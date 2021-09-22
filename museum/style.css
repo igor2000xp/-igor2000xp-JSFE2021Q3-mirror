@@ -1,0 +1,34 @@
+.header {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  border: 1px solid red;
+} 
+
+.main {
+  border: 1px solid red;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+
+}
+.section {
+  padding: 75px, 0;
+}
+.dark-section {
+
+}
+.video-section {
+  padding: 90px, 0;
+}
+
+
+
+
+
