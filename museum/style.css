@@ -1,34 +1,165 @@
+/* ! HEADER __________________________*/
+/* TODO ______________________________*/
+/* ? HEADER __________________________*/
+/* // HEADER __________________________*/
+/* * HEADER __________________________*/
+/* Обнуление */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  /* margin: 0; */
+  font-size: 22px;
+  font-family: "Roboto";
+  color: #000;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+
+}
+
+/* ! --HEADER----------------- */
 .header {
-  border: 1px solid red;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: #030303;
+  box-sizing: content-box;
+  /* border: 1px solid red; */
+}
+
+.header__container {
+  max-width: 1440px;
+  min-height: 150px;
+  margin: 0 auto;
+  top: 0px;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+}
+/* ! -----LOGO--------------------------- */
+.logo {
+  width: 199px;
+  margin: 0 0 0 0;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* position:relative; width:200px; height:160px; */
+  
 }
 
-.footer {
-  border: 1px solid red;
-} 
+/* .Logo__image, .logo__text {float:none; margin:0; padding:0;} */
+
+.logo__img {
+  background-image: url("assets/svg/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: 1px solid red; */
+  /* margin: 0 0 0 0; */
+  width: 49px;
+  height: 26px;
+}
+
+.logo__text {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 25px;
+  text-align: initial;
+  vertical-align: initial;
+  text-transform: uppercase;
+  /* border: 1px solid red; */
+  margin: 0 0 -1.5px 0;
+  width: 125px;
+  color: #fff;
+  vertical-align: text-bottom;
+
+  /* position:absolute; width:200px; left:74px; bottom:0; */
+}
+
+/* ! ---MENU------------------------------ */
+
+.menu {
+  margin: 0px 0px 0px 0;
+
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item {
+  font-family: "Roboto";
+  color: #fff;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 25.78px;
+  margin: 0 0 0 55px;
+  
+}
+
+/* ! ------MAIN----------------- */
 
 .main {
   border: 1px solid red;
 }
 
-.container {
-  margin: 0 auto;
-  width: 1440px;
-
-}
 .section {
   padding: 75px, 0;
 }
 .dark-section {
-
+  
 }
 .video-section {
   padding: 90px, 0;
 }
 
-
-
+.footer {
+  border: 1px solid red;
+} 
 
 
