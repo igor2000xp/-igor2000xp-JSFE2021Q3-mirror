@@ -50,6 +50,15 @@ h6 {
   font-size: inherit;
 }
 
+h2 {
+  font-family: "Forum";
+  font-size: 80px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 90px;
+  letter-spacing: 5px;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -178,11 +187,6 @@ h6 {
   /* From museum-hints.md */
   padding: 75px, 0;
 }
-.section-visiting {
-  border: 1px solid red; 
-  min-height: 1264px;
-}
-
 
 .section-explorer {
   min-height: 810px;
@@ -242,14 +246,7 @@ h6 {
 }
 
 /* ?? Section Welcome left hand block-------*/
-.welcome__article h2 {
-  font-family: "Forum";
-  font-size: 80px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 90px;
-  letter-spacing: 5px;
-}
+/* .welcome__article h2  */
 
 .welcome__text p {
   font-family: Roboto;
@@ -357,6 +354,20 @@ h6 {
   height: 8px;
   background-image: url(assets/svg/←r.svg);
 }
+
+/* Section Visiting---------------------- */
+
+.section-visiting {
+  border: 1px solid red; 
+  min-height: 1264px;
+}
+
+.section-visiting h2 {
+  color: #9D8665;
+  text-transform: uppercase;
+  margin: 75px 0 0 0;
+}
+
 
 /* ! -----------FOOTER----------- */
 .footer {
