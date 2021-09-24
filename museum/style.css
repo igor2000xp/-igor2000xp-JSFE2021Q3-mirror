@@ -1,0 +1,366 @@
+/* ! HEADER __________________________*/
+/* TODO ______________________________*/
+/* ? HEADER __________________________*/
+/* // HEADER __________________________*/
+/* * HEADER __________________________*/
+/* Nulling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  /* margin: 0; */
+  font-size: 22px;
+  font-family: "Roboto";
+  color: #000;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: content-box;
+
+}
+
+/* ! --HEADER----------------- */
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  box-sizing: content-box;
+  background-color: #030303;
+  /* border: 1px solid red; */
+}
+
+.header__container {
+  /* max-width: 1440px; */
+  min-height: 150px;
+  top: 0px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  /* From museum-hints.md */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+/* ! -----LOGO--------------------------- */
+.logo {
+  width: 199px;
+  margin: 0 0 0 0;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* position:relative; width:200px; height:160px; */
+  
+}
+
+/* .Logo__image, .logo__text {float:none; margin:0; padding:0;} */
+
+.logo__img {
+  background-image: url("assets/svg/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: 1px solid red; */
+  /* margin: 0 0 0 0; */
+  width: 49px;
+  height: 26px;
+}
+
+.logo__text {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-align: initial;
+  vertical-align: initial;
+  text-transform: uppercase;
+  /* border: 1px solid red; */
+  margin: 0 0 -1.5px 0;
+  width: 125px;
+  color: #fff;
+  vertical-align: text-bottom;
+  /* position:absolute; width:200px; left:74px; bottom:0; */
+}
+
+
+/* ! ---MENU------------------------------ */
+
+.menu {
+  margin: 0px 0px 0px 0;
+  /* padding: 15px 0; */
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 790px;
+}
+
+.menu__item {
+  font-family: "Roboto";
+  color: #fff;
+  font-weight: 200;
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 26px;
+  margin: 0 0 0 55px;
+}
+
+/* ! ------MAIN----------------- */
+
+.main {
+  border: 1px solid red;
+  flex: 1 1 auto;
+}
+
+.section__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: content-box;
+}
+
+.article {
+  /* max-width: 1440px; */
+  margin: 0 auto;
+  /* padding: 0 15px; */
+  box-sizing: content-box; 
+}
+
+.section {
+  /* From museum-hints.md */
+  padding: 75px, 0;
+}
+.section-explorer {
+  min-height: 810px;
+  background-color: #030303;
+  border: 1px solid red; 
+}
+
+.section-video {
+   /* From museum-hints.md */
+  padding: 90px, 0;
+}
+
+.section-title {
+  font-family: "Forum";
+  font-size: 80px;
+  line-height: 90px; 
+  font-weight: 500;
+  color: #9D8665;
+}
+
+.underline-title {
+  position: relative;
+  color: #fff;
+}
+.underline-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: red;
+}
+
+/* ---Section Welcome---------------------- */
+.section-welcome {
+  margin: 150px 0 0 0;
+  background-color: #030303;
+  border: 1px solid red;
+  color: #fff;
+}
+
+.welcome__container {
+  position: relative;
+  height: 810px;
+
+}
+.welcome__article {
+  position: absolute;
+  left: 0; 
+  top: 70px;
+  width: 599px;
+  height: 180;
+  text-transform: uppercase;
+  z-index: 50;
+
+}
+
+/* ?? Section Welcome left hand block-------*/
+.welcome__article h2 {
+  font-family: "Forum";
+  font-size: 80px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 90px;
+  letter-spacing: 5px;
+}
+
+.welcome__text p {
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 33px;
+  letter-spacing: 2px;
+  text-align: left;
+  text-transform: initial;
+  text-decoration: none;
+}
+
+.welcome__text {
+  margin: 25px 0 0 0;
+  text-decoration: none;
+}
+
+.welcome__liza-bg {
+  position: absolute;
+  right: 0;
+  top: 150;
+  width: 1000px;
+  height: 750px;
+  /* background-image: url("assets/svg/logo.svg"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) calc(100% - 10px);
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(assets/img/welcome-slider/1.jpg);
+ /* background: linear-gradient(); */
+  z-index: 0;
+}
+
+.welcome__button {
+  margin: 75px 0 0 0;
+  width: 360px;
+  height: 75px;
+  background: #710707;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 75px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: initial;
+  text-align: center;
+  /* vertical-align: middle; */
+}
+
+.welcome__button p {
+  text-decoration: none;
+}
+
+
+/* ?? Section Welcome Control menu Liza--------------------- */
+.liza__control {
+  position: absolute;
+  height: 120px;
+  width: 600px;
+  right: 0;
+  bottom: 0;
+  background: #030303;
+  color: #fff;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.liza-count__control {
+  width: 76px;
+
+}
+
+.liza-v__control {
+  width: 180px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+}
+
+.liza-v__item {
+  width:16px;
+  height: 16px;
+  background: #fff;
+}
+
+.liza__arrows {
+  width: 80px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+}
+
+.liza-vl__arrow {
+  width: 30px;
+  height: 8px;
+  background-image: url(assets/svg/←.svg);
+}
+
+.liza-vr__arrow {
+  width: 30px;
+  height: 8px;
+  background-image: url(assets/svg/←r.svg);
+}
+
+/* ! -----------FOOTER----------- */
+.footer {
+  min-height: 50px;
+  color: rgb(3, 250, 3);
+  font-size: 25px;
+  font-weight: 500;
+  border: 1px solid red;
+} 
+
+
