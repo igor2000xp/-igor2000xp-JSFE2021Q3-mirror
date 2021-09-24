@@ -84,11 +84,9 @@ h6 {
   margin: 0 auto;
   /* border: 1px solid red; */
   /* From museum-hints.md */
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 /* ! -----LOGO--------------------------- */
 .logo {
@@ -158,7 +156,7 @@ h6 {
 /* ! ------MAIN----------------- */
 
 .main {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   flex: 1 1 auto;
 }
 
@@ -180,6 +178,12 @@ h6 {
   /* From museum-hints.md */
   padding: 75px, 0;
 }
+.section-visiting {
+  border: 1px solid red; 
+  min-height: 1264px;
+}
+
+
 .section-explorer {
   min-height: 810px;
   background-color: #030303;
@@ -217,7 +221,7 @@ h6 {
 .section-welcome {
   margin: 150px 0 0 0;
   background-color: #030303;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   color: #fff;
 }
 
