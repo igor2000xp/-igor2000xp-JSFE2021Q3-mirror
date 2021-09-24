@@ -186,12 +186,6 @@ h6 {
   border: 1px solid red; 
 }
 
-.section-welcome {
-  margin: 150px 0 0 0;
-  background-color: #030303;
-  border: 1px solid red;
-  color: #fff;
-}
 .section-video {
    /* From museum-hints.md */
   padding: 90px, 0;
@@ -203,7 +197,6 @@ h6 {
   line-height: 90px; 
   font-weight: 500;
   color: #9D8665;
-
 }
 
 .underline-title {
@@ -218,6 +211,14 @@ h6 {
   right: 0;
   height: 3px;
   background-color: red;
+}
+
+/* ---Section Welcome---------------------- */
+.section-welcome {
+  margin: 150px 0 0 0;
+  background-color: #030303;
+  border: 1px solid red;
+  color: #fff;
 }
 
 .welcome__container {
@@ -235,6 +236,8 @@ h6 {
   z-index: 50;
 
 }
+
+/* ?? Section Welcome left hand block-------*/
 .welcome__article h2 {
   font-family: "Forum";
   font-size: 80px;
@@ -299,7 +302,7 @@ h6 {
 }
 
 
-/* ! Control menu Liza--------------------- */
+/* ?? Section Welcome Control menu Liza--------------------- */
 .liza__control {
   position: absolute;
   height: 120px;
@@ -311,7 +314,7 @@ h6 {
   display: flex;
   /* flex-direction: row; */
   justify-content: space-around;
-
+  align-items: center;
 }
 
 .liza-count__control {
@@ -332,6 +335,13 @@ h6 {
   background: #fff;
 }
 
+.liza__arrows {
+  width: 80px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+}
+
 .liza-vl__arrow {
   width: 30px;
   height: 8px;
@@ -342,12 +352,6 @@ h6 {
   width: 30px;
   height: 8px;
   background-image: url(assets/svg/←r.svg);
-}
-.liza__arrows {
-  width: 80px;
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: space-around;
 }
 
 /* ! -----------FOOTER----------- */
