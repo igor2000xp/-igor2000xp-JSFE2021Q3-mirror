@@ -30,6 +30,11 @@ body {
   font-size: 22px;
   font-family: "Roboto";
   color: #000;
+  background-color: #030303;
+}
+
+html {
+scroll-behavior: smooth;
 }
 
 img {
@@ -49,11 +54,15 @@ h6 {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
+  max-width: 1920px;
   margin: 0 auto;
-  max-width: 1440px;
+  padding: 0 15px;
+  box-sizing: content-box;
 
 }
 
@@ -64,17 +73,18 @@ h6 {
   left: 0;
   top: 0;
   z-index: 50;
-  background-color: #030303;
   box-sizing: content-box;
   /* border: 1px solid red; */
 }
 
 .header__container {
-  max-width: 1440px;
+  /* max-width: 1440px; */
   min-height: 150px;
-  margin: 0 auto;
   top: 0px;
+  margin: 0 auto;
   /* border: 1px solid red; */
+  /* From museum-hints.md */
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,11 +135,13 @@ h6 {
 
 .menu {
   margin: 0px 0px 0px 0;
-
+  padding: 15px 0;
+  max-width: 775px;
 }
 
 .menu__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .menu__item {
@@ -146,19 +158,60 @@ h6 {
 
 .main {
   border: 1px solid red;
+  flex: 1 1 auto;
 }
 
 .section {
+  /* From museum-hints.md */
   padding: 75px, 0;
 }
-.dark-section {
-  
+.section-explorer {
+  min-height: 842px;
+  background-color: #030303;
+  border: 1px solid red; 
 }
-.video-section {
+
+.section-welcome {
+  margin: 150px 0 0 0;
+  min-height: 842px;
+  background-color: #030303;
+  border: 1px solid red;
+  color: #fff;
+}
+.section-video {
+   /* From museum-hints.md */
   padding: 90px, 0;
 }
 
+.section-title {
+  font-family: "Forum";
+  font-size: 80px;
+  line-height: 90px; 
+  font-weight: 500;
+  color: #9D8665;
+
+}
+
+.underline-title {
+  position: relative;
+  color: #fff;
+}
+.underline-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: red;
+}
+
+/* ! -----------FOOTER----------- */
 .footer {
+  min-height: 50px;
+  color: rgb(3, 250, 3);
+  font-size: 25px;
+  font-weight: 500;
   border: 1px solid red;
 } 
 
