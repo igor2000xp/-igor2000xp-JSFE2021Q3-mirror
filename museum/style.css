@@ -57,6 +57,7 @@ h2 {
   font-style: normal;
   line-height: 90px;
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 .wrapper {
@@ -186,12 +187,6 @@ h2 {
 .section {
   /* From museum-hints.md */
   padding: 75px, 0;
-}
-
-.section-explorer {
-  min-height: 810px;
-  background-color: #030303;
-  border: 1px solid red; 
 }
 
 .section-video {
@@ -440,6 +435,62 @@ h2 {
 
 }
 
+/* Section Explore-------------- */
+.section-explorer {
+   /* position: relative; */
+   /* min-height: 810px; */
+   background-color: #030303;
+   /* border: 1px solid red;  */
+   display: flex;
+   /* max-width: 1440px; */
+ }
+ .section-explorer__cont {
+   position: relative; 
+   display: flex;
+   /* border: 1px solid red; */
+ }
+.section-explorer__text {
+   margin: 75px 60px 0 0;
+   display: flex;
+   flex-direction: column;
+   max-width: 655px;
+   height: 867px;
+   /* border: 1px solid red; */
+   color: #fff;
+}
+
+.section-explorer__text p {
+   font-family: Roboto;
+   font-size: 22px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 39px;
+   letter-spacing: 0em;
+   text-align: left;
+   margin: 25px 0 0 0;
+
+}
+.section-explorer__text-h2 {
+   color: #fff;
+   position: relative;
+   margin: 0 0 103px 0;
+}
+.section-explorer__text-h2::after {
+   content: "";
+   position: absolute;
+   bottom: -10px;
+   left: 0;
+   right: 0;
+   height: 3px;
+   background-color: #710707;
+ }
+
+ .section-explorer__pics {
+   position: relative;
+   display: flex;
+   width: 720px;
+
+ }
 /* ! -----------FOOTER----------- */
 .footer {
   min-height: 50px;
