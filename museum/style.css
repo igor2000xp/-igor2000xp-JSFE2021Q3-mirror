@@ -218,7 +218,7 @@ h2 {
   left: 0;
   right: 0;
   height: 3px;
-  background-color: red;
+  background-color: #710707;
 }
 
 /* ---Section Welcome---------------------- */
@@ -358,16 +358,87 @@ h2 {
 /* Section Visiting---------------------- */
 
 .section-visiting {
-  border: 1px solid red; 
+  /* border: 1px solid red;  */
   min-height: 1264px;
 }
 
 .section-visiting h2 {
   color: #9D8665;
   text-transform: uppercase;
-  margin: 75px 0 0 0;
+  margin: 75px 0 100px 0;
+}
+/* ?? Cards of Section Visiting ----------------- */
+
+/* .visiting-card {
+
+} */
+.visiting-cards {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1440px;
+  flex-wrap: wrap;
+  row-gap: 75px;
 }
 
+.section-visiting a {
+  display: block;
+  text-transform: initial;
+  width: 424px;
+  height: 440px;
+}
+
+.visiting-card__item {
+  text-decoration: none;
+  color: #000000;
+}
+
+.underline-title__h3 {
+  margin: 25px 0 22px 0;
+  font-family: Forum;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-align: left;
+  text-decoration: none;
+  position: relative;
+}
+
+.underline-title__h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width: 300px;
+  background-color: #710707;
+}
+
+.visiting-card__item h4 {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+.visiting-card__item p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
 
 /* ! -----------FOOTER----------- */
 .footer {
