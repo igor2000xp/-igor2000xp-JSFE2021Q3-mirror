@@ -567,6 +567,52 @@ h2 {
    margin: 40px 0 0 0;
 }
 
+/* Gallery Section ----------------*/
+
+.section-gallery {
+   margin: 0 0 0 0;
+   background-color: #030303;
+   /* border: 1px solid red; */
+   color: #fff;
+ }
+
+ .container-gallery {
+   padding: 75px 0 0 0; 
+   height: 2200px;
+   border: 1px solid red;
+ }
+ .gallery-pictures {
+    margin: 75px 0 0 0;
+    display: flex;
+    border: 1px solid red;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 24px;
+    column-gap: 24px;
+ }
+
+ .gallery-pictures__row1 {
+   display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+ }
+
+ .gallery-pictures__row2 {
+   margin: 50px 0 0 0;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-between; */
+   align-items: flex-start;
+ }
+
+ .gallery-pictures__row3 {
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-between; */
+   align-items: flex-start;
+ }
 /* ! -----------FOOTER----------- */
 .footer {
   min-height: 50px;
