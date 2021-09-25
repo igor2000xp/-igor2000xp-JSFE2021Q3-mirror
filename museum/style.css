@@ -72,8 +72,14 @@ h2 {
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: content-box;
-
 }
+
+.container1440 {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 15px;
+   box-sizing: content-box;
+ }
 
 /* ! --HEADER----------------- */
 .header {
@@ -187,11 +193,6 @@ h2 {
 .section {
   /* From museum-hints.md */
   padding: 75px, 0;
-}
-
-.section-video {
-   /* From museum-hints.md */
-  padding: 90px, 0;
 }
 
 .section-title {
@@ -453,7 +454,7 @@ h2 {
    margin: 75px 60px 0 0;
    display: flex;
    flex-direction: column;
-   max-width: 655px;
+   max-width: 657px;
    height: 867px;
    /* border: 1px solid red; */
    color: #fff;
@@ -470,6 +471,11 @@ h2 {
    margin: 25px 0 0 0;
 
 }
+
+.section-explorer__text span {
+   color: #CAAA7D;
+}
+
 .section-explorer__text-h2 {
    color: #fff;
    position: relative;
@@ -482,7 +488,7 @@ h2 {
    left: 0;
    right: 0;
    height: 3px;
-   background-color: #710707;
+   /* background-color: #710707; */
  }
 
  .section-explorer__pics {
@@ -491,6 +497,76 @@ h2 {
    width: 720px;
 
  }
+/* Video Section ----------------*/
+
+.section-video {
+   padding: 75px 0 0 0;
+   /* border: 1px solid red; */
+   height: 1396px;
+}
+
+.video-container {
+   height: 1396px;
+}
+.video-header-container {
+   padding: 0 15px;
+   max-width: 1440px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.video-header {
+   color: #9D8665;
+   width: 615px;
+}
+
+.video-text {
+   width: 720px;
+   font-family: Roboto;
+   font-size: 22px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 39px;
+   letter-spacing: 0em;
+   text-align: left;
+}
+
+.video-frame {
+   margin: 75px 0 0 0;
+   max-width: 1440px;
+   max-height: 650px;
+   text-align: center;
+}
+
+.video-footer {
+   position: relative;
+   background: #030303;
+   height: 85px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.container-video__items {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0;
+   margin: 40px 0 0 0;
+}
+
+.nav-video__items {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   margin: 40px 0 0 0;
+}
+
 /* ! -----------FOOTER----------- */
 .footer {
   min-height: 50px;
