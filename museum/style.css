@@ -630,12 +630,12 @@ h2 {
  /* Tickets Section ------------------ */
 .section-tickets {
   height: 1293px;
-  border: red 1px solid;
+  /* border: red 1px solid; */
 }
 
 .section-tickets__container {
   /* display: flex; */
-  border: red 1px solid;
+  /* border: red 1px solid; */
 }
 .section-tickets__container-h2 {
   color: #9D8665;
@@ -821,7 +821,7 @@ h2 {
 
 .contacts-section {
   height: 952px;
-  border: red 1px solid;
+  /* border: red 1px solid; */
 }
 
 .contacts-maps {
@@ -858,11 +858,39 @@ h2 {
 
 /* ! -----------FOOTER----------- */
 .footer {
-  min-height: 50px;
-  color: rgb(3, 250, 3);
+  height: 392px;
+  color: #fff;
   font-size: 25px;
   font-weight: 500;
+  background-color: #030303;
   border: 1px solid red;
 } 
 
+.footer-container__top {
+  position: relative;
+  margin: 75px 0 0 0;
+  display: flex;
+  justify-items: flex-start;
+  align-items: flex-start;
+}
 
+.menu-footer__left {
+  /* margin: 0 0 25px 0; */
+
+}
+
+.menu-footer__litems {
+margin: 0 0 25px 145px;
+}
+
+.menu-footer__litems a {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 22px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-align: left;
+}
