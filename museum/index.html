@@ -87,11 +87,9 @@
                  <div class="liza-vl__arrow"></div>
                  <div class="liza-vr__arrow"></div>
               </div>
-
-
             </div>
-
           </div>
+
         </section>
         <section class="section-visiting" id="Visiting">
           <div class="container">
@@ -232,30 +230,80 @@
                   <img src="assets/img/galery/galery9.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery4.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery6.jpg" alt="Gallery picture" style="width:456px; object-fit: cover; height: 242px; object-position:top;">
-
                </div>
                <div class="gallery-pictures__row2">
                   <img src="assets/img/galery/galery1.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery8.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery3.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery5.jpg" alt="Gallery picture" style="width:456px; object-fit: cover; height: 292px; object-position:top;">
-
                </div>
                <div class="gallery-pictures__row3">
                   <img src="assets/img/galery/galery7.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery10.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery15.jpg" alt="Gallery picture" style="width:456px">
                   <img src="assets/img/galery/galery12.jpg" alt="Gallery picture" style="width:456px">
-
                </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-tickets" id="Tickets">
+          <div class="container section-tickets__container">
+            <h2 class="section-tickets__container-h2">BUY TICKETS</h2>
+            <div class="section-tickets__form">
+                <div>
+                  <img src="assets/img/parallax/gallery_tickets.jpg" alt="Picture for Gallery's tickets">
+                </div>
+                  <!-- Radio buttons ___________ -->
+                <div class="section-tickets__form-left">
+                  <h3>Ticket Type</h3>
+                  <label class="ticket-form__container">Permanent exhibition
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="ticket-form__container">Temporary exhibition
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="ticket-form__container">Combined Admission
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <!-- END Radio  buttons ________________ -->
+                </div>
+                <div class="section-tickets__form-right">
+                    <!-- Number buttons ___________ -->
+                    <h3>Amount</h3>
+                    <div class="forms-number__label">
+                      <p>Basic 18+</p>
+                      <div class="forms-number">
+                        <button type="button" onclick="this.nextElementSibling.stepDown()">&mdash;</button>
+                        <input type="number" min="0" max="100" value="1" readonly class="raz">
+                        <button type="button" onclick="this.previousElementSibling.stepUp()">+</button> 
+                      </div>
+                    </div>
+
+                    <div class="forms-number__label">
+                      <p>Senior 65+</p>
+                      <div class="forms-number">
+                        <button type="button" onclick="this.nextElementSibling.stepDown()">&mdash;</button>
+                        <input type="number" min="0" max="100" value="1" readonly class="raz">
+                        <button type="button" onclick="this.previousElementSibling.stepUp()">+</button> 
+                      </div>
+                  </div>
+                    <h4>Total €220</h4>
+
+                    <!-- END Number buttons ________________ -->
+                </div>
+                <div class="button-buy">
+                  <p>Buy Now</p>
+                </div>              
 
             </div>
 
+
           </div>
-        </section>
-        <section class="section" id="Tickets">
-          <div class="container">
-            <h2>BUY TICKETS</h2>
+          <div class="section-tickets__parrallax">
+            <img src="assets/img/parallax/parallax.jpg" alt="Parallax" style="width: 1990px; height: 400px;">
           </div>
         </section>
         <section class="section" id="Contacts">
