@@ -36,6 +36,11 @@ html {
 scroll-behavior: smooth;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+   html {
+     scroll-behavior: auto;
+   }
+ }
 img {
   vertical-align: top;
 }
@@ -579,12 +584,13 @@ h2 {
  .container-gallery {
    padding: 75px 0 0 0; 
    height: 2200px;
-   border: 1px solid red;
+   box-sizing: border-box;
+   /* border: 1px solid red; */
  }
  .gallery-pictures {
     margin: 75px 0 0 0;
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* flex-direction: row; */
     justify-content: space-between;
     align-items: flex-start;
@@ -592,6 +598,7 @@ h2 {
  }
 
  .gallery-pictures__row1 {
+   margin: 50px 0 0 0;
    display: flex;
    row-gap: 24px;
     flex-direction: column;
@@ -600,7 +607,7 @@ h2 {
  }
 
  .gallery-pictures__row2 {
-   margin: 50px 0 0 0;
+   margin: 0 0 0 0;
    display: flex;
    flex-direction: column;
    /* justify-content: space-between; */
@@ -609,6 +616,7 @@ h2 {
  }
 
  .gallery-pictures__row3 {
+   margin: 50px 0 0 0;
    display: flex;
    flex-direction: column;
    /* justify-content: space-between; */
