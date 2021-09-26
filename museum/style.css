@@ -366,7 +366,7 @@ h2 {
 .section-visiting h2 {
   color: #9D8665;
   text-transform: uppercase;
-  margin: 75px 0 100px 0;
+  margin: 75px 0 103px 0;
 }
 /* ?? Cards of Section Visiting ----------------- */
 
@@ -597,7 +597,7 @@ h2 {
    column-gap: 36px;
    z-index: 50;
    background-position: calc(100% - 20px) calc(100% - 10px);
-   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, #000000 100%,);
+   /* background: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, #000000 100%,); */
  }
 
  .gallery-pictures__row1 {
@@ -630,13 +630,12 @@ h2 {
  /* Tickets Section ------------------ */
 .section-tickets {
   height: 1293px;
-
+  border: red 1px solid;
 }
 
 .section-tickets__container {
   /* display: flex; */
-  
-  
+  border: red 1px solid;
 }
 .section-tickets__container-h2 {
   color: #9D8665;
@@ -654,7 +653,8 @@ h2 {
 } 
 .section-tickets__form {
   position: relative;
-  margin: 75px 0 0 0;
+  margin: 103px 0 0 0;
+  height: 550px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -816,6 +816,46 @@ h2 {
 .section-tickets__parrallax {
   margin: 75px 0 0 0;
 }
+
+/* ! Section Contacts ------------------ */
+
+.contacts-section {
+  height: 952px;
+  border: red 1px solid;
+}
+
+.contacts-maps {
+  margin: 103px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-maps_text {
+  width: 282px;
+  height: 244px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contacts-maps_text h3 {
+  margin: 0 0 50px 0;
+  font-weight: 500;
+  line-height: 33px;
+}
+
+.contacts-maps_text p {
+  font-weight: 300;
+  line-height: 26px;
+  margin: 0 0 25px 0;
+}
+
+.contacts-maps_item {
+
+}
+
+
 /* ! -----------FOOTER----------- */
 .footer {
   min-height: 50px;
