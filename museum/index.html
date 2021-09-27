@@ -389,18 +389,72 @@
 
 
     </footer>
- <!-- <iframe src="https://www.google.com/maps/embed?pb=!4v1632667254848!6m8!1m7!1sCAoSLEFGMVFpcE9WeFpRdVN5M0J4OVRfSHBIXzdGdEJIRFRYdkk2U0YtQTEwb2NU!2m2!1d48.86181593314584!2d2.336681797486702!3f81.55!4f-16.599999999999994!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
     <!-- Ticket form -->
     <div id="ticketsForm">
       <div class="overlay"></div>
-      <form action="#">
-        <input type="text">
-        <button>Submit</button>
-      </form>
-    </div>
+
+        <form action="#">
+
+          
+            <div class="ticket-buy__container">
+              <div class="left-side__form">
+                <h2>Booking tickets</h2>
+                <div class="buy-date__time">
+
+                    <div class="forms-buy__date">
+                      <input type="date" class="buy">
+                    </div>
+
+                    <div class="forms-buy__time">
+                      <input type="time" class="buy">
+                    </div>
+
+                </div>
+
+                <div class="forms-buy">
+                  <input type="text" class="buy">
+                </div>
+                <div class="forms-buy">
+                  <input type="email" class="buy">
+                </div>
+                <div class="forms-buy">
+                  <input type="tel">
+                </div>
+                <div class="forms-buy">
+                  <input type="number">
+                </div>
+                <!--Supplement an id here instead of using 'name'-->
+                <select name="select">
+                  <option value="value1">Basic</option>
+                  <option value="value2" selected>Senior</option>
+                </select>
+          </div>
+          <div class="right-side__form">
+            <img src="assets/img/tickets/payment.jpg" alt="Payment">
+
+          </div>
+          <div class="close">
+            <button>
+              <img src="assets/img/tickets/close.jpg" alt="close">
+            </button>
+            
+          </div>
+          
+              
+
+            <!-- </div> -->
+              <div class="right-side__form">
+                <div class="form-submit">
+                  <button>Submit</button>
+                </div>
+              </div>
+          </div>
+        </form>
+
+     </div>
 
 
-  </div>
+   </div>
     <script src="js/index.js"></script>
 
 </body>
