@@ -3,12 +3,22 @@
 let buttonBuy = document.querySelectorAll('.button-buy'),
    ticketsForm = document.getElementById('ticketsForm'),
    closeButton = document.querySelectorAll('.close');
+   closeOverlay = document.querySelectorAll('.overlay');
    
-
+   
    
    buttonBuy.forEach((element) => {
       element.addEventListener("click", buyScript);
     });
+
+    closeButton.forEach((element) => {
+       element.addEventListener("click", closeForm);
+    });
+
+   closeOverlay.forEach((element) =>   {
+      element.addEventListener("click", closeForm);
+   });
+    
 
 function buyScript(){
    ticketsForm.classList.add("show");

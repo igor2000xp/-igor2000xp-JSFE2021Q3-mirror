@@ -1069,6 +1069,7 @@ width: 117px;
   opacity: 0;
   pointer-events: none;
   position: fixed;
+  z-index: 0;
 }
 
 #ticketsForm.show {
@@ -1089,7 +1090,7 @@ width: 117px;
   transform: translateX(0%);  
 }
 
-#ticketsForm .overlay{
+#ticketsForm .overlay {
   display: none;
 }
 
