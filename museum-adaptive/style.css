@@ -32,6 +32,10 @@ body {
   color: #000;
 }
 
+body._lock {
+   overflow: hidden;
+}
+
 html {
 scroll-behavior: smooth;
 }
@@ -71,21 +75,6 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  /* padding: 0 15px; */
-  box-sizing: content-box;
-}
-
-.container1440 {
-   max-width: 1440px;
-   margin: 0 auto;
-   /* padding: 0 15px; */
-   box-sizing: content-box;
- }
-
 /* ! --HEADER----------------- */
 .header {
   position: absolute;
@@ -109,6 +98,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+/* ??  MEDIA ---------------- */
+@media (max-width: 1061px) {
+   .header__container {
+      min-height: 130px;
+   }
+}
+/* ??  MEDIA ---------------- */
 /* ! -----LOGO--------------------------- */
 .logo {
   width: 199px;
@@ -128,7 +124,7 @@ h2 {
   background-size: contain;
   background-repeat: no-repeat; */
   /* border: 1px solid red; */
-  margin: 0 0 0 10px;
+  /* margin: 0 0 0 10px; */
   /* width: 49px;
   height: 26px; */
   justify-content: flex-start;
@@ -154,7 +150,7 @@ h2 {
   text-align: initial;
   vertical-align: initial;
   text-transform: uppercase;
-  margin: 0 0 12px 22px;
+  margin: 0 0 16px 22px;
   width: 125px;
   color: #fff;
   vertical-align: text-bottom;
@@ -169,23 +165,116 @@ h2 {
   /* padding: 15px 0; */
 }
 
-.menu__list {
+.menu-list {
   display: flex;
   flex-wrap: wrap;
   max-width: 850px;
   margin: 0 0 0 0;
 }
 
-.menu__item {
-  font-family: "Roboto";
+.menu-list__item {
+  margin: 0 0 0 55px;
+}
+
+.menu-list__link {
+   font-family: "Roboto";
   color: #fff;
   font-weight: 200;
   font-size: 22px;
   letter-spacing: 2px;
   line-height: 26px;
-  margin: 0 0 0 55px;
 }
 
+
+
+ /* ! hamburger bar */
+ .bar {
+   display: block;
+   width: 32px;
+   height: 2px;
+   margin: 6px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.5s ease-in-out;
+   background-color: #fff;
+ }
+
+ .hamburger {
+   display: none;
+ }
+
+ .menu-arrow {
+   display: none;
+ }
+/* ?? media ------------------------------ */
+@media (max-width: 1061px) {
+   /* .menu {
+      overflow: auto;
+   } */
+  .menu-list {
+     position: fixed;
+     left: -100%;
+     top: 130px;
+     flex-direction: column;
+     width: 297px;
+     /* margin: 0 0 0 55px; */
+     padding: 35px 0 0 0;
+     font-size: 20px;
+     line-height: 25px;
+     letter-spacing: 2px;
+     transition: left 0.7s ease-out;
+     background-color: #030303;
+     text-align: left;
+  }       
+
+  .menu-list.active {
+     left: 55px;  
+ }
+
+ .menu-list__item {
+     margin: 0 0 25.5px 0;
+     text-align: left;
+     display: flex;
+     width: 121px;
+     justify-content: space-between;
+}
+         
+  .menu-list__link {
+     color: #fff;
+     font-family: Roboto;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 23px;
+     letter-spacing: 2px;
+     text-align: left;
+  }
+  .menu-arrow {
+     display: block;
+  }
+
+  .hamburger {
+     display: block;
+     cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+/* Welcome Page */
+/* .welcome__article {
+   display: none;
+} */
+
+}
+/* ?? media ------------------------------ */
 /* ! ------MAIN----------------- */
 
 .main {
@@ -193,31 +282,31 @@ h2 {
   flex: 1 1 auto;
 }
 
-.section__container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: content-box;
-}
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 20px;
+   box-sizing: content-box;
+ }
+
+/* ?? */
+/* .section {
+   padding: 75px, 0;
+ } */
+ 
+ .section-title {
+   font-family: "Forum";
+   font-size: 80px;
+   line-height: 90px; 
+   font-weight: 500;
+   color: #9D8665;
+ }
 
 .article {
   /* max-width: 1440px; */
   margin: 0 auto;
   /* padding: 0 15px; */
   box-sizing: content-box; 
-}
-
-.section {
-  /* From museum-hints.md */
-  padding: 75px, 0;
-}
-
-.section-title {
-  font-family: "Forum";
-  font-size: 80px;
-  line-height: 90px; 
-  font-weight: 500;
-  color: #9D8665;
 }
 
 .underline-title {
@@ -233,7 +322,19 @@ h2 {
   height: 3px;
   background-color: #710707;
 }
+/* ?? MEDIA SECTIONS Container------------------------------*/
 
+@media (max-width: 1061px) {
+
+   .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: content-box;
+    }
+
+}
+/* ?? End of MEDIA SECTIONS Container-----------------------------*/
 /* ---Section Welcome---------------------- */
 .section-welcome {
   margin: 150px 0 0 0;
@@ -249,17 +350,16 @@ h2 {
 }
 .welcome__article {
   position: absolute;
-  left: 25px; 
+  left: 21px; 
   top: 153px;
   width: 599px;
   height: 180;
   text-transform: uppercase;
   z-index: 50;
-
 }
 
-/* ?? Section Welcome left hand block-------*/
-/* .welcome__article h2  */
+/*  Section Welcome left hand block-------*/
+
 
 .welcome__text p {
   font-family: Roboto;
@@ -280,16 +380,13 @@ h2 {
 
 .welcome__liza-bg {
   position: absolute;
-  right: 0;
-  top: 150;
+  right: 20px;
   width: 1000px;
   height: 750px;
-  /* background-image: url("assets/svg/logo.svg"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) calc(100% - 10px);
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(assets/img/welcome-slider/1.jpg);
- /* background: linear-gradient(); */
   z-index: 0;
 }
 
@@ -314,14 +411,85 @@ h2 {
 .welcome__button p {
   text-decoration: none;
 }
+/* ?? MEDIA of Welcome section ------------------------------------- */
+@media (max-width: 1061px) {
+   .section-welcome {
+      margin: 130px 0 0 0;
+    }
+    
+    .welcome__container {
+      /* position: relative; */
+      height: 585px;
+    
+    }
+    .welcome__article {
+      position: absolute;
+      left: 21px; 
+      top: 50px;
+      width: 599px;
+      height: 180px;
+      text-transform: uppercase;
+      z-index: 50;
+    
+    }
+    
+    .welcome__article.passive {
+      display: none;
+   }
+
+   .welcome__liza-bg {
+      width: 700px;
+      /* background-size: 100%; */
+      height: 525px;
+      /* background-image: url("assets/svg/logo.svg"); */
+      background-size: contain;
+      /* background-size: 700px; */
+      background-repeat: no-repeat;
+      /* background-position: calc(100% - 20px) calc(100% - 10px); */
+      /* background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(assets/img/welcome-slider/1.jpg); */
+      /* z-index: 0; */
+   }
+   .welcome__text p {
+      font-size: 24px;
+      line-height: 28px;
+
+    }
+    
+    .welcome__text {
+      margin: 25px 0 0 0;
+      text-decoration: none;
+    }
+
+    .welcome__article h2 {
+      font-size: 50px;
+    }
+
+    .welcome__button {
+      margin: 51px 0 0 0;
+      width: 300px;
+      height: 60px;
+
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 60px;
+      /* letter-spacing: 2px; */
 
 
-/* ?? Section Welcome Control menu Liza--------------------- */
+      /* color: #fff;
+      text-transform: initial;
+      text-align: center;
+      vertical-align: middle; */
+    }
+
+}
+/* ?? End of MEDIA Section Welcome, text, button, Liza--------------------- */
+
 .liza__control {
   position: absolute;
   height: 120px;
   width: 600px;
-  right: 0;
+  right: 20px;
   bottom: 0;
   background: #030303;
   color: #fff;
@@ -333,14 +501,16 @@ h2 {
 
 .liza-count__control {
   width: 96px;
-  margin: 0 0 0 67px;
-  letter-spacing: 3px;
+  margin: 0 0 0 77px;
+  font-family: "Roboto";
+  letter-spacing: 2px;
+  font-size: 22px;
 
 }
 
 .liza-v__control {
   width: 210px;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 31px;
   display: flex;
   /* flex-direction: row; */
   justify-content:flex-start;
@@ -348,15 +518,18 @@ h2 {
 
 .liza-v__item {
   width:16px;
-  margin: 0 24px 0 0;
+  margin: 0 25px 0 0;
   height: 16px;
   background: #fff;
+}
+.liza-v__item:first-child {
+   background: #D2B183;
 }
 
 .liza__arrows {
   width: 90px;
   display: flex;
-  margin: 0 0 0 33px;
+  margin: 0 0 0 30px;
   /* flex-direction: row; */
   justify-content: flex-start;
 }
@@ -374,6 +547,72 @@ h2 {
   background-image: url(assets/svg/←r.svg);
 }
 
+/* ?? MEDIA of Lisa control Welcome section */
+@media (max-width: 1061px) {
+   .liza__control {
+      /* position: absolute; */
+      /* height: 120px; */
+      width: 700px;
+      /* right: 20px; */
+      /* bottom: 0; */
+      /* background: #030303; */
+      /* color: #fff; */
+      /* display: flex; */
+      /* flex-direction: row; */
+      /* justify-content: flex-start; */
+      /* align-items: center; */
+    }
+    
+    .liza-count__control {
+      width: 96px;
+      margin: 0 0 0 224px;
+      font-family: "Roboto";
+      letter-spacing: 2px;
+      font-size: 22px;
+    
+    }
+    
+    .liza-v__control {
+      width: 175px;
+      margin: 0 0 0 20px;
+      display: flex;
+      /* flex-direction: row; */
+      justify-content:flex-start;
+    }
+    
+    .liza-v__item {
+      width:12px;
+      margin: 0 25px 0 0;
+      height: 12px;
+      /* background: #fff; */
+    }
+    .liza-v__item:last-child {
+       margin: 0;
+    }
+    
+    .liza__arrows {
+      width: 90px;
+      display: flex;
+      margin: 0 0 0 30px;
+      /* flex-direction: row; */
+      justify-content: flex-start;
+    }
+    
+    .liza-vl__arrow {
+      width: 30px;
+      height: 8px;
+      background-image: url(assets/svg/←.svg);
+    }
+    
+    .liza-vr__arrow {
+      width: 30px;
+      margin: 0 0 0 18px;
+      height: 8px;
+      background-image: url(assets/svg/←r.svg);
+    }
+    
+}
+
 /* Section Visiting---------------------- */
 
 .section-visiting {
@@ -386,7 +625,15 @@ h2 {
   text-transform: uppercase;
   margin: 75px 0 103px 0;
 }
-/* ?? Cards of Section Visiting ----------------- */
+
+.section-visiting a {
+   display: block;
+   text-transform: initial;
+   /* width: 424px; */
+   height: 440px;
+   text-transform: uppercase;
+ }
+/*  Cards of Section Visiting ----------------- */
 
 /* .visiting-card {
 
@@ -401,13 +648,9 @@ h2 {
   row-gap: 59px;
 }
 
-.section-visiting a {
-  display: block;
-  text-transform: initial;
-  /* width: 424px; */
-  height: 440px;
-  text-transform: uppercase;
-}
+.visiting-card__item:hover .underline-title__h3::after {
+   width: 100%;
+ }
 
 .visiting-card__item {
   text-decoration: none;
@@ -460,7 +703,109 @@ h2 {
   text-align: left;
   text-transform: initial;
 }
+/* ?? MEDIA of section Video */
+@media (max-width: 1061px) {
+   .section-visiting {
+      /* border: 1px solid red;  */
+      min-height: 1189px;
+    }
+    
+    .section-visiting h2 {
+      margin: 60px 0 83px 0;
 
+      /* font-family: Forum; */
+      font-size: 50px;
+      /* font-style: normal; */
+      font-weight: 400;
+      line-height: 75px;
+      /* letter-spacing: 5px; */
+      /* text-align: left; */
+
+    }
+    .section-visiting .underline-title::after {
+      content: "";
+      position: absolute;
+      bottom: -24.6px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: #710707;
+    }
+    
+    .section-visiting a {
+       display: block;
+       text-transform: initial;
+       /* width: 424px; */
+       height: 440px;
+       text-transform: uppercase;
+     }
+    
+    /*  .visiting-card {
+    
+    } */
+    .visiting-cards {
+      display: flex;
+      /* flex-direction: row; */
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1440px;
+      flex-wrap: wrap;
+      row-gap: 59px;
+    }
+
+    .visiting-card__item {
+      text-decoration: none;
+      color: #000000;
+    }
+    
+    .underline-title__h3 {
+      margin: 25px 0 22px 0;
+      font-family: Forum;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px;
+      letter-spacing: 5px;
+      text-align: left;
+      text-decoration: none;
+      position: relative;
+    }
+    
+    .underline-title__h3::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 300px;
+      background-color: #710707;
+    }
+    
+    .visiting-card__item h4 {
+      font-family: Roboto;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 0 0 10px 0;
+      text-transform: initial;
+    }
+    
+    .visiting-card__item p {
+      font-family: Roboto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-transform: initial;
+    }
+}
+/* ?? End of MEDIA of section Video */
 /* Section Explore-------------- */
 .section-explorer {
    /* position: relative; */
@@ -596,6 +941,8 @@ h2 {
 /* Gallery Section ----------------*/
 
 .section-gallery {
+   /* display: flex; */
+   padding: 75px 0 0 ;
    margin: 0 0 0 0;
    background-color: #030303;
    /* border: 1px solid red; */
@@ -604,11 +951,13 @@ h2 {
 
  .container-gallery {
    padding: 75px 0 0 0; 
-   height: 2199px;
+   height: 2200px;
    box-sizing: border-box;
    /* border: 1px solid red; */
  }
  .gallery-pictures {
+   /* display: flex; */
+   position: relative;
    margin: 75px 0 0 0;
    display: flex;
    /* border: 1px solid red; */
@@ -616,9 +965,11 @@ h2 {
    justify-content: space-between;
    align-items: flex-start;
    column-gap: 36px;
-   z-index: 50;
-   background-position: calc(100% - 20px) calc(100% - 10px);
-   /* background: linear-gradient(180deg, rgba(0, 0, 0, 0) 1%, #000000 100%,); */
+   /* z-index: 50; */
+   /* background-position: calc(100% - 20px) calc(100% - 10px); */
+   /* background: linear-gradient(180deg, #000 10%, #030303 20%, #ccc 50%); */
+   /* background: linear-gradient(0deg, #000000, #ffffff); */
+   /* z-index: 5; */
  }
 
  .gallery-pictures__row1 {
@@ -648,6 +999,20 @@ h2 {
    row-gap: 24px;
  }
 
+ .shadow {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 360px;
+   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+   /* background: linear-gradient(0deg, #000000, #ffffff); */
+   z-index: 5;
+
+
+   
+ }  
+ 
  /* Tickets Section ------------------ */
 .section-tickets {
   /* height: 1293px; */
