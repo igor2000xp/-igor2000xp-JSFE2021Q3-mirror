@@ -48,6 +48,12 @@ scroll-behavior: smooth;
 img {
   vertical-align: top;
 }
+:root {
+   --content-width: 1440px;
+   --main-h-padding: 20px;
+   --v-card-width: 440px;
+
+}
 
 h1,
 h2,
@@ -283,7 +289,7 @@ h2 {
 }
 
 .container {
-   max-width: 1440px;
+   max-width: var(--content-width);
    margin: 0 auto;
    padding: 0 20px;
    box-sizing: content-box;
@@ -327,10 +333,13 @@ h2 {
 @media (max-width: 1061px) {
 
    .container {
-      max-width: 1024px;
+      max-width: var(--content-width);
       margin: 0 auto;
       padding: 0 20px;
       box-sizing: content-box;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
 }
@@ -612,7 +621,7 @@ h2 {
     }
     
 }
-
+/* ?? End of MEDIA of Lisa control Welcome section */
 /* Section Visiting---------------------- */
 
 .section-visiting {
@@ -630,7 +639,7 @@ h2 {
    display: block;
    text-transform: initial;
    /* width: 424px; */
-   height: 440px;
+   /* height: 440px; */
    text-transform: uppercase;
  }
 /*  Cards of Section Visiting ----------------- */
@@ -643,7 +652,7 @@ h2 {
   /* flex-direction: row; */
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
+  max-width: var(--content-width);
   flex-wrap: wrap;
   row-gap: 59px;
 }
@@ -657,17 +666,21 @@ h2 {
   color: #000000;
 }
 
+.visiting-card__item img {
+   width: var(--v-card-width);
+}
+
 .underline-title__h3 {
-  margin: 25px 0 22px 0;
-  font-family: Forum;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 35px;
-  letter-spacing: 5px;
-  text-align: left;
-  text-decoration: none;
-  position: relative;
+   margin: 27px 0 22px 0;
+   font-family: Forum;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 35px;
+   letter-spacing: 5px;
+   text-align: left;
+   text-decoration: none;
+   position: relative;
 }
 
 .underline-title__h3::after {
@@ -703,16 +716,26 @@ h2 {
   text-align: left;
   text-transform: initial;
 }
-/* ?? MEDIA of section Video */
+/* ! MEDIA of section  - Visiting Cards*/
 @media (max-width: 1061px) {
+   :root {
+      --content-width: 1024px;
+      --v-card-width: 330px;
+      --main-h-padding: 20px;
+   }
+   
+
+   
+   
+   
    .section-visiting {
       /* border: 1px solid red;  */
-      min-height: 1189px;
+      min-height: 1433px;
     }
     
     .section-visiting h2 {
-      margin: 60px 0 83px 0;
-
+      margin: 60px 0 84px 0;
+      width: 100%;
       /* font-family: Forum; */
       font-size: 50px;
       /* font-style: normal; */
@@ -725,7 +748,7 @@ h2 {
     .section-visiting .underline-title::after {
       content: "";
       position: absolute;
-      bottom: -24.6px;
+      bottom: -23.6px;
       left: 0;
       right: 0;
       height: 3px;
@@ -736,7 +759,7 @@ h2 {
        display: block;
        text-transform: initial;
        /* width: 424px; */
-       height: 440px;
+       /* height: 440px; */
        text-transform: uppercase;
      }
     
@@ -748,10 +771,24 @@ h2 {
       /* flex-direction: row; */
       justify-content: space-between;
       align-items: center;
-      max-width: 1440px;
+      width: calc(var(--content-width) - 216px);
+      min-height: 1156px;
+      padding: 0 20px;
       flex-wrap: wrap;
       row-gap: 59px;
     }
+    .visiting-card__item img {
+      width: calc(0.4*var(--content-width) - 80px);
+      /* width: 330px; */
+      /* display: flex; */
+      /* flex-direction: row; */
+      /* justify-content: space-between; */
+      /* align-items: center; */
+      /* max-width: 1024px; */
+      /* padding: 0 20px; */
+      /* flex-wrap: wrap; */
+      /* row-gap: 59px; */
+    }  
 
     .visiting-card__item {
       text-decoration: none;
@@ -759,16 +796,13 @@ h2 {
     }
     
     .underline-title__h3 {
-      margin: 25px 0 22px 0;
-      font-family: Forum;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 35px;
-      letter-spacing: 5px;
-      text-align: left;
-      text-decoration: none;
-      position: relative;
+      margin: 28px 0 23px 0;
+      /* font-family: Forum; */
+      font-size: 28px;
+      /* font-style: normal; */
+      font-weight: 200;
+      line-height: 31px;
+      letter-spacing: 3px;
     }
     
     .underline-title__h3::after {
@@ -778,34 +812,43 @@ h2 {
       left: 0;
       right: 0;
       height: 2px;
-      width: 300px;
+      width: 150px;
       background-color: #710707;
     }
     
     .visiting-card__item h4 {
-      font-family: Roboto;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: 200;
-      line-height: 26px;
-      letter-spacing: 0em;
-      text-align: left;
+      /* font-family: Roboto; */
+      font-size: 20px;
+      /* font-style: normal; */
+      /* font-weight: 200; */
+      line-height: 23px;
+      /* letter-spacing: 0em; */
+      /* text-align: left; */
       margin: 0 0 10px 0;
-      text-transform: initial;
     }
     
     .visiting-card__item p {
+      /* font-family: Roboto; */
+      font-size: 16px;
+      /* font-style: normal; */
+      /* font-weight: 200; */
+      line-height: 19px;
+      /* letter-spacing: 0em; */
+      /* text-align: left; */
+      /* text-transform: initial; */
+
       font-family: Roboto;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 200;
-      line-height: 21px;
-      letter-spacing: 0em;
-      text-align: left;
-      text-transform: initial;
+font-size: 16px;
+font-style: normal;
+font-weight: 200;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+
     }
 }
-/* ?? End of MEDIA of section Video */
+/* ! End of MEDIA of section Visiting */
 /* Section Explore-------------- */
 .section-explorer {
    /* position: relative; */
