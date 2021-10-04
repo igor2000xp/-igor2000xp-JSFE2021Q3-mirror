@@ -1,3 +1,29 @@
+/* burger menu script */
+
+const iconMenu = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.menu-list');
+const welList = document.querySelector('.welcome__article');
+const navLink = document.querySelectorAll('.menu-list__link');
+
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+iconMenu.addEventListener("click", showMenu);
+
+function showMenu() {
+   document.body.classList.toggle("_lock")
+   iconMenu.classList.toggle("active");
+   navMenu.classList.toggle("active");
+   welList.classList.toggle("passive");
+}
+
+function closeMenu() {
+   document.body.classList.remove("_lock")
+   iconMenu.classList.remove("active");
+   navMenu.classList.remove("active");
+   welList.classList.remove("passive");
+}
+
+
 /* form scripts */
 
 let buttonBuy = document.querySelectorAll('.button-buy'),
