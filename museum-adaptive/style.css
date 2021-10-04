@@ -1040,6 +1040,8 @@ h2 {
 
 .video-container {
    height: 1396px;
+   max-width: var(--content-width);
+   margin: 0 auto;
 }
 .video-header-container {
    padding: 0;
