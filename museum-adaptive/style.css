@@ -1194,9 +1194,7 @@ h2 {
       margin: 40px 0 0 0;
     }
 
-    .video-gallery__img {
-      width: calc(0.29 * var(--content-width) + 3px);
-    }
+
 }
 
 /* ?? End of MEDIA Video Section ----------------*/
@@ -1204,16 +1202,19 @@ h2 {
 
 .section-gallery {
    /* display: flex; */
-   padding: 75px 0 0 ;
-   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   margin: 75px 0 0 0;
    background-color: #030303;
-   /* border: 1px solid red; */
+   min-height: 2200px;
+   border: 1px solid red;
    color: #fff;
  }
 
  .container-gallery {
    padding: 75px 0 0 0; 
-   height: 2200px;
+   margin: 0 auto;
+   width: var(--content-width);
+   min-height: 1440px;
    box-sizing: border-box;
    /* border: 1px solid red; */
  }
@@ -1234,6 +1235,16 @@ h2 {
    /* z-index: 5; */
  }
 
+ .pic-gallery {
+  width:456px"
+}
+.bottom-pic {
+  width: 456px; 
+  object-fit: cover; 
+  height: 242px; 
+  object-position: center top; 
+  order: 16;
+}
  .gallery-pictures__row1 {
   margin: 50px 0 0 0;
   display: flex;
@@ -1270,11 +1281,120 @@ h2 {
    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
    /* background: linear-gradient(0deg, #000000, #ffffff); */
    z-index: 5;
-
-
-   
  }  
  
+ /* ! MEDIA Gallery Section ----------------*/
+@media (max-width: 1061px) {
+
+.section-gallery {
+  /* display: flex; */
+  padding: 60px 20px 0 20px;
+  margin: 0 0 0 0 auto;
+  background-color: #030303;
+  max-height: 1460px;
+  /* border: 1px solid red; */
+  color: #fff;
+}
+
+.container-gallery {
+  padding: 0 0 0 0; 
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--content-width);
+  /* height: 1440px; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.h2-left {
+  font-family: Forum;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 75px;
+  letter-spacing: 5px;
+  text-align: left;
+
+}
+
+
+.gallery-pictures {
+  /* display: flex; */
+  position: relative;
+  margin: 60px 0 0 0;
+  display: flex;
+  /* border: 1px solid red; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 36px;
+  /* z-index: 50; */
+  /* background-position: calc(100% - 20px) calc(100% - 10px); */
+  /* background: linear-gradient(180deg, #000 10%, #030303 20%, #ccc 50%); */
+  /* background: linear-gradient(0deg, #000000, #ffffff); */
+  /* z-index: 5; */
+}
+.pic-gallery__img {
+  width: calc(0.29 * var(--content-width) + 8px);
+  height: calc(0.3 * var(--content-width) + 8px);;
+}
+.bottom-pic {
+  width: calc(0.29 * var(--content-width) + 8px);
+  object-fit: cover; 
+  height: calc(0.08 * var(--content-width) + 6px);
+  object-position: center top; 
+  order: 16;
+}
+
+.video-gallery__img {
+  width: calc(0.29 * var(--content-width) + 3px);
+}
+.gallery-pictures__row1 {
+ margin: 50px 0 0 0;
+ display: flex;
+ row-gap: 24px;
+ flex-direction: column;
+ /* justify-content: space-between; */
+ align-items: flex-start;
+}
+
+.gallery-pictures__row2 {
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  row-gap: 24px;
+}
+
+.gallery-pictures__row3 {
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  row-gap: 24px;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 360px;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  /* background: linear-gradient(0deg, #000000, #ffffff); */
+  z-index: 5; 
+}  
+
+}
+/* ! End of MEDIA Gallery Section ----------------*/
+
+
+
  /* Tickets Section ------------------ */
 .section-tickets {
   /* height: 1293px; */
