@@ -1333,9 +1333,10 @@ h2 {
 .gallery-pictures {
   /* display: flex; */
   position: relative;
-  margin: 0 0 0 0;
+  margin: 0;
   display: flex;
   min-height: 1200px;
+  width: 100%;
   /* border: 1px solid red; */
   /* flex-direction: row; */
   justify-content: space-between;
@@ -1348,7 +1349,7 @@ h2 {
   /* z-index: 5; */
 }
 .pic-gallery__img {
-  width: calc(0.29 * var(--content-width) + 8px);
+  width: calc(0.29 * var(--content-width) + 1px);
   height: calc(0.3 * var(--content-width) + 5px);;
 }
 .bottom-pic {
