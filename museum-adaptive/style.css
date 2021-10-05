@@ -1122,7 +1122,8 @@ h2 {
     }
 
     .video-container {
-      height: 1396px;
+      height: 1000px;
+      /* border: 1px solid red; */
     }
     .video-header-container {
       padding: 0;
@@ -1135,6 +1136,7 @@ h2 {
     }
 
     .video-header {
+      margin: 20px 0 0 0;
       color: #9D8665;
       width: 100%;
       display: flex;
@@ -1163,13 +1165,14 @@ h2 {
 
     .video-frame__img {
       width: 100%; 
-      height: 100%
+      height: 100%;
+
     }
 
     .video-footer {
       position: relative;
       background: #030303;
-      height: 60px;
+      height: 0;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -1183,6 +1186,10 @@ h2 {
       align-items: center;
       padding: 0;
       margin: 40px 0 0 0;
+    }
+
+    .video-gallery__img {
+      width: calc(0.29 * var(--content-width) + 3px);
     }
 
     .nav-video__items {
@@ -1289,9 +1296,10 @@ h2 {
 .section-gallery {
   /* display: flex; */
   padding: 60px 20px 0 20px;
-  margin: 0 0 0 0 auto;
+  margin: 0 auto;
   background-color: #030303;
-  max-height: 1460px;
+  min-height: 1400px;
+  /* max-height: 1460px; */
   /* border: 1px solid red; */
   color: #fff;
 }
@@ -1300,8 +1308,9 @@ h2 {
   padding: 0 0 0 0; 
   margin: 0 auto;
   width: 100%;
+  height: 100%;
   max-width: var(--content-width);
-  /* height: 1440px; */
+  min-height: 1400px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1324,8 +1333,9 @@ h2 {
 .gallery-pictures {
   /* display: flex; */
   position: relative;
-  margin: 60px 0 0 0;
+  margin: 0 0 0 0;
   display: flex;
+  min-height: 1200px;
   /* border: 1px solid red; */
   /* flex-direction: row; */
   justify-content: space-between;
@@ -1339,19 +1349,16 @@ h2 {
 }
 .pic-gallery__img {
   width: calc(0.29 * var(--content-width) + 8px);
-  height: calc(0.3 * var(--content-width) + 8px);;
+  height: calc(0.3 * var(--content-width) + 5px);;
 }
 .bottom-pic {
   width: calc(0.29 * var(--content-width) + 8px);
   object-fit: cover; 
-  height: calc(0.08 * var(--content-width) + 6px);
+  height: calc(0.19 * var(--content-width) + 9px);
   object-position: center top; 
   order: 16;
 }
 
-.video-gallery__img {
-  width: calc(0.29 * var(--content-width) + 3px);
-}
 .gallery-pictures__row1 {
  margin: 50px 0 0 0;
  display: flex;
