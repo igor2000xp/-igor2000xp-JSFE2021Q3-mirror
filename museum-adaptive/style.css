@@ -1045,7 +1045,7 @@ h2 {
 }
 .video-header-container {
    padding: 0;
-   max-width: 1440px;
+   max-width: var(--content-width);
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -1069,7 +1069,7 @@ h2 {
 
 .video-frame {
    margin: 75px 0 0 0;
-   max-width: 1440px;
+   max-width: var(--content-width);
    max-height: 650px;
    text-align: center;
 }
@@ -1213,7 +1213,7 @@ h2 {
    margin: 75px 0 0 0;
    background-color: #030303;
    min-height: 2200px;
-   border: 1px solid red;
+   /* border: 1px solid red; */
    color: #fff;
  }
 
@@ -1221,7 +1221,7 @@ h2 {
    padding: 75px 0 0 0; 
    margin: 0 auto;
    width: var(--content-width);
-   min-height: 1440px;
+   min-height: var(--content-width);
    box-sizing: border-box;
    /* border: 1px solid red; */
  }
@@ -1290,7 +1290,7 @@ h2 {
    z-index: 5;
  }  
  
- /* ! MEDIA Gallery Section ----------------*/
+ /* ?? MEDIA Gallery Section ----------------*/
 @media (max-width: 1061px) {
 
 .section-gallery {
@@ -1353,7 +1353,7 @@ h2 {
   height: calc(0.3 * var(--content-width) + 5px);;
 }
 .bottom-pic {
-  width: calc(0.29 * var(--content-width) + 8px);
+  /* width: calc(0.29 * var(--content-width) + 1spx); */
   object-fit: cover; 
   height: calc(0.19 * var(--content-width) + 9px);
   object-position: center top; 
@@ -1399,7 +1399,7 @@ h2 {
 }  
 
 }
-/* ! End of MEDIA Gallery Section ----------------*/
+/* ?? End of MEDIA Gallery Section ----------------*/
 
 
 
@@ -1410,9 +1410,12 @@ h2 {
 }
 
 .section-tickets__container {
-  /* display: flex; */
-  /* border: red 1px solid; */
+  margin: 0 auto;
+  max-width: var(--content-width);
+  box-sizing: content-box;
+  padding: 0 20px 0 20px;
 }
+
 .section-tickets__container-h2 {
   color: #9D8665;
   position: relative;
@@ -1437,8 +1440,15 @@ h2 {
   /* align-items: center; */
 }
 
+.ticket-form__total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
 .section-tickets__form-left {
-  margin: 0 0 0 50px;
+  margin: 0 0 0 58px;
   width: 270px;
 }
 
@@ -1453,9 +1463,6 @@ h2 {
   margin: 0 0 50px 0;
 }
 
-.section-tickets__container {
-  margin: 0 auto;
-}
 .section-tickets__form-right h3 {
   box-sizing: content-box;
   margin: 0 0 26px 0;
@@ -1471,7 +1478,7 @@ h2 {
 
 .section-tickets__form-right {
   box-sizing: content-box;
-  margin: 0 0 0 230px;
+  margin: 0 0 0 1px;
   width: 150px;
   font-family: Roboto;
   font-size: 28px;
@@ -1485,24 +1492,35 @@ h2 {
 .section-tickets__form-right h5 {
   /* margin: 25px 0 0 0; */
 }
+.total-220 {
+  width: 120px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
  
  .section-tickets__container h4 {
-  margin: 50px 0 0 0;
+  margin: 39px 0 0 0;
   font-family: Roboto;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 33px;
-  letter-spacing: 1.649999976158142px;
+  letter-spacing: 1.65px;
   text-align: left;
   text-align: right;
  }
+
+ .h4-right {
+  margin: 4.5px;
+}
  
 /* ?? Ticket's form ------------- */
 .ticket-form__container {
   display: block;
   position: relative;
-  padding-left: 37px;
+  padding-left: 42px;
   margin-bottom: 26px;
   cursor: pointer;
   font-size: 22px;
@@ -1512,6 +1530,7 @@ h2 {
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
+  width: 260px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1528,7 +1547,7 @@ h2 {
 /* Create a custom radio button */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
   height: 17px;
   width: 17px;
@@ -1582,7 +1601,7 @@ h2 {
   text-align: center;
   line-height: 50px;
 }
-.forms-number__label-left {
+.right-ticket__form {
   font-family: Roboto;
   font-size: 22px;
   font-style: normal;
@@ -1592,7 +1611,7 @@ h2 {
   text-align: left;
 }
 
-.forms-number__label-left button {
+.right-ticket__form button {
   font-family: Roboto;
   font-size: 22px;
   font-style: normal;
@@ -1660,6 +1679,301 @@ h2 {
   line-height: 50px;
   }
 
+
+/* ! MEDIA Tickets ------------------------------ */
+
+@media (max-width: 1061px) {
+    /* Tickets Section ------------------ */
+  .section-tickets {
+    max-height: 640px;
+    /* border: red 1px solid; */
+  }
+
+  .section-tickets__container {
+    max-width: var(--content-width);
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+  }
+  .section-tickets__container-h2 {
+    color: #9D8665;
+    position: relative;
+    margin: 60px 0 0 0;
+    font-family: Forum;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 75px;
+    letter-spacing: 5px;
+    text-align: left;
+    width: 100%;
+  }
+  .section-tickets__container-h2::after {
+    content: "";
+    position: absolute;
+    bottom: -23px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #710707;
+  } 
+    .tickets-header {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .ticket-picture img {
+      width: 700px;
+      height: 440px;
+      object-fit: none;
+    }
+  .section-tickets__form {
+    position: relative;
+    margin: 83px 0 0 0;
+    /* height: 550px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align-items: center; */
+  }
+
+  .section-tickets__form-left {
+    display: none;
+    margin: 0 0 0 50px;
+    width: 270px;
+  }
+
+  .section-tickets__form-left h3 {
+    text-align: left;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0em;
+    margin: 0 0 50px 0;
+  }
+
+  .section-tickets__form-right h3 {
+    box-sizing: content-box;
+    margin: 0 0 30px 0;
+    width: 150px;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .section-tickets__form-right {
+    box-sizing: content-box;
+    margin: 0 0 0 80px;
+    width: 210px;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+
+
+    .right-ticket__form {
+        /* margin: 25px 0 0 0; */
+    }
+
+
+  
+  .section-tickets__container h4 {
+    margin: -5px 0 0 0;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 1.65px;
+    text-align: left;
+    /* text-align: right; */
+  }
+.total-220 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+  .h4-right {
+    margin: 5px;
+  }
+}
+
+/* !! MEDIA !! FORM Tickets ---------------*/
+  
+  @media (max-width: 1061px) {
+  /* ?? Ticket's form ------------- */
+  .ticket-form__container {
+    display: block;
+    position: relative;
+    padding-left: 37px;
+    margin-bottom: 26px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .ticket-form__container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .ticket-form__container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .ticket-form__container input:checked ~ .checkmark {
+    background-color: #fff;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .ticket-form__container input:checked ~ .checkmark:after {
+    display: block;
+
+  }
+
+  /* Style the indicator (dot/circle) */
+  .ticket-form__container .checkmark:after {
+    top: 3.5px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+  }
+  /* Number  */
+  .forms-number__left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0 10px 0;
+    border: 1px solid black;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+  .forms-number__label-left {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .right-ticket__form button {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: #fff;
+  }
+
+  .forms-number {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 9px 0 30px 0;
+    border: 3px solid black;
+    width: 175px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+  .forms-number__label-right {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .forms-number__label-right button {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: #fff;
+  }
+  .raz {
+    all: unset;
+    -moz-appearance: textfield;
+    width: 2em;
+    text-align: center;
+  }
+  .raz::-webkit-inner-spin-button { 
+    display: none;
+  }
+
+  .button-buy  {
+    position: absolute;
+    right: 29px;
+    bottom: 111px;
+    width: 175px;
+    height: 50px;
+    /* border: 1px solid red; */
+    text-align: center;
+    background: #000;
+    }
+    .button-buy  p {
+    color: #fff;
+    z-index: 100;
+    line-height: 50px;
+    }
+}
+/* ! End of MEDIA Tickets ------------------------------ */
 /* Parallax --------------------- */
 
 /* .section-tickets__parrallax {
@@ -1673,60 +1987,60 @@ h2 {
    background-size: cover;
    background-attachment: fixed;
  }
- 
 
-/* ! Section Contacts ------------------ */
+
+/*   Section Contakts ----------------------- */
 #Contacts {
-   margin: 75px 0 0 0;
+  margin: 75px 0 0 0;
 }
 
 .contacts-section {
-  height: 888px;
-  /* margin: 75px 0 0 0; */
-  /* border: red 1px solid; */
+ height: 888px;
+ /* margin: 75px 0 0 0; */
+ /* border: red 1px solid; */
 }
 
 .contacts-section__h2 {
-  color: #9D8665;
-  position: relative;
-  /* margin: 75px 0 0 0; */
+ color: #9D8665;
+ position: relative;
+ /* margin: 75px 0 0 0; */
 }
 
 .contacts-section__h2::after {
-  content: "";
-  position: absolute;
-  bottom: -27px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #710707;
+ content: "";
+ position: absolute;
+ bottom: -27px;
+ left: 0;
+ right: 0;
+ height: 3px;
+ background-color: #710707;
 } 
 
 
 .contacts-maps {
-  margin: 103px 0 0 0;
-  display: flex;
-  justify-content: space-between;
+ margin: 103px 0 0 0;
+ display: flex;
+ justify-content: space-between;
 }
 
 .contacts-maps__text {
-  width: 282px;
-  height: 244px;
-  font-family: Roboto;
-  font-size: 22px;
-  font-style: normal;
-  letter-spacing: 0em;
-  text-align: left;
+ width: 282px;
+ height: 244px;
+ font-family: Roboto;
+ font-size: 22px;
+ font-style: normal;
+ letter-spacing: 0em;
+ text-align: left;
 }
 .contacts-maps__text h3 {
-  font-family: Roboto;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 33px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin: 0 0 50px 0;
+ font-family: Roboto;
+ font-size: 28px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 33px;
+ letter-spacing: 0em;
+ text-align: left;
+ margin: 0 0 50px 0;
 
 }
 
@@ -1737,12 +2051,133 @@ h2 {
 }
 
 .contacts-maps__text a {
-  color: #000;
+ color: #000;
 }
 
 .contacts-maps_item {
 
 }
+/* ! MEDIA Section Contacts ------------------ */ 
+@media (max-width: 1061px) {
+  #Contacts {
+    margin: 62px 0 0 0;
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+  }
+  
+  .contacts-section {
+   max-width: var(--content-width);
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 0;
+   flex-direction: column;
+   margin: 0 auto;
+   padding: 0 20px;
+   box-sizing: content-box;
+    height: 673px;
+   
+   /* margin: 75px 0 0 0; */
+   /* border: red 1px solid; */
+  }
+  
+  .header-contacts {
+    display: flex;
+    justify-self: flex-start;
+    width: 100%;
+    height: 157px;
+  }
+  .contacts-section__h2 {
+    color: #9D8665;
+    position: relative;
+    width: 100%;
+   /* margin: 75px 0 0 0; */
+
+   /* font-family: Forum; */
+   font-size: 50px;
+   /* font-style: normal; */
+   /* font-weight: 400; */
+   line-height: 74px;
+   /* letter-spacing: 5px; */
+   text-align: left;
+   
+  }
+  
+  .contacts-section__h2::after {
+   content: "";
+   position: absolute;
+   bottom: 60px;
+   left: 0;
+   right: 0;
+   height: 3px;
+   background-color: #710707;
+  } 
+  
+  
+  .contacts-maps {
+   margin: 0 auto;
+   /* padding: 100px 0 0 0; */
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+  }
+  
+  .contacts-maps__text {
+   width: 282px;
+   height: 244px;
+   font-family: Roboto;
+   font-size: 22px;
+   font-style: normal;
+   letter-spacing: 0em;
+   text-align: left;
+  }
+  .contacts-maps__text h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 35px 0;
+  }
+  
+  .contacts-maps__text p {
+   font-weight: 300;
+   font-size: 20px;
+   line-height: 23px;
+   margin: 0 0 16px 0;
+  }
+  
+  .contacts-maps__text a {
+   color: #000;
+  }
+  
+  .contacts-maps_item {
+  
+  }
+
+  .map-image {
+    height: calc((0.44 * var(--content-width)) + 1.5px);
+    width: calc(0.67 * var(--content-width) + 8px);
+    background-image: url(assets/img/map/google_maps1024.jpg) ;
+  }
+
+  .map-image__img {
+    height: calc((0.44 * var(--content-width)) + 1.5px);
+    
+    width: auto;
+    object-fit: none;
+    /* margin-right: 150px; */
+  }
+  .map-image img {
+    display: none;
+  }
+
+  img.map-image {
+    margin-right: -50%;
+  }
+}
+
+/* ! End of MEDIA Section Contacts ------------------ */
+
 
 
 /* ! -----------FOOTER----------- */
@@ -1845,7 +2280,7 @@ width: 117px;
 }
 #ticketsForm form {
     position: fixed;
-    width: 1440px;
+    width: var(--content-width);
     height: 100%;
     top: 0;
     left: 0;
@@ -1872,7 +2307,7 @@ width: 117px;
 .ticket-buy__container{
   display: flex;
   justify-content: space-between;
-  width: 1440px;
+  width: var(--content-width);
   height: 860px;
   background: #fff;
 }
