@@ -1499,6 +1499,21 @@ h2 {
   justify-content: space-between;
 }
 
+.pre-text {
+  margin: 39px 0 0 0;
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 1.65px;
+  text-align: left;
+
+}
+
+.h4-right {
+  margin: 4.5px;
+}
  
  .section-tickets__container h4 {
   margin: 39px 0 0 0;
@@ -1512,9 +1527,7 @@ h2 {
   text-align: right;
  }
 
- .h4-right {
-  margin: 4.5px;
-}
+
  
 /* ?? Ticket's form ------------- */
 .ticket-form__container {
@@ -1803,8 +1816,19 @@ h2 {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+.pre-text {
+  margin: -5px 0 0 0;
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 1.65px;
+  text-align: left;
+
+}
   .h4-right {
-    margin: 5px;
+    margin: 3px;
   }
 }
 
