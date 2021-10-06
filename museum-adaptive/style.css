@@ -52,7 +52,7 @@ img {
    --content-width: 1440px;
    --main-h-padding: 20px;
    --v-card-width: 440px;
-
+   --height-footer: 392px;
 }
 
 h1,
@@ -1693,7 +1693,7 @@ h2 {
   }
 
 
-/* ! MEDIA Tickets ------------------------------ */
+/* ?? MEDIA Tickets ------------------------------ */
 
 @media (max-width: 1061px) {
     /* Tickets Section ------------------ */
@@ -1832,7 +1832,7 @@ h2 {
   }
 }
 
-/* !! MEDIA !! FORM Tickets ---------------*/
+/* ?? MEDIA !! FORM Tickets ---------------*/
   
   @media (max-width: 1061px) {
   /* ?? Ticket's form ------------- */
@@ -1997,7 +1997,7 @@ h2 {
     line-height: 50px;
     }
 }
-/* ! End of MEDIA Tickets ------------------------------ */
+/* ?? End of MEDIA Tickets ------------------------------ */
 /* Parallax --------------------- */
 
 /* .section-tickets__parrallax {
@@ -2013,7 +2013,7 @@ h2 {
  }
 
 
-/*   Section Contakts ----------------------- */
+/*   Section Contacts ----------------------- */
 #Contacts {
   margin: 75px 0 0 0;
 }
@@ -2081,7 +2081,7 @@ h2 {
 .contacts-maps_item {
 
 }
-/* ! MEDIA Section Contacts ------------------ */ 
+/* ?? MEDIA Section Contacts ------------------ */ 
 @media (max-width: 1061px) {
   #Contacts {
     margin: 62px 0 0 0;
@@ -2200,13 +2200,18 @@ h2 {
   }
 }
 
-/* ! End of MEDIA Section Contacts ------------------ */
+/* ?? End of MEDIA Section Contacts ------------------ */
 
 
 
 /* ! -----------FOOTER----------- */
+/* ::HEIGHT_FOOTER {
+
+} */
+
+
 .footer {
-  height: 392px;
+  height: calc(var(--height-footer));
   color: #fff;
   font-size: 25px;
   font-weight: 500;
@@ -2215,7 +2220,8 @@ h2 {
 } 
 
 .border-footer {
-  height: 265px;
+  /* height: 265px; */
+  min-height: calc(0.67 * var(--height-footer));
   margin: 0;
   border: 3px solid #666666;
   border-top-style: none;
@@ -2227,15 +2233,19 @@ h2 {
 .footer-container__top {
   position: relative;
   /* margin: 0 auto; */
-  padding: 83px 0 0 0;
-  height: 191px;
+  padding: 67px 0 0 0;
+  /* height: 191px; */
   display: flex;
   justify-items: flex-start;
   align-items: flex-start;
 }
 
 .menu-footer__left {
-  /* margin: 0 0 25px 0; */
+  margin: 16px 0 0 0;
+
+}
+.menu-footer__left2 {
+  margin: 16px 0 0 0;
 
 }
 
@@ -2258,7 +2268,7 @@ width: 117px;
 
 .footer__social-media {
   position: absolute;
-  bottom: 67px;
+  bottom: 29px;
   right: 0;
 }
 
@@ -2267,10 +2277,12 @@ width: 117px;
 }
 
 .footer-container__down {
-  width: 1920px;
+  max-width: var(--content-width);
   height: 110px;
-  margin: 0 auto;
-  padding: 0;
+  /* height: 100%; */
+  /* margin: 0 auto; */
+  margin-top: auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2288,6 +2300,133 @@ width: 117px;
   width: 320px;
   margin: 0 0 0 10px;
 }
+.footer-container__down-rss a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ! MEDIA FOOTER -----------------------*/
+
+@media (max-width: 1061px) {
+    .footer {
+      height: 368px;
+      width: 100%;
+      color: #fff;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      font-size: 25px;
+      font-weight: 500;
+      background-color: #030303;
+
+    } 
+
+    .border-footer {
+      min-height: 234px;
+      width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 20px 0 20px;
+      display: flex;
+      justify-content: flex-start;
+      border: 3px solid #666666;
+      border-top-style: none;
+      border-right-style: none;
+      border-bottom-style: solid;
+      border-left-style: none;
+    }
+
+    .footer-container__top {
+      min-height: 100px;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      margin: 0 auto;
+      padding: 47px 0 0 0;
+      /* height: 191px; */
+      /* display: flex; */
+      /* justify-items: flex-start;
+      align-items: flex-start; */
+    }
+
+    .menu-footer__left {
+      margin: 19px 0 0 40px;
+
+    }
+
+    .menu-footer__left2 {
+      margin: 19px 0 0 89px;
+
+    }
+
+    .menu-footer__litems {
+    margin: 0 0 24px 0;
+    /* margin: 0; */
+    width: 117px;
+    }
+
+    .menu-footer__litems a {
+      color: #fff;
+      font-family: Roboto;
+      font-size: 22px;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 26px;
+      letter-spacing: 2px;
+      text-align: left;
+    }
+
+    .footer__social-media {
+      position: absolute;
+      bottom: 50px;
+      right: 0;
+    }
+
+    .footer__social-media img {
+      margin: 0 0 0 19px;
+    }
+
+    .footer-container__down {
+      max-width: var(--content-width);
+      width: 100%;
+      height: 110px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      font-family: Roboto;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 124px;
+      letter-spacing: 2px;
+      text-align: left;
+    }
+
+    .footer-container__down-rss {
+      width: 320px;
+      margin: 0 0 0 10px;
+    }
+    .footer-container__down-rss a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-link a {
+      color: #fff;
+      text-decoration: none;
+    }
+}
+/* ! End of media Footer sections */
+
+
 /* ! Tickets Form2________________ */
 #ticketsForm {
   width: 100%;
