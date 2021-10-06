@@ -250,18 +250,20 @@
           </div>
 
         </section>
-        <section class="section section-tickets" id="Tickets">
-          <div class="container section-tickets__container">
+        <section class="section-tickets" id="Tickets">
+          <div class="section-tickets__container">
 
-
-
-
-            <h2 class="section-tickets__container-h2">BUY TICKETS</h2>
+            <div class="tickets-header">
+              <h2 class="section-tickets__container-h2">BUY TICKETS</h2>
+            </div>
             <div class="section-tickets__form">
-                <div>
+                <div class="ticket-picture">
                   <img src="assets/img/parallax/gallery_tickets.jpg" alt="Picture for Gallery's tickets">
                 </div>
-                  <!-- Radio buttons ___________ -->
+
+
+                  <div class="ticket-form__total">
+                <!-- Radio buttons ___________ -->
                 <div class="section-tickets__form-left">
                   <h3>Ticket Type</h3>
                   <label class="ticket-form__container">Permanent exhibition
@@ -290,7 +292,7 @@
                       </div>
                     </div>
 
-                    <div class="forms-number__label-right">
+                    <div class="right-ticket__form">
                       <h5>Senior 65+</h5>
                       <div class="forms-number">
                         <button type="button" onclick="this.nextElementSibling.stepDown()">&mdash;</button>
@@ -298,10 +300,16 @@
                         <button type="button" onclick="this.previousElementSibling.stepUp()">+</button> 
                       </div>
                   </div>
-                    <h4>Total €220</h4>
-
+                  <div class="total-220">
+                    <h4>Total</h4> <div class="h4-right"></div>
+                    <h4><pre>€ 220</pre></h4>
+                      
+                  </div>
+                    
+                  </div>
+                  </div>
                     <!-- END Number buttons ________________ -->
-                </div>
+
                 <div class="button-buy">
                   <p>Buy Now</p>
                 </div>              
@@ -316,7 +324,9 @@
         <div class="parallax"></div>
         <section class="section" id="Contacts">
           <div class="container contacts-section">
-            <h2 class="contacts-section__h2">Contacts</h2>
+            <div class="header-contacts">
+              <h2 class="contacts-section__h2">Contacts</h2>
+            </div>
             <div class="contacts-maps">
               <div class="contacts-maps__text">
                 <h3>Palais Royal <br>Musee du Louvre</h3>
@@ -328,8 +338,9 @@
                   <a href="mailto:info@louvre.fr">info@louvre.fr</a>
                 </p>
               </div>
-              <div>
-                <img src="assets/img/map/google_maps.jpg" alt="Map of the Museum">
+              <div class="map-image">
+                <img src="assets/img/map/google_maps.jpg" class="map-image__img" alt="Map of the Museum">
+                <!-- <div class="image-1024"></div> -->
               </div>
             </div>
           </div>
