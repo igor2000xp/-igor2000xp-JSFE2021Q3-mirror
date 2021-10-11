@@ -527,6 +527,7 @@ h2 {
 }
 
 .liza-v__control {
+  /* position: relative; */
   width: 210px;
   margin: 0 0 0 31px;
   display: flex;
@@ -540,6 +541,35 @@ h2 {
   height: 16px;
   background: #fff;
 }
+.swiper-pagination-bullet {
+  width:16px;
+  margin: 0 25px 0 0;
+  height: 16px;
+  background: #fff;
+  border-radius: 0;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+ .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom, 
+  .swiper-pagination-fraction {
+  bottom: 50px;
+  left: 184px;
+  width: 100%;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+ .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: -3px var(--swiper-pagination-bullet-horizontal-gap,10px);
+  /* background-color: #D2B183; */
+}
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 100%;
+}
+.swiper-pagination-bullet-active {
+  background-color: #D2B183;
+}
+
 .liza-v__item:first-child {
    background: #D2B183;
 }
@@ -576,6 +606,8 @@ h2 {
 .swiper-button-next:after {
   content: '';
 }
+
+/* .swiper-pagination__ */
 
 /* ?? MEDIA of Lisa control Welcome section */
 @media (max-width: 1061px) {
