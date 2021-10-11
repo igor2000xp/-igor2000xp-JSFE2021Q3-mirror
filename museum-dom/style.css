@@ -95,6 +95,7 @@ h2 {
 
 .header__container {
   /* max-width: 1440px; */
+  max-width: var(--content-width);
   min-height: 150px;
   top: 0px;
   margin: 0 auto;
@@ -395,9 +396,16 @@ h2 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) calc(100% - 10px);
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(assets/img/welcome-slider/1.jpg);
-  z-index: 0;
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+  z-index: 20;
 }
+
+.swiper {
+  width: 1000px;
+  height: 750px;
+}
+
+
 
 .welcome__button {
   margin: 75px 0 0 0;
@@ -506,6 +514,7 @@ h2 {
   /* flex-direction: row; */
   justify-content: flex-start;
   align-items: center;
+  z-index: 25;
 }
 
 .liza-count__control {
@@ -546,14 +555,26 @@ h2 {
 .liza-vl__arrow {
   width: 30px;
   height: 8px;
+  left: 442px;
+  top: 78px;
   background-image: url(assets/svg/←.svg);
 }
 
+.swiper-button-prev:after {
+  content: '';
+}
 .liza-vr__arrow {
+/* .swiper-button-next { */
   width: 30px;
   margin: 0 0 0 18px;
   height: 8px;
+  right: 80px;
+  top: 56px;
+  /* left: 0; */
   background-image: url(assets/svg/←r.svg);
+}
+.swiper-button-next:after {
+  content: '';
 }
 
 /* ?? MEDIA of Lisa control Welcome section */
