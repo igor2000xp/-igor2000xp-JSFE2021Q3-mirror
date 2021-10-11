@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Forum:regular&display=swap" rel="stylesheet" />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico">
   <title>museum</title>
@@ -86,6 +90,50 @@
               </a>
             </div>
             <div class="welcome__liza-bg">
+              <div class="swiper-wrapper">
+                <!-- Slider-swiper  -->
+                <div class="swiper">
+                   <div class="swiper-wrapper">
+          
+                      <div class="swiper-slide">
+                         <div class="image-slider__image">
+                            <img src="assets/img/welcome-slider/1.jpg" alt="Louvre images">
+                         </div>
+                      </div>
+                      <div class="image-slider__slide swiper-slide">
+                         <div class="image-slider__image">
+                            <img src="assets/img/welcome-slider/2.jpg" alt="Louvre images">
+                         </div>
+                      </div>
+                      <div class="image-slider__slide swiper-slide">
+                         <div class="image-slider__image">
+                            <img src="assets/img/welcome-slider/3.jpg" alt="Louvre images">
+                         </div>
+                      </div>
+                      <div class="image-slider__slide swiper-slide">
+                         <div class="image-slider__image">
+                            <img src="assets/img/welcome-slider/4.jpg" alt="Louvre images">
+                         </div>
+                      </div>
+                      <div class="image-slider__slide swiper-slide">
+                         <div class="image-slider__image">
+                            <img src="assets/img/welcome-slider/5.jpg" alt="Louvre images">
+                         </div>
+                      </div>
+          
+                   </div>
+                </div>
+             </div>
+             <!-- If we need pagination -->
+             <div class="swiper-pagination"></div>
+          
+             <!-- If we need navigation buttons -->
+             <div class="swiper-button-prev"></div>
+             <div class="swiper-button-next"></div>
+          
+             <!-- If we need scrollbar -->
+             <!-- <div class="swiper-scrollbar"></div> -->
+           
             </div>
             <div class="liza__control">
               <div class="liza-count__control">
@@ -99,8 +147,8 @@
                 <div class="liza-v__item"></div>
               </div>
               <div class="liza__arrows">
-                 <div class="liza-vl__arrow"></div>
-                 <div class="liza-vr__arrow"></div>
+                 <div class="liza-vl__arrow swiper-button-prev"></div>
+                 <div class="liza-vr__arrow swiper-button-next"></div>
               </div>
             </div>
           </div>
@@ -473,7 +521,9 @@
 
 
    </div>
-    <script src="js/index.js"></script>
+    <script src="dist/main.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
