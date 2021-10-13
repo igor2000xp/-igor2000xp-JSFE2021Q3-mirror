@@ -13,6 +13,8 @@
   />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <link rel="icon" href="assets/favicon.ico">
   <title>museum</title>
 </head>
@@ -92,8 +94,9 @@
             </div>
             <div class="welcome__liza-bg">
               <div class="swiper-wrapper">
-                <!-- Slider-swiper  -->
-                <div class="swiper">
+
+                <!--  Slider-swiper Images -->
+                <div class="swiper swiper-image">
                    <div class="swiper-wrapper">
           
                       <div class="swiper-slide">
@@ -101,7 +104,7 @@
                             <img src="assets/img/welcome-slider/1.jpg" alt="Louvre images">
                          </div>
                       </div>
-                      <div class="image-slider__slide swiper-slide">
+                      <div class="swiper-slide image-slider__slide">
                          <div class="image-slider__image">
                             <img src="assets/img/welcome-slider/2.jpg" alt="Louvre images">
                          </div>
@@ -125,37 +128,24 @@
                    </div>
                 </div>
              </div>
-             <!-- If we need pagination -->
-             <!-- <div class="swiper-pagination"></div> -->
-          
-             <!-- If we need navigation buttons -->
-             <div class="swiper-button-prev"></div>
-             <div class="swiper-button-next"></div>
-          
-             <!-- If we need scrollbar -->
-             <!-- <div class="swiper-scrollbar"></div> -->
+
            
             </div>
             <div class="liza__control">
               <div class="liza-count__control">
                <pre>01|05</pre> 
               </div>
-              <div class="swiper-pagination liza-v__control">
+              <div class="swiper-pagination__image liza-v__control">
                 <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
                 <span class="swiper-pagination-bullet liza-v__item" tabindex="0" role="button" aria-label="Go to slide 2"></span>
                 <span class="swiper-pagination-bullet liza-v__item" tabindex="0" role="button" aria-label="Go to slide 3"></span>
                 <span class="swiper-pagination-bullet liza-v__item" tabindex="0" role="button" aria-label="Go to slide 4"></span>
                 <span class="swiper-pagination-bullet liza-v__item" tabindex="0" role="button" aria-label="Go to slide 5"></span>
 
-                <!-- <div class="swiper-pagination-bullet liza-v__item"></div>
-                <div class="swiper-pagination-bullet liza-v__item"></div>
-                <div class="liza-v__item"></div>
-                <div class="liza-v__item"></div>
-                <div class="liza-v__item"></div> -->
               </div>
               <div class="liza__arrows">
-                 <div class="liza-vl__arrow swiper-button-prev"></div>
-                 <div class="liza-vr__arrow swiper-button-next"></div>
+                 <div class="liza-vl__arrow swiper-image-prev"></div>
+                 <div class="liza-vr__arrow swiper-image-next"></div>
               </div>
             </div>
           </div>
@@ -260,17 +250,82 @@
                </div>
             </div>
             <div class="video-frame">
-               <img src="assets/video/rectangle0.jpg" alt="Video" class="video-frame__img">
+              <iframe width="1440" height="730" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <!-- <img src="assets/video/rectangle0.jpg" alt="Video" class="video-frame__img"> -->
             </div>
             <div class="video-footer">
+
             </div>
             <div class="container-video__items container">
-               <img src="assets/video/poster01.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img">
-               <img src="assets/video/poster02.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img">
-               <img src="assets/video/poster03.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img">
+
+
+                <!-- ! Video swiper -->
+                <!-- <img src="assets/video/poster01.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img">  -->
+
+
+                <div class="swiper swiper-video">
+
+                  <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <iframe width="460" height="255" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <div class="swiper-slide">
+                        <iframe width="460" height="255" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe width="460" height="255" src="https://www.youtube.com/embed/mHfwdCMZRqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- <img src="assets/video/poster1.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img"> -->
+                      </div>
+                      <div class="swiper-slide">
+                        <iframe width="460" height="255" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <img src="assets/video/poster2.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img"> -->
+                        <!-- <iframe width="460" height="255" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                      </div>
+                      <div class="swiper-slide">
+                        <iframe width="460" height="255" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <img src="assets/video/poster3.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img"> -->
+                      </div>
+                      <div class="swiper-slide">
+                        <iframe width="460" height="255" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <img src="assets/video/poster4.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img"> -->
+                      </div>
+                     
+
+
+
+
+                  </div>
+
+
+
+                </div>
+
+                
+                
+                
+                  
+
+
+               
+               <!-- <img src="assets/video/poster02.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img"> -->
+               <!-- <img src="assets/video/poster03.jpg" alt="Exposition - Le Corps et l’Ame. De Dona..." class="video-gallery__img"> -->
             </div>
+
+            
+
             <div class="nav-video__items">
-               <img src="assets/video/video_slider_pagination.png" alt="Exposition - Le Corps et l’Ame. De Dona..." style="width: 200px">
+              <div class="swiper-videobutton-prev  video-swiper">
+                <img src="./assets/svg/stroke-left.svg" alt="stroke-left">
+              </div>
+              
+              <div class="swiper-pagination__video">
+                
+              </div>
+  
+              <div class="swiper-videobutton-next video-swiper">
+                <img src="./assets/svg/stroke-right.svg" alt="stroke-right">
+              </div>
+  
+               <!-- <img src="assets/video/video_slider_pagination.png" alt="Exposition - Le Corps et l’Ame. De Dona..." style="width: 200px"> -->
             </div>
 
 
@@ -536,6 +591,18 @@
     <script src="src/dop-files-js/js/map-script.js"></script>
     <script src="src/dop-files-js/js/index.js"></script>
     <script src="src/dop-files-js/js/script.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $('.multiple-items').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+    </script>
+				
 
 </body>
 
