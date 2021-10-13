@@ -1,9 +1,7 @@
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiaWdvcjIwMDB4cCIsImEiOiJja3Vuem5qaDQwZHRzMnZxcmpmM3oxZTkxIn0.oOzqtXR2nTtSTASmnZqQTQ';
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/light-v10',
-  // center: [2.336, 48.861],
   center: [2.3364, 48.86091],
   zoom: 15.75,
   showZoom: true,
@@ -32,5 +30,4 @@ const marker4 = new mapboxgl.Marker({
 const marker5 = new mapboxgl.Marker({
     color: '#757575',
   })
-  .setLngLat([2.3365, 48.8625])
-  .addTo(map);
+  
