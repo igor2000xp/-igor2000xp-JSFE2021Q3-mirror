@@ -1281,15 +1281,14 @@ h2 {
    /* border: 1px solid red; */
  }
  .gallery-pictures {
-   /* display: flex; */
+   display: flex;
    position: relative;
    margin: 75px 0 0 0;
-   display: flex;
    /* border: 1px solid red; */
-   /* flex-direction: row; */
+   flex-direction: row;
    justify-content: space-between;
    align-items: flex-start;
-   column-gap: 36px;
+   column-gap: 24px;
    /* z-index: 50; */
    /* background-position: calc(100% - 20px) calc(100% - 10px); */
    /* background: linear-gradient(180deg, #000 10%, #030303 20%, #ccc 50%); */
@@ -1301,7 +1300,7 @@ h2 {
   width:456px"
 }
 .bottom-pic {
-  width: 456px; 
+  width: 462px; 
   object-fit: cover; 
   height: 242px; 
   object-position: center top; 
@@ -2136,6 +2135,24 @@ h2 {
 .contacts-maps_item {
 
 }
+
+.map-wrapper {
+  height: 0;
+  max-width: 960px;
+  width: 100%;
+  margin-top: 2px;
+  position: relative;
+  padding: 0 0 42.95% 0;
+}
+
+  #map { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+  }
+
+
 /* ?? MEDIA Section Contacts ------------------ */ 
 @media (max-width: 1061px) {
   #Contacts {
@@ -2233,7 +2250,7 @@ h2 {
   
   }
 
-  .map-image {
+  /* .map-image {
     height: calc((0.44 * var(--content-width)) + 1.5px);
     width: calc(0.67 * var(--content-width) + 8px);
     background-image: url(assets/img/map/google_maps1024.jpg) ;
@@ -2245,16 +2262,16 @@ h2 {
     width: auto;
     object-fit: none;
     /* margin-right: 150px; */
-  }
-  .map-image img {
+  
+  /* .map-image img {
     display: none;
   }
 
   img.map-image {
     margin-right: -50%;
-  }
-}
+  } */
 
+}
 /* ?? End of MEDIA Section Contacts ------------------ */
 
 

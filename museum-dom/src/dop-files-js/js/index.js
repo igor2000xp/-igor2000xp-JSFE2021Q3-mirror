@@ -1,5 +1,6 @@
 /* burger menu script */
 
+
 const iconMenu = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.menu-list');
 const welList = document.querySelector('.welcome__article');
