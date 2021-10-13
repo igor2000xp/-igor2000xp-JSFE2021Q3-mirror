@@ -30,4 +30,4 @@ const marker4 = new mapboxgl.Marker({
 const marker5 = new mapboxgl.Marker({
     color: '#757575',
   })
-
+  
