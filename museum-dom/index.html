@@ -250,10 +250,22 @@
                </div>
             </div>
             <div class="video-frame">
-              <iframe width="1440" height="730" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <video id="main-video" poster="./assets/video/poster0.jpg">
+                <source src="./assets/video/video0.mp4" type="video/mp4">
+              </video>
+              <!-- <video id="main-video" controls="controls" poster="./assets/video/poster0.jpg">
+                <source src="./assets/video/video0.mp4" type="video/mp4">
+              </video> -->
+              
+              <!-- <iframe width="1440" height="730" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                <!-- <img src="assets/video/rectangle0.jpg" alt="Video" class="video-frame__img"> -->
             </div>
             <div class="video-footer">
+              <div><button id="play-stop" class="video-control video-control__button"></button></div>
+              <div><input type="range" id="progress-video" value="0" min="0" max="100" step="1" class="progress main-video__range" ></div> 
+              <div><button id="sound" class="video-control__button video-control__sound"></button></div>
+              <div><input type="range" id="level-sound" value="0" min="0" max="100" step="1" class="progress main-video__sound-range"></div> 
+              <div><button id="full-sreen" class="video-control__button video-control__full-screen"></button></div>
 
             </div>
             <div class="container-video__items container">
