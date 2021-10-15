@@ -1,5 +1,6 @@
 {
   "editor.tabSize": 2,
   "terminal.explorerKind": "external",
-  "terminal.integrated.defaultProfile.windows": ""
+  "terminal.integrated.defaultProfile.windows": "",
+  "liveServer.settings.port": 5501
 }

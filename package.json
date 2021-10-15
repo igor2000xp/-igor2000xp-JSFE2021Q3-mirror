@@ -1,0 +1,23 @@
+{
+  "name": "igor2000xp-jsfe2021q3",
+  "version": "1.0.0",
+  "description": "Private repository for @igor2000xp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/igor2000xp-JSFE2021Q3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/igor2000xp-JSFE2021Q3/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/igor2000xp-JSFE2021Q3#readme",
+  "dependencies": {
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
+}
