@@ -28,7 +28,7 @@ body {
   width: 100%;
   height: 30vh;
   min-height: 220px;  
-  padding: 20px;
+  padding: 5px;
 }
 
 .player-controls {
@@ -246,9 +246,9 @@ body {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 40vh;
+  height: 25vh;
   min-height: 160px;  
-  padding: 20px;
+  padding: 0;
 }
 
 .change-quote {
