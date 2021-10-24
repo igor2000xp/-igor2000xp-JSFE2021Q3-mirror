@@ -1,5 +1,3 @@
-// const { get } = require("http");
-
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
@@ -33,9 +31,7 @@ async function getWeather() {
   const res = await fetch(url);
   const data = await res.json(); 
 
-  // console.log(data.weather[0].id, data.weather[0].description, data.main.temp);
   if(data.message != undefined) {
-    // console.log(data.message);
     weatherError.textContent = `Error! city not found for '${cities.city}'`;
     weatherIcon.className = '';
     weatherIcon.classList.remove();
