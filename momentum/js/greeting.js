@@ -1,10 +1,10 @@
 const greeting = document.querySelector('.greeting');
-const date = new Date();
-const hours = date.getHours();
+// const date = new Date();
+// const hours = date.getHours();
 const nameGreeting = document.querySelector('.name');
-const timeOfDay = getTimeOfDay();
-const greetingText = `Good ${timeOfDay}`;
-greeting.textContent = greetingText;
+// const timeOfDay = getTimeOfDay();
+// const greetingText = `Good ${timeOfDay}`;
+// greeting.textContent = greetingText;
 
 let user = {name:''};
 
@@ -13,9 +13,11 @@ let user = {name:''};
 // возвращающую время суток (morning, day, evening, night)
 //  в зависимости от текущего времени в часах
 function getTimeOfDay() {
+  const date = new Date();
+  const hours = date.getHours(); 
   let result;
   let numberSwitch = hours / 6 + 0.01;
-  setTimeout(showTime, 60000);
+  // setTimeout(showTime, 60000);
 
   if(numberSwitch < 1)
   {
@@ -53,13 +55,23 @@ function inputName() {
   setLocalStorage();
 }
 
+// Получаем имя из хранилища, отслеживаем поле input и заноим
+// имя в поле input
+function showGreeting() {
+  getLocalStorage();
+  nameGreeting.value = user.name;
+
+  const timeOfDay = getTimeOfDay();
+  const greetingText = `Good ${timeOfDay}`;
+  greeting.textContent = greetingText;
+  setTimeout(showGreeting, 60000);
+}
+
 // Вызываем обработчик события перед и после перезагрузки страницы
 window.addEventListener('load', getLocalStorage);
 window.addEventListener('beforeunload', setLocalStorage);
-
-// Получаем имя из хранилища, отслеживаем поле input и заноим
-// имя в поле input
-getLocalStorage();
 nameGreeting.addEventListener('input', inputName);
-nameGreeting.value = user.name;
+
+showGreeting();
+
 
