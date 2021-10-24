@@ -14,7 +14,7 @@ let user = {name:''};
 //  в зависимости от текущего времени в часах
 function getTimeOfDay() {
   let result;
-  let numberSwitch = hours / 6 - 0.01;
+  let numberSwitch = hours / 6 + 0.01;
   setTimeout(showTime, 60000);
 
   if(numberSwitch < 1)
