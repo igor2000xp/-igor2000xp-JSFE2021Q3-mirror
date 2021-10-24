@@ -1,14 +1,7 @@
 const greeting = document.querySelector('.greeting');
-// const date = new Date();
-// const hours = date.getHours();
 const nameGreeting = document.querySelector('.name');
-// const timeOfDay = getTimeOfDay();
-// const greetingText = `Good ${timeOfDay}`;
-// greeting.textContent = greetingText;
 
 let user = {name:''};
-
-
 
 // возвращающую время суток (morning, day, evening, night)
 //  в зависимости от текущего времени в часах
@@ -17,7 +10,6 @@ function getTimeOfDay() {
   const hours = date.getHours(); 
   let result;
   let numberSwitch = hours / 6 + 0.01;
-  // setTimeout(showTime, 60000);
 
   if(numberSwitch < 1)
   {
