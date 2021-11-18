@@ -5,7 +5,8 @@
   "name": "my-app",
   "scripts": {
     "start": "webpack serve --env development",
-    "build": "webpack"
+    "build": "webpack",
+    "bDev": "webpack --env development"
   },
   "devDependencies": {
     "rss-scripts": "^0.2.4",
