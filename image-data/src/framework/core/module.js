@@ -38,7 +38,9 @@ import { wfm } from "../tools/util";
    }
 
    renderComponent(c) {
+    if(!wfm.isUndefined(c.onInit)) c.onInit();
     c.render();
+    if(!wfm.isUndefined(c.afterInit)) c.afterInit();
    }
 
 }
