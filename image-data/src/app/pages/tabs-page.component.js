@@ -1,4 +1,4 @@
-import { WFMComponent } from "../../framework";
+import { WFMComponent } from 'framework';
 
 class TabsPageComponent extends WFMComponent {
   constructor(config) {
@@ -28,7 +28,7 @@ export const tabsPageComponent = new TabsPageComponent ({
     
     <div class="row">
       <div class="col s6 offset-s3">
-        <ul class="collapsible popout collapsible-accordion" style="margin-top: 30px">
+        <ul class="collapsible popout collapsible-accordion">
 
           <li class="js-tab">
             <div class="collapsible-header">
@@ -64,9 +64,16 @@ export const tabsPageComponent = new TabsPageComponent ({
 
       </div>
     </div>
+  `,
 
+    styles: `
+    .collapsible-accordion {
+      margin-top: 30px
+    }
 
-
-  `
+    .collapsible li.active .collapsible-body {
+      display: block;
+    }
+    `
 });
 

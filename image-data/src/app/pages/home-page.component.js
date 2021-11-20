@@ -1,8 +1,13 @@
-import { WFMComponent } from "../../framework";
-import { router } from "../../framework/tools/router";
+import { WFMComponent, router } from 'framework';
+
 class HomePageComponent extends WFMComponent {
   constructor(config) {
     super(config);
+
+    this.data = {
+      title: 'Главная страница работает!!!',
+      linkTitle: 'Здесь будет картина.'
+    }
   }
 
   events() {
@@ -11,16 +16,8 @@ class HomePageComponent extends WFMComponent {
     };
   }
 
-  onInit(){
-    console.log('Component init');
-  }
-
-  afterInit() {
-    console.log('Component after init');
-  }
-
-  goToTabs() {
-    events.preventDefault();
+  goToTabs(event) {
+    event.preventDefault();
     router.navigate('tabs');
   }
 
@@ -31,11 +28,11 @@ export const homePageComponent = new HomePageComponent ({
   selector: 'app-home-page',
   template: `
   <div class="row">
-  <div class="col s6 offset-s3" style="margin-top: 40px;">
+  <div class="home__block col s6 offset-s3">
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
-        <span class="card-title">First Card</span>
-        <p>Здесь будет картина.</p>
+        <span class="card-title">{{ title }}</span>
+        <p>{{linkTitle}}</p>
       </div>
       <div class="card-action">
         <a href="#not-existing-path" class="js-link">Перейти на другую страницу</a>
@@ -43,5 +40,14 @@ export const homePageComponent = new HomePageComponent ({
     </div>
   </div>
 </div>
+  `,
+  styles: `
+  .home__block { 
+    margin-top: 40px;
+    marg 
+  }
+  
   `
+
 });
+

@@ -1,4 +1,4 @@
-const wfm = {
+const _ = {
   delay(ms = 1000) {
     return new Promise((resolve,  reject) => {
       setTimeout(() => {
@@ -9,7 +9,7 @@ const wfm = {
 
     },
 
-    isUndefined(d) {
+        isUndefined(d) {
       return typeof d == 'undefined';
 
   }
@@ -17,4 +17,4 @@ const wfm = {
 
 }
 
-export { wfm }
+export { _ }

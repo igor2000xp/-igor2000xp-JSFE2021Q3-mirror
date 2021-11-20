@@ -1,7 +1,7 @@
-import { bootstrap } from './framework/core/bootstrap';
+import { _ } from 'framework';
+import { bootstrap } from './framework/core/functions/bootstrap';
 import { appModule } from "./app/app.module";
-import { wfm } from './framework/index'
 
-wfm.delay(2000).then(() => {
+_.delay(1000).then(() => {
   bootstrap(appModule);
 })
