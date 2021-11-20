@@ -1,14 +1,13 @@
 {
   "name": "art-quiz",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --mode development",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
-    },
+  },
   "keywords": [],
   "author": "Igor",
   "license": "ISC",
@@ -18,5 +17,6 @@
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.5.0"
-  }
+  },
+  "description": ""
 }
