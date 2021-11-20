@@ -5,8 +5,9 @@ import { router } from './router';
 
 
 export class RoutingModule {
-  constructor(routes) {
+  constructor(routes, dispatcher) {
     this.routes = routes;
+    this.dispatcher = dispatcher;
 
   }
 
@@ -27,4 +28,6 @@ function renderRoute() {
 
   $('router-outlet').html(`<${route.component.selector}></${route.component.selector}>`);
   renderComponent(route.component);
+
+  this.dispatcher.emit('routing.change-page')
 };
