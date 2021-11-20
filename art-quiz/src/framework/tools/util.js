@@ -9,12 +9,18 @@ const _ = {
 
     },
 
-        isUndefined(d) {
+    isUndefined(d) {
       return typeof d == 'undefined';
 
-  }
+    },
 
+    isNull(d) {
+      return d === null;
+    },
 
+    isString(d) {
+      return typeof d === 'string';
+    }
 }
 
 export { _ }
