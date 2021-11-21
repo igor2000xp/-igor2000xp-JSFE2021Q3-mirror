@@ -5,3 +5,101 @@
   width: 100vw;
   height: 100vh;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url('../img/quiz/j-retrato-de-cardenal-rafael\ 1.jpg'); 
+  background-repeat: no-repeat; 
+  background-size: 100vw auto;	
+  background-position: 50% 20%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.heder__settings {
+  /* justify-self: center; */
+  display: flex;
+  justify-content:flex-end;
+}
+
+.art-settings {
+  padding: 3vw 3vw 0 0;
+}
+
+
+.home__page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo__container {
+  width: 25vh;
+  /* margin-top: 35vh; */
+  align-self: center;
+  margin-bottom: 2vh;
+}
+
+.logo {
+  width: 100%;
+}
+
+.button__home {
+  height: 56px;
+  width: 70vw;
+  color: #fff;
+  border-radius: 56px;
+  border-color: white;
+  margin: 0 auto;
+  background-color: transparent;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2px;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+.button__artist {
+  margin-bottom: 2vh;
+}
+.button__pic {
+  margin-bottom: 2vh;
+}
+
+.footer {
+  height: 43px;
+  justify-self: end;
+  display: flex;
+  width: 100%;
+}
+
+.footer-container__down {
+  display: flex;
+  justify-content:space-around ;
+  flex-direction: row;
+  align-items: center;
+  justify-self: end;
+  width: 100%;
+}
+
+.footer-link {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.63px;
+  text-align: left;
+
+  color: white ;
+}
+.footer-link a {
+  color: white ;
+}
+
