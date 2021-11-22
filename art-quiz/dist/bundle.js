@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"../node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"#preloader {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 100vw;\\n  height: 100vh;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./css/style.css?../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B2%5D!../node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"../node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"../node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../img/quiz/j-retrato-de-cardenal-rafael 1.jpg */ \"./img/quiz/j-retrato-de-cardenal-rafael 1.jpg\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"#preloader {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  width: 100vw;\\n  height: 100vh;\\n}\\n\\n.container {\\n  width: 100vw;\\n  height: 100vh;\\n  margin: 0 auto;\\n  background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\n  background-repeat: no-repeat;\\n  background-size: 115vw auto;\\n  background-position: 50% 20%;\\n  border: 1px solid red;\\n  display: flex;\\n  justify-content: space-between;\\n  flex-direction: column;\\n}\\n\\n.heder__settings {\\n  /* justify-self: center; */\\n  display: flex;\\n  justify-content: flex-end;\\n}\\n\\n.art-settings {\\n  padding: 3vw 3vw 0 0;\\n}\\n\\n.home__page {\\n  display: flex;\\n  justify-content: center;\\n  flex-direction: column;\\n}\\n\\n.logo__container {\\n  width: 25vh;\\n  /* margin-top: 35vh; */\\n  align-self: center;\\n  margin-bottom: 2vh;\\n}\\n\\n.logo {\\n  width: 100%;\\n}\\n\\n.button__home {\\n  height: 56px;\\n  width: 70vw;\\n  color: #fff;\\n  border-radius: 56px;\\n  border-color: white;\\n  margin: 0 auto;\\n  background-color: transparent;\\n  font-family: Gilroy;\\n  font-size: 24px;\\n  font-style: normal;\\n  font-weight: 500;\\n  line-height: 2px;\\n  letter-spacing: -0.4px;\\n  text-align: center;\\n}\\n\\n.button__artist {\\n  margin-bottom: 2vh;\\n}\\n\\n.button__pic {\\n  margin-bottom: 2vh;\\n}\\n\\n.footer {\\n  height: 43px;\\n  justify-self: end;\\n  display: flex;\\n  width: 100%;\\n}\\n\\n.footer-container__down {\\n  display: flex;\\n  justify-content: space-around;\\n  flex-direction: row;\\n  align-items: center;\\n  justify-self: end;\\n  width: 100%;\\n}\\n\\n.footer-link {\\n  font-family: Gilroy;\\n  font-size: 14px;\\n  font-style: normal;\\n  font-weight: 500;\\n  line-height: 20px;\\n  letter-spacing: -0.63px;\\n  text-align: left;\\n  color: white;\\n}\\n\\n.footer-link a {\\n  color: white;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./css/style.css?../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B2%5D!../node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -47,6 +47,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n\n      content += cssWithMappingToString(item);\n\n      if (needLayer) {\n        content += \"}\";\n      }\n\n      if (item[2]) {\n        content += \"}\";\n      }\n\n      if (item[4]) {\n        content += \"}\";\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n\n\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack:///../node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/runtime/getUrl.js":
+/*!*********************************************************!*\
+  !*** ../node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  }\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack:///../node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -156,7 +166,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"appComponent\": () => (/* binding */ appComponent)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n\n\nclass AppComponent extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMComponent {\n  constructor(config) {\n    super(config)\n  }\n}\n\nconst appComponent = new AppComponent({\n  selector: 'app-root',\n  template: `\n  <app-header></app-header>\n  <router-outlet></router-outlet>\n    `\n});\n\n//# sourceURL=webpack:///./app/app.component.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"appComponent\": () => (/* binding */ appComponent)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n\n\nclass AppComponent extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMComponent {\n  constructor(config) {\n    super(config)\n  }\n}\n\nconst appComponent = new AppComponent({\n  selector: 'app-root',\n  template: `\n  \n  <router-outlet></router-outlet>\n    `\n});\n\n//# sourceURL=webpack:///./app/app.component.js?");
 
 /***/ }),
 
@@ -166,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"appModule\": () => (/* binding */ appModule)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ \"./app/app.component.js\");\n/* harmony import */ var _shared_app_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/app.header */ \"./app/shared/app.header.js\");\n/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.routes */ \"./app/app.routes.js\");\n/* harmony import */ var _shared_directives_hover_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared/directives/hover.directive */ \"./app/shared/directives/hover.directive.js\");\n/* harmony import */ var _shared_pipes_multi_pipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/pipes/multi-pipe */ \"./app/shared/pipes/multi-pipe.js\");\n\n\n\n\n\n\n\n\nclass AppModule extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMModule {\n  constructor(config) {\n    super(config)\n  }\n}\n\nconst appModule = new AppModule({\n  components: [\n    _shared_app_header__WEBPACK_IMPORTED_MODULE_2__.appHeader\n  ],\n\n  bootstrap: _app_component__WEBPACK_IMPORTED_MODULE_1__.appComponent,\n  routes: _app_routes__WEBPACK_IMPORTED_MODULE_3__.appRoutes,\n  directive: [\n    _shared_directives_hover_directive__WEBPACK_IMPORTED_MODULE_4__.appHoverDirective\n  ],\n\n  pipes: [\n    _shared_pipes_multi_pipe__WEBPACK_IMPORTED_MODULE_5__.appMultiPipe\n  ]\n})\n\n//# sourceURL=webpack:///./app/app.module.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"appModule\": () => (/* binding */ appModule)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ \"./app/app.component.js\");\n/* harmony import */ var _shared_app_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/app.header */ \"./app/shared/app.header.js\");\n/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.routes */ \"./app/app.routes.js\");\n/* harmony import */ var _shared_directives_hover_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared/directives/hover.directive */ \"./app/shared/directives/hover.directive.js\");\n/* harmony import */ var _shared_pipes_multi_pipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/pipes/multi-pipe */ \"./app/shared/pipes/multi-pipe.js\");\n\n\n\n\n\n\n\n\nclass AppModule extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMModule {\n  constructor(config) {\n    super(config)\n  }\n}\n\nconst appModule = new AppModule({\n  components: [\n    \n  ],\n\n  bootstrap: _app_component__WEBPACK_IMPORTED_MODULE_1__.appComponent,\n  routes: _app_routes__WEBPACK_IMPORTED_MODULE_3__.appRoutes,\n  directive: [\n    _shared_directives_hover_directive__WEBPACK_IMPORTED_MODULE_4__.appHoverDirective\n  ],\n\n  pipes: [\n    _shared_pipes_multi_pipe__WEBPACK_IMPORTED_MODULE_5__.appMultiPipe\n  ]\n})\n\n//# sourceURL=webpack:///./app/app.module.js?");
 
 /***/ }),
 
@@ -196,7 +206,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"homePageComponent\": () => (/* binding */ homePageComponent)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n\n\nclass HomePageComponent extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMComponent {\n  constructor(config) {\n    super(config);\n\n    this.data = {\n      title: 'Главная страница работает!!!',\n      linkTitle: 'Здесь будет картина.',\n      ip: 'Loading...'\n    }\n  }\n\n  events() {\n    return {\n      'click .js-link': 'goToTabs'\n    };\n  }\n\n  afterInit() {\n    framework__WEBPACK_IMPORTED_MODULE_0__.http.get('https://api.ipify.org?format=json')\n      .then(({ip}) => {\n          framework__WEBPACK_IMPORTED_MODULE_0__._.delay(2000).then(() => {\n            this.data.ip = ip;\n            this.render();\n          });\n          \n      })\n  }\n\n  goToTabs(event) {\n    event.preventDefault();\n    framework__WEBPACK_IMPORTED_MODULE_0__.router.navigate('tabs');\n  }\n\n\n}\n\nconst homePageComponent = new HomePageComponent ({\n  selector: 'app-home-page',\n  template: `\n  <div class=\"row\">\n  <div class=\"home__block col s6 offset-s3\">\n    <div class=\"card blue-grey darken-1\">\n      <div class=\"card-content white-text\">\n        <span class=\"card-title\">{{ title }}</span>\n        <p>{{linkTitle}}</p>\n      </div>\n      <div class=\"card-action\">\n        <a href=\"#not-existing-path\" class=\"js-link\">{{ ip }}</a>\n      </div>\n    </div>\n  </div>\n</div>\n  `,\n  styles: `\n  .home__block { \n    margin-top: 40px;\n    marg \n  }\n  \n  `\n\n});\n\n\n\n//# sourceURL=webpack:///./app/pages/home-page.component.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"homePageComponent\": () => (/* binding */ homePageComponent)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n\n\nclass HomePageComponent extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMComponent {\n  constructor(config) {\n    super(config);\n\n    this.data = {\n      title: 'Главная страница работает!!!',\n      linkTitle: 'Здесь будет картина.',\n      ip: 'Loading...'\n    }\n  }\n\n  events() {\n    return {\n      'click .js-link': 'goToTabs'\n    };\n  }\n\n  afterInit() {\n    framework__WEBPACK_IMPORTED_MODULE_0__.http.get('https://api.ipify.org?format=json')\n      .then(({ip}) => {\n          framework__WEBPACK_IMPORTED_MODULE_0__._.delay(2000).then(() => {\n          this.data.ip = ip;\n           this.render();\n          });\n          \n      })\n  }\n\n  goToTabs(event) {\n    event.preventDefault();\n    framework__WEBPACK_IMPORTED_MODULE_0__.router.navigate('tabs');\n  }\n\n\n}\n\nconst homePageComponent = new HomePageComponent ({\n  selector: 'app-home-page',\n  template: `\n\n<div class=\"container\">\n\n  <header class=\"heder__settings\">\n    <div class=\"art-settings\">\n      <img src=\"../src/img/quiz/carbon_settings.svg\" alt=\"art-setup\">\n    </div>\n  </header>\n  <div class=\"wrapper\">\n    <section class=\"home__page\">\n      <div class=\"logo__container\">\n        <img class=\"logo\" src=\"../src/img/quiz/group_1438.png\" alt=\"art-quiz\">\n      </div>\n      \n      <button class=\"button__home button__artist\"> \n        <p>Artist quiz</p>\n      </button>\n      <button class=\"button__home button__pic\"> \n        <p>Artist quiz</p>\n      </button>\n    </section>\n\n    <footer class=\"footer\"> \n      <div class=\"footer-container__down\">\n\n        <div class=\"footer-container__down-rss\">\n          <a href=\"https://app.rs.school/course/student/cross-check-submit?course=js-fe-2021Q3\">\n            <img src=\"../src/img/quiz/rs_school_js.svg\" alt=\"RSSchool\">\n          </a>\n        </div>\n        <div class=\"footer-link\">\n          <a href=\"https://github.com/igor2000xp/rsschool-cv\">App developer igor2000xp</a>\n        </div>\n\n        <div class=\"footer-link\">\n          © 2021\n        </div>\n      </div>\n    </footer>\n\n  </div>\n  \n</div>\n  `,\n  styles: `\n\n  `\n\n});\n\n\n\n//# sourceURL=webpack:///./app/pages/home-page.component.js?");
 
 /***/ }),
 
@@ -226,7 +236,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"appHeader\": () => (/* binding */ appHeader)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n\n\nclass AppHeader extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMComponent {\n  constructor(config) {\n    super(config)\n  }\n}\n\nconst appHeader = new AppHeader({\n  selector: 'app-header',\n\n  template: `\n  \n    <nav class=\"indigo\">\n      <div class=\"nav-wrapper\">\n        <a href=\"#\" class=\"brand-logo header__logo\" >Art-quiz</a>\n        <ul class=\"right hide-on-med-and-down\">\n          <li><a href=\"#\">Главная</a></li>\n          <li><a href=\"#tabs\">Табы</a></li>\n          <li><a href=\"#directive\">Директивы</a></li>\n          <li><a href=\"#pipe\">Пайпы</a></li>\n        </ul>\n      </div>\n    </nav> \n      \n  `,\n\n  styles: `\n    .header__logo {\n      margin-left: 20px;\n    }\n  \n  `\n})\n\n//# sourceURL=webpack:///./app/shared/app.header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"appHeader\": () => (/* binding */ appHeader)\n/* harmony export */ });\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n\n\nclass AppHeader extends framework__WEBPACK_IMPORTED_MODULE_0__.WFMComponent {\n  constructor(config) {\n    super(config)\n  }\n}\n\nconst appHeader = new AppHeader({\n  selector: 'app-header',\n\n  template: `\n    <header class=\"heder__settings\">\n      <div class=\"art-settings\">\n        <img src=\"../src/img/quiz/carbon_settings.svg\" alt=\"art-setup\">\n      </div>\n    </header>\n  `,\n\n  styles: `\n  \n  `\n})\n\n//# sourceURL=webpack:///./app/shared/app.header.js?");
 
 /***/ }),
 
@@ -456,7 +466,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"_\": () => (/* binding */ _)\n/* harmony export */ });\nconst _ = {\n  delay(ms = 1000) {\n    return new Promise((resolve,  reject) => {\n      setTimeout(() => {\n        resolve()\n      }, ms);\n\n    });\n\n    },\n\n    isUndefined(d) {\n      return typeof d == 'undefined';\n\n    },\n\n    isNull(d) {\n      return d === null;\n    },\n\n    isString(d) {\n      return typeof d === 'string';\n    },\n\n    isEmpty(d) {\n      return d.length && d.length === 0;\n    }\n}\n\n\n\n\n//# sourceURL=webpack:///./framework/tools/util.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"_\": () => (/* binding */ _)\n/* harmony export */ });\nconst _ = {\n  delay(ms = 1000) {\n    return new Promise((resolve,  reject) => {\n      setTimeout(() => {\n        resolve()\n      }, ms);\n\n    });\n\n    },\n\n  isUndefined(d) {\n    return typeof d == 'undefined';\n\n  },\n\n  isNull(d) {\n    return d === null;\n  },\n\n  isString(d) {\n    return typeof d === 'string';\n  },\n\n  isEmpty(d) {\n    return d.length && d.length === 0;\n  }\n}\n\n\n\n\n//# sourceURL=webpack:///./framework/tools/util.js?");
 
 /***/ }),
 
@@ -467,6 +477,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var framework__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! framework */ \"./framework/index.js\");\n/* harmony import */ var _framework_core_functions_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./framework/core/functions/bootstrap */ \"./framework/core/functions/bootstrap.js\");\n/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ \"./app/app.module.js\");\n/* harmony import */ var _css_materialize_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/materialize.min.css */ \"./css/materialize.min.css\");\n/* harmony import */ var _css_normalize_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/normalize.css */ \"./css/normalize.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./css/style.css */ \"./css/style.css\");\n\n\n\n\n\n\n\nframework__WEBPACK_IMPORTED_MODULE_0__._.delay(1000).then(() => {\n  (0,_framework_core_functions_bootstrap__WEBPACK_IMPORTED_MODULE_1__.bootstrap)(_app_app_module__WEBPACK_IMPORTED_MODULE_2__.appModule);\n})\n\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./img/quiz/j-retrato-de-cardenal-rafael 1.jpg":
+/*!*****************************************************!*\
+  !*** ./img/quiz/j-retrato-de-cardenal-rafael 1.jpg ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"236458156c9dad870ae7.jpg\";\n\n//# sourceURL=webpack:///./img/quiz/j-retrato-de-cardenal-rafael_1.jpg?");
 
 /***/ })
 
@@ -496,6 +516,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var fram
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -521,6 +544,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var fram
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -535,6 +570,52 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var fram
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/

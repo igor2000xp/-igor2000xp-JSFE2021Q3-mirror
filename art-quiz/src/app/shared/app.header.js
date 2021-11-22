@@ -10,25 +10,14 @@ export const appHeader = new AppHeader({
   selector: 'app-header',
 
   template: `
-  
-    <nav class="indigo">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo header__logo" >Art-quiz</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#tabs">Табы</a></li>
-          <li><a href="#directive">Директивы</a></li>
-          <li><a href="#pipe">Пайпы</a></li>
-        </ul>
+    <header class="heder__settings">
+      <div class="art-settings">
+        <img src="../src/img/quiz/carbon_settings.svg" alt="art-setup">
       </div>
-    </nav> 
-      
+    </header>
   `,
 
   styles: `
-    .header__logo {
-      margin-left: 20px;
-    }
   
   `
 })
