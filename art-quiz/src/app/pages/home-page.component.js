@@ -4,11 +4,11 @@ class HomePageComponent extends WFMComponent {
   constructor(config) {
     super(config);
 
-    this.data = {
-      title: 'Главная страница работает!!!',
-      linkTitle: 'Здесь будет картина.',
-      ip: 'Loading...'
-    }
+    // this.data = {
+    //   title: 'Главная страница работает!!!',
+    //   linkTitle: 'Здесь будет картина.',
+    //   ip: 'Loading...'
+    // }
   }
 
   events() {
@@ -17,16 +17,16 @@ class HomePageComponent extends WFMComponent {
     };
   }
 
-  afterInit() {
-    http.get('https://api.ipify.org?format=json')
-      .then(({ip}) => {
-          _.delay(2000).then(() => {
-          this.data.ip = ip;
-           this.render();
-          });
+  // afterInit() {
+  //   http.get('https://api.ipify.org?format=json')
+  //     .then(({ip}) => {
+  //         _.delay(1000).then(() => {
+  //         this.data.ip = ip;
+  //          this.render();
+  //         });
           
-      })
-  }
+  //     })
+  // }
 
   goToTabs(event) {
     event.preventDefault();
@@ -53,12 +53,19 @@ export const homePageComponent = new HomePageComponent ({
         <img class="logo" src="../src/img/quiz/group_1438.png" alt="art-quiz">
       </div>
       
-      <button class="button__home button__artist"> 
-        <p>Artist quiz</p>
-      </button>
-      <button class="button__home button__pic"> 
-        <p>Artist quiz</p>
-      </button>
+      <a href="#tabs">
+        <button appHover="violet" class="waves-effect button__home button__artist" style="transition: 1s ease-out;"> 
+        <p appHover="violet">
+          Artist quiz
+        </p>
+        
+        </button>
+      </a>
+      <a href="#tabs">
+        <button class="waves-effect button__home button__artist" style="transition: 1s ease-out;"> 
+          Picture quiz
+        </button>
+      </a>
     </section>
 
     <footer class="footer"> 

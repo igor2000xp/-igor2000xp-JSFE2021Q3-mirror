@@ -14,7 +14,7 @@
   background-repeat: no-repeat; 
   background-size: 115vw auto;	
   background-position: 50% 20%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -37,12 +37,18 @@
   flex-direction: column;
 }
 
+.home__page a {
+  display: flex;
+  justify-content: center;
+}
+
 .logo__container {
   width: 25vh;
   /* margin-top: 35vh; */
   align-self: center;
   margin-bottom: 2vh;
 }
+
 
 .logo {
   width: 100%;
@@ -63,6 +69,11 @@
   line-height: 2px;
   letter-spacing: -0.4px;
   text-align: center;
+  transition: 1s ease-out;
+}
+
+.button__home a {
+  color: #fff;
 }
 
 .button__artist {

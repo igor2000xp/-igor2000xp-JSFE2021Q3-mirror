@@ -14,7 +14,7 @@ export const directivePageComponent = new DirectivePageComponent({
   template: `
     <div class="row">
       <div class="dir__block col s6 offset-s3">
-        <h3 appHover="red">Наведи на меня</h3>
+        <h3 appHover="violet">Наведи на меня</h3>
 
       </div>
     </div>
