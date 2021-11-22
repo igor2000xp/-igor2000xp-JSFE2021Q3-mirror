@@ -22,7 +22,7 @@ class DomManipulator {
     }
 
     css(styles) {
-      if(_/isUndefined(styles)) return this.nativeElement.style;
+      if(_.isUndefined(styles)) return this.nativeElement.style;
 
       Object.keys(styles).forEach(key => {
         this.nativeElement.style[key] = styles[key];
@@ -88,7 +88,6 @@ class DomManipulator {
 
 export function $(el) {
   return new DomManipulator(el);
-  // return this;
 }
 
 // on css off addClass removeClass hasClass html append find 

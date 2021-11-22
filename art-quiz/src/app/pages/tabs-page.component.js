@@ -11,6 +11,18 @@ class TabsPageComponent extends WFMComponent {
     }
   };
 
+  // onInit() {
+  //   http.get('https://api.ipify.org?format=json')
+  //     .then(({ip}) => {
+  //         _.delay(1000).then(() => {
+  //         this.data.ip = ip;
+  //          this.render();
+  //         });
+          
+  //     })
+  // }
+
+
   onTabClick({target}) {
     // console.log(event);
     let $target = $(target);
