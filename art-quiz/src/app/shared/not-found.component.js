@@ -12,7 +12,8 @@ export const notFound = new NotFound({
   template: `
     <div class="not-found-block">
       <div>
-        <h2 class="red darken-1">Страница не найдена</h2>
+        <h2 class="red darken-1">404</h2>
+        <h4>Страница не найдена</h4>
         <a href="#">Перейти на главную</a>
       </div>
     </div>   
