@@ -40,7 +40,7 @@ export const homePageComponent = new HomePageComponent ({
   selector: 'app-home-page',
   template: `
 
-<div class="container">
+<div class="container" style="with: 100%">
 
   <header class="heder__settings">
     <div class="art-settings">
@@ -61,7 +61,7 @@ export const homePageComponent = new HomePageComponent ({
         
         </button>
       </a>
-      <a href="#tabs">
+      <a href="#tabs-pic">
         <button class="waves-effect button__home button__artist" style="transition: 1s ease-out;"> 
           Picture quiz
         </button>

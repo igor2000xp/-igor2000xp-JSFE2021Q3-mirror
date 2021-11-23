@@ -12,7 +12,7 @@ export async function getCategories(path) {
   
   }
   cat = [...new Set(cat)];  // Remove doubles
-  // console.log(cat);
+  // console.log(cat[2]);
   return cat;
 }
 
@@ -44,10 +44,9 @@ export async function sortCatPic (path) {
     }
     
   }
-
+  // This code is needed to get a numbered array by category
   // sortedArray.forEach(e => {
-  //   if(e.catNum == 1) console.log(e);
-    
+  //   if(e.catNum == 11) console.log(e);  
   // });
 
 
