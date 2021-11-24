@@ -78,12 +78,6 @@ body {
   transition: all 0.5s ease-in;
 }
 
-/* .art-settings:hover {
-  padding: 3vw 3vw 0 0;
-  transition: all 0.5s ease-in;
-  border: red solid 1px;
-} */
-
 
 .art-settings svg path {
   transition: all 0.5s ease-in;
@@ -262,6 +256,7 @@ body {
   border: #FFBCA2 1px solid;
   transition: all 0.5s ease-in;
   opacity: 0.8;
+  /* filter: grayscale(100%); */
 }
 
 .footer {
@@ -282,6 +277,16 @@ body {
   justify-self: end;
   width: 100%;
 }
+.footer-container__down-rss {
+  transition: all 0.8s ease-in;
+}
+.footer-container__down-rss svg path{
+  transition: all 0.8s ease-in;
+}
+.footer-container__down-rss:hover svg path {
+  transition: all 0.8s ease-in;
+  fill: #FFBCA2;
+}
 
 .footer-link {
   font-family: Gilroy;
@@ -292,9 +297,16 @@ body {
   letter-spacing: -0.63px;
   text-align: left;
   color: white ;
+  transition: all 0.8s ease-in;
 }
 .footer-link a {
   color: white ;
+  transition: all 0.8s ease-in;
+}
+
+.footer-link:hover a {
+  transition: all 0.8s ease-in;
+  color: #FFBCA2;
 }
 
 .footer__art {
@@ -315,6 +327,7 @@ body {
   padding: 2vw 2vw 0 2vw;
   border: 1px solid white;
   border-radius: 20px 20px 0px 0px;
+  /* transition: all 0.8s ease-in; */
 }
 
 .footer-cont-art__home {
