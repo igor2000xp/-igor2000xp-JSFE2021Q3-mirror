@@ -11,11 +11,11 @@ class HomePageComponent extends WFMComponent {
     // }
   }
 
-  events() {
-    return {
-      'click .js-link': 'goToTabs'
-    };
-  }
+  // events() {
+  //   return {
+  //     'click .js-link': 'goToTabs'
+  //   };
+  // }
 
   // afterInit() {
   //   http.get('https://api.ipify.org?format=json')
@@ -28,10 +28,10 @@ class HomePageComponent extends WFMComponent {
   //     })
   // }
 
-  goToTabs(event) {
-    event.preventDefault();
-    router.navigate('tabs-pic');
-  }
+  // goToTabs(event) {
+  //   event.preventDefault();
+  //   router.navigate('tabs-pic');
+  // }
 
 }
 
