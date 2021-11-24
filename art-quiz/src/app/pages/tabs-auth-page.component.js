@@ -5,11 +5,11 @@ class TabsAuthComponent extends WFMComponent {
     super(config);
   }
 
-  events() {
-    return {
-      'click .collapsible': 'onTabClick'  
-    }
-  };
+  // events() {
+  //   return {
+  //     'click .collapsible': 'onTabClick'  
+  //   }
+  // };
 
   // onInit() {
   //   http.get('https://api.ipify.org?format=json')

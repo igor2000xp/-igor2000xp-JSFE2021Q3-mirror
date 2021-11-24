@@ -30,7 +30,7 @@ class HomePageComponent extends WFMComponent {
 
   goToTabs(event) {
     event.preventDefault();
-    router.navigate('tabs');
+    router.navigate('tabs-pic');
   }
 
 
