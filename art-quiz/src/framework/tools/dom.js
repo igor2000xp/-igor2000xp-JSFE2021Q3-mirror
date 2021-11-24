@@ -12,8 +12,9 @@ class DomManipulator {
 
     on(eventName, func, context = null) {
       func = func.bind(context);
-      
+      debugger
       this.nativeElement.addEventListener(eventName, func);
+      debugger
     }
 
     off(eventName, func) {
