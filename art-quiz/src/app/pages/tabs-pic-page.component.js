@@ -41,7 +41,7 @@ class TabsPageComponent extends WFMComponent {
 }
 
 export const tabsPicPageComponent = new TabsPageComponent ({
-  selector: 'app-tabs-pic-page',
+  selector: 'app-tabs-pic',
   template: `
     
     
@@ -60,7 +60,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
 
     </div>
     <div class="art-settings__cat">
-      <h1>Categories</h1>
+      <h1>Категории - угадай картину</h1>
     </div>
   </header>
 
@@ -80,7 +80,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
           </div>
 
           <div class="pic-cat__container">
-          <a href="./#tabs-quest">
+          <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/0.jpg" alt="realism">
              </a>
           </div>
@@ -97,7 +97,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/1.jpg" alt="realism">
              </a>
           </div>
@@ -114,7 +114,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/2.jpg" alt="realism">
              </a>
           </div>
@@ -130,7 +130,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/3.jpg" alt="realism">
              </a>
           </div>
@@ -146,7 +146,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/4.jpg" alt="realism">
              </a>
           </div>
@@ -162,7 +162,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/5.jpg" alt="realism">
              </a>
           </div>
@@ -178,7 +178,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/6.jpg" alt="realism">
              </a>
           </div>
@@ -194,7 +194,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/7.jpg" alt="realism">
              </a>
           </div>
@@ -210,7 +210,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/8.jpg" alt="realism">
              </a>
           </div>
@@ -226,7 +226,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/9.jpg" alt="realism">
              </a>
           </div>
@@ -242,7 +242,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/10.jpg" alt="realism">
              </a>
           </div>
@@ -258,7 +258,7 @@ export const tabsPicPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-pic">
               <img class="pic-cat" src="../img/cat/11.jpg" alt="realism">
              </a>
           </div>
