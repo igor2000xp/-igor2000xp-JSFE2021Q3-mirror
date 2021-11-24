@@ -33,7 +33,6 @@ class HomePageComponent extends WFMComponent {
     router.navigate('tabs-pic');
   }
 
-
 }
 
 export const homePageComponent = new HomePageComponent ({
