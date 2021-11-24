@@ -1,18 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/questions.css">
-  <link rel="stylesheet" href="../css/materialize.min.css">
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-  <title>Art-quiz categories Artists</title>
-</head>
-<body style="height: 100%;">
+import { WFMComponent, $ } from 'framework';
 
-<div class="q-wrapper">
+class QuestPageComponent extends WFMComponent {
+  constructor(config) {
+    super(config);
+  }
+
+  events() {
+    return {
+      'click .collapsible': 'onTabClick'  
+    }
+  };
+
+  // onInit() {
+  //   http.get('https://api.ipify.org?format=json')
+  //     .then(({ip}) => {
+  //         _.delay(1000).then(() => {
+  //         this.data.ip = ip;
+  //          this.render();
+  //         });
+          
+  //     })
+  // }
+
+
+  onTabClick({target}) {
+    // console.log(event);
+    let $target = $(target);
+    if(!$target.hasClass('collapsible-header')) return;
+
+    // this.el.querySelectorAll('.js-tab').forEach(e => {
+    //   e.classList.remove('active');
+    // });
+    // target.parentNode.classList.add('active');
+
+    this.el.findAll('.js-tab').forEach(e => {
+      e.removeClass('active');
+    });
+    $target.parent().addClass('active');
+  }
+}
+
+export const questPageComponent = new QuestPageComponent ({
+  selector: 'app-quest-page',
+  template: `
+  <div class="q-wrapper">
 
   <div class="q-container">
 <!-- Header -->
@@ -113,5 +144,10 @@
   </div>
 
 </div>
-</body>
-</html>
+  `,
+
+    styles: `
+
+    `
+});
+
