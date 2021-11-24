@@ -75,6 +75,23 @@ body {
 
 .art-settings {
   padding: 3vw 3vw 0 0;
+  transition: all 0.5s ease-in;
+}
+
+/* .art-settings:hover {
+  padding: 3vw 3vw 0 0;
+  transition: all 0.5s ease-in;
+  border: red solid 1px;
+} */
+
+
+.art-settings svg path {
+  transition: all 0.5s ease-in;
+}
+
+.art-settings:hover svg path {
+  transition: all 0.5s ease-in;
+  fill: #FFBCA2;
 }
 
 .art-settings__left {
@@ -150,6 +167,12 @@ body {
 .button__artist {
   margin-bottom: 2vh;
 }
+.button__artist:hover {
+  transform: scale(1.1);
+  /* opacity: 0.6; */
+  background-color: rgba(253, 0, 253, 0.233);
+}
+
 .button__pic {
   margin-bottom: 2vh;
 }
@@ -230,8 +253,17 @@ body {
 .pic-cat {
   width: calc(150px + (1vw - 3.6vw));
   height: calc(150px + (1vw - 3.6vw));
-  border-radius: 3vw;
+  border-radius: 15px;
 }
+.pic-cat:hover {
+  width: calc(148px + (1vw - 3.6vw));
+  height: calc(148px + (1vw - 3.6vw));
+  border-radius: 15px;
+  border: #FFBCA2 1px solid;
+  transition: all 0.5s ease-in;
+  opacity: 0.8;
+}
+
 .footer {
   height: 43px;
   justify-self: end;
@@ -285,3 +317,23 @@ body {
   border-radius: 20px 20px 0px 0px;
 }
 
+.footer-cont-art__home {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__home svg path {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__home:hover svg path {
+  transition: all 0.5s ease-in;
+  fill: #FFBCA2;
+}
+.footer-cont-art__score {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__score svg path {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__score:hover svg path {
+  transition: all 0.5s ease-in;
+  fill: #FFBCA2;
+}
