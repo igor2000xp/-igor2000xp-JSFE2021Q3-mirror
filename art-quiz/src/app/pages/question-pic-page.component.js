@@ -1,6 +1,6 @@
 import { WFMComponent, $ } from 'framework';
 
-class QuestPageComponent extends WFMComponent {
+class QuestPicComponent extends WFMComponent {
   constructor(config) {
     super(config);
   }
@@ -40,8 +40,8 @@ class QuestPageComponent extends WFMComponent {
   }
 }
 
-export const questPageComponent = new QuestPageComponent ({
-  selector: 'app-quest-page',
+export const questPicComponent = new QuestPicComponent ({
+  selector: 'app-quest-pic',
   template: `
   <div class="q-wrapper">
 
@@ -71,12 +71,12 @@ export const questPageComponent = new QuestPageComponent ({
         <div class="q-buttons-container">
 
           <div class="q-row__buttons">
-            <a href="#tabs">
+            <a href="#tabs-pic">
               <button class="waves-effect q-button__quest" style="transition: 1s ease-out;"> 
                 Марк Шагал
               </button>
             </a>
-            <a href="#tabs">
+            <a href="#tabs-pic">
               <button class="waves-effect q-button__quest" style="transition: 1s ease-out;"> 
                 Пабло Пикассо
               </button>
@@ -84,12 +84,12 @@ export const questPageComponent = new QuestPageComponent ({
 
           </div>
           <div class="q-row__buttons">
-            <a href="#tabs">
+            <a href="#tabs-pic">
               <button class="waves-effect q-button__quest" style="transition: 1s ease-out;"> 
                 Густав Климт
               </button>
             </a>
-            <a href="#tabs">
+            <a href="#tabs-pic">
               <button class="waves-effect q-button__quest" style="transition: 1s ease-out;"> 
                 Эдвард Мунк
               </button>

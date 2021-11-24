@@ -59,7 +59,7 @@ export const homePageComponent = new HomePageComponent ({
         <img class="logo" src="../src/img/quiz/group_1438.png" alt="art-quiz">
       </div>
       
-      <a href="#tabs">
+      <a href="#tabs-auth">
         <button appHover="violet" class="waves-effect button__home button__artist" style="transition: 1s ease-out;"> 
         <p appHover="violet">
           Artist quiz

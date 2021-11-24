@@ -1,6 +1,6 @@
 import { WFMComponent, $ } from 'framework';
 
-class TabsPageComponent extends WFMComponent {
+class TabsAuthComponent extends WFMComponent {
   constructor(config) {
     super(config);
   }
@@ -40,8 +40,8 @@ class TabsPageComponent extends WFMComponent {
   }
 }
 
-export const tabsPageComponent = new TabsPageComponent ({
-  selector: 'app-tabs-page',
+export const tabsAuthComponent = new TabsAuthComponent ({
+  selector: 'app-tabs-auth',
   template: `
     
     
@@ -69,7 +69,7 @@ export const tabsPageComponent = new TabsPageComponent ({
 
     </div>
     <div class="art-settings__cat">
-      <h1>Categories</h1>
+      <h1>Категории - угадай автора</h1>
     </div>
   </header>
 
@@ -89,7 +89,7 @@ export const tabsPageComponent = new TabsPageComponent ({
           </div>
 
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/0.jpg" alt="realism">
              </a>
           </div>
@@ -106,7 +106,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/1.jpg" alt="realism">
              </a>
           </div>
@@ -123,7 +123,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/2.jpg" alt="realism">
              </a>
           </div>
@@ -139,7 +139,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/3.jpg" alt="realism">
              </a>
           </div>
@@ -155,7 +155,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/4.jpg" alt="realism">
              </a>
           </div>
@@ -171,7 +171,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/5.jpg" alt="realism">
              </a>
           </div>
@@ -187,7 +187,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/6.jpg" alt="realism">
              </a>
           </div>
@@ -203,7 +203,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/7.jpg" alt="realism">
              </a>
           </div>
@@ -219,7 +219,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/8.jpg" alt="realism">
              </a>
           </div>
@@ -235,7 +235,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/9.jpg" alt="realism">
              </a>
           </div>
@@ -251,7 +251,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/10.jpg" alt="realism">
              </a>
           </div>
@@ -267,7 +267,7 @@ export const tabsPageComponent = new TabsPageComponent ({
             </div>
           </div>
           <div class="pic-cat__container">
-            <a href="./#tabs-quest">
+            <a href="./#quest-auth">
               <img class="pic-cat" src="../img/cat/11.jpg" alt="realism">
              </a>
           </div>
