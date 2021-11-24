@@ -1,0 +1,352 @@
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+}
+.wrapper {
+  margin: 0;
+  height: 100%;
+  /* max-width: 100vw; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wrapper-art {
+  width: 100%;
+  min-height: 110%;
+  /* height: 325vw; */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url('../img/quiz/j-retrato-de-cardenal-rafael\ 1.jpg'); 
+  background-repeat: no-repeat; 
+  background-size: 115vw auto;	
+  background-position: 50% 20%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+  flex-direction: column;
+}
+
+.container-cat__art {
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.heder__settings {
+  /* justify-self: center; */
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+}
+
+.heder-settings__art {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  margin: 0 0 40px 0;
+
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.art-settings {
+  padding: 3vw 3vw 0 0;
+  transition: all 0.5s ease-in;
+}
+
+
+.art-settings svg path {
+  transition: all 0.5s ease-in;
+}
+
+.art-settings:hover svg path {
+  transition: all 0.5s ease-in;
+  fill: #FFBCA2;
+}
+
+.art-settings__left {
+  padding: 3vw 0 0 3vw;
+}
+
+.art-settings__cat {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: left;
+  padding: 0 0 0 3vw;
+}
+.art-settings__cat h1 {
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  margin: 2vh 0 0 0;
+
+}
+
+
+.home__page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home__page a {
+  display: flex;
+  justify-content: center;
+}
+
+.logo__container {
+  width: 25vh;
+  /* margin-top: 35vh; */
+  align-self: center;
+  margin-bottom: 2vh;
+}
+
+
+.logo {
+  width: 100%;
+}
+
+.button__home {
+  height: 56px;
+  width: 70vw;
+  color: #fff;
+  border-radius: 56px;
+  border-color: white;
+  margin: 0 auto;
+  background-color: transparent;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2px;
+  letter-spacing: -0.4px;
+  text-align: center;
+  transition: 1s ease-out;
+
+}
+
+.button__home a {
+  color: #fff;
+}
+
+.button__artist {
+  margin-bottom: 2vh;
+}
+.button__artist:hover {
+  transform: scale(1.1);
+  /* opacity: 0.6; */
+  background-color: rgba(253, 0, 253, 0.233);
+}
+
+.button__pic {
+  margin-bottom: 2vh;
+}
+
+.content {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+
+}
+
+.cont-pics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center; 
+  justify-items: center;
+  column-gap: 1vw;
+  padding-bottom: 90px;
+  padding-left: 10px;
+
+  /* border: green 1px solid; */
+
+}
+
+.cont-pic {
+  display: flex;
+  width: 48%;
+  /* height: 48vw; */
+  flex-wrap: wrap;
+  justify-self: center; 
+  justify-content: space-between;
+  /* border: blue 1px solid; */
+}
+.header-pic {
+  display: flex;
+  /* width: calc(150px + (1vw - 3.6)vw); */
+  width: 100%;
+  height: 18px;
+  justify-content: space-around;
+  text-align: center; 
+  padding: 0 2vw 0 2vw ;
+}
+
+
+.header-pic h4 {
+  margin: 0;
+  color: white;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+.heder-pic__name {
+  color: white;
+
+}
+
+
+.heder-pic__score {
+  color: white;
+}
+
+.pic-cat__container {
+  width: 100%;
+  height: 100%;
+  margin: 8px 0 0 0;
+}
+
+.pic-cat {
+  width: calc(150px + (1vw - 3.6vw));
+  height: calc(150px + (1vw - 3.6vw));
+  border-radius: 15px;
+}
+.pic-cat:hover {
+  width: calc(148px + (1vw - 3.6vw));
+  height: calc(148px + (1vw - 3.6vw));
+  border-radius: 15px;
+  border: #FFBCA2 1px solid;
+  transition: all 0.5s ease-in;
+  opacity: 0.8;
+  /* filter: grayscale(100%); */
+}
+
+.footer {
+  height: 43px;
+  justify-self: end;
+  display: flex;
+  width: 95%;
+
+  /* position: fixed;
+  bottom: 0; */
+}
+
+.footer-container__down {
+  display: flex;
+  justify-content:space-around ;
+  flex-direction: row;
+  align-items: center;
+  justify-self: end;
+  width: 100%;
+}
+.footer-container__down-rss {
+  transition: all 0.8s ease-in;
+}
+.footer-container__down-rss svg path{
+  transition: all 0.8s ease-in;
+}
+.footer-container__down-rss:hover svg path {
+  transition: all 0.8s ease-in;
+  fill: #FFBCA2;
+}
+
+.footer-link {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.63px;
+  text-align: left;
+  color: white ;
+  transition: all 0.8s ease-in;
+}
+.footer-link a {
+  color: white ;
+  transition: all 0.8s ease-in;
+}
+
+.footer-link:hover a {
+  transition: all 0.8s ease-in;
+  color: #FFBCA2;
+}
+
+.footer__art {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 12vh;
+  background-color: black;
+  /* flex: 0 0 auto; */
+}
+.footer-cont-art__down {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 2vw 2vw 0 2vw;
+  border: 1px solid white;
+  border-radius: 20px 20px 0px 0px;
+  /* transition: all 0.8s ease-in; */
+}
+
+.footer-cont-art__home {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__home svg path {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__home:hover svg path {
+  transition: all 0.5s ease-in;
+  fill: #FFBCA2;
+}
+.footer-cont-art__score {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__score svg path {
+  transition: all 0.5s ease-in;
+}
+.footer-cont-art__score:hover svg path {
+  transition: all 0.5s ease-in;
+  fill: #FFBCA2;
+}
