@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const baseConfig = {
-    entry: path.resolve(__dirname, './src/index.js'),
+    entry: path.resolve(__dirname, './src/index.ts'),
     mode: 'development',
     module: {
         rules: [
@@ -16,7 +16,8 @@ const baseConfig = {
             { 
               test: /.(ts|tsx)$/i, 
               loader: 'ts-loader', 
-              exclude: ['/node_modules/'], 
+              // include: [path.resolve(__dirname, './src')],
+              exclude: [path.resolve(__dirname, 'node_modules')], 
             },
         ],
     },

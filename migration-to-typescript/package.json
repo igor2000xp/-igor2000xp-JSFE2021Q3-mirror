@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
     "build": "webpack --config ./webpack.config.js --env mode=prod",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "dev": "webpack"
   },
   "repository": {
     "type": "git",
@@ -30,10 +31,14 @@
     "html-webpack-plugin": "^5.2.0",
     "prettier": "2.2.1",
     "style-loader": "^2.0.0",
+    "ts-loader": "^9.2.6",
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.6.0",
     "webpack-merge": "^5.7.3"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "typescript": "^4.5.2"
+  }
 }
