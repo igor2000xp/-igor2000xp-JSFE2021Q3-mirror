@@ -3,17 +3,21 @@ import { IArtNews, IDataJSON } from './loader';
 
 
 export class AppController extends AppLoader {
-  getSources(callback = (): (IDataJSON | void) => {}) {
+
+  // callback: (data?: IDataJSON) => void
+  // getSources(callback = (): (IDataJSON | void) => {}) {
+    getSources(callback: (data?: IDataJSON) => void) {
       super.getResp(
           {
               endpoint: 'sources',
               options: {},
           },
-          callback
+          callback,
       );
   }
 
-  getNews(e: Event, callback = (): (IDataJSON | void) => {}) {
+  // getNews(e: Event, callback = (): (IDataJSON | void) => {}) {
+    getNews(e: Event, callback: (data?: IDataJSON) => void) {
       let target = e.target as HTMLElement;
       const newsContainer = e.currentTarget as HTMLElement;
 
