@@ -14,10 +14,10 @@ export class AppController extends AppLoader {
   }
 
   getNews(e: Event, callback = (): (IDataJSON | void) => {}) {
-      let target = e.target;
-      const newsContainer = e.currentTarget;
+      let target = e.target as HTMLElement;
+      const newsContainer = e.currentTarget as HTMLElement;
 
-      while (target !== newsContainer) {
+      while (target !== newsContainer as HTMLElement) {
           if (target!.classList.contains('source__item')) {
               const sourceId = target!.getAttribute('data-source-id')!;
               if (newsContainer!.getAttribute('data-source') !== sourceId) {
@@ -34,7 +34,7 @@ export class AppController extends AppLoader {
               }
               return;
           }
-          target = target!.parentNode;
+          target = target!.parentNode as HTMLElement;
       }
   }
 }

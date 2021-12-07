@@ -20,7 +20,7 @@ export class App {
         document
             .querySelector('.sources')!
             .addEventListener('click', (e) => this.controller.getNews(e, (data): (IDataJSON | void) => this.view.drawNews((data))));
-        this.controller.getSources((data): (IDataJSON | void) => (this.view.drawSources(data));
+        this.controller.getSources((data): (IDataJSON | void) => (this.view.drawSources(data)));
 
         // (data: IDataJSON) => (IDataJSON | void)
     }
