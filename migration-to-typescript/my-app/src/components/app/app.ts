@@ -1,6 +1,6 @@
 import { AppController } from '../controller/controller';
-import { AppView, IValuesDataSources } from '../view/appView';
-import { IArtNews, IDataJSON } from '../controller/loader'
+import { AppView } from '../view/appView';
+import { IArtNews, IDataJSON, IValuesDataSources } from '../interfaces/interfacesAndTypes';
 
 // interface IDataSources {
 //   endpoint: string;

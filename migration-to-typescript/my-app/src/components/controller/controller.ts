@@ -1,5 +1,5 @@
 import { AppLoader } from './appLoader';
-import { IArtNews, IDataJSON } from './loader';
+import { IArtNews, IDataJSON } from '../interfaces/interfacesAndTypes';
 
 
 export class AppController extends AppLoader {

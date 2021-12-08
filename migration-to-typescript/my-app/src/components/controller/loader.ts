@@ -1,90 +1,5 @@
-// import fetch from "node-fetch";
-
-export type Options = {
-  [apiKey: string]: string;
-};
-
-export type OptionsEmpty = {
-};
-
-export interface dataSources {
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  category: string;
-  language: string;
-  country: string;
-  author?: string;
-  urlToImage?: string;
-  publishedAt?: string;
-  title: string;
-  content?: string;
-  sources?: {
-    id: string;
-    name: string;
-    description: string;
-    url: string;
-    category: string;
-    language: string;
-  }
-  source?: {
-    name: string;
-    id: string;
-  };
-};
-
-export interface IDataJSON {
-  status: string;
-  sources: Array<dataSources>;
-};
-
-export interface IArtNews {
-  author?: string;
-  title?: string;
-  description?: string;
-  url?: string;
-  urlToImage?: string;
-  publishedAt?: string;
-  content?: string;
-  language?: string;
-  country?: string;
-  category?: string;
-  id?: string;
-  name?: string;
-  articles?: {
-    author: string;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string;
-    publishedAt?: string;
-    content: string;
-    language?: string;
-    country?: string;
-    category?: string;
-  };
-  sources?: {
-    id: string;
-    name: string;
-    description: string;
-    url: string;
-    category: string;
-    language: string;
-  };
-  source?: {
-    name: string;
-    id: string;
-  };
-};
-
-
-export type Res = {
-  ok: boolean;
-  status: number;
-  statusText: string;
-};
-
+import fetch from "node-fetch";
+import {Options, OptionsEmpty, Res, IValuesDataSources, IDataJSON,  } from '../interfaces/interfacesAndTypes'
 
 export class Loader {
   baseLink: string;
@@ -109,7 +24,7 @@ console.log('getResp = ' + Object.values(options));
 this.load('GET', endpoint, callback, options);
 }
 
-errorHandler(res:Res): (Res | undefined) {
+errorHandler(res: Res): (Res | undefined) {
   if (!res.ok) {
     if (res.status === 401 || res.status === 404)
       console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -143,7 +58,7 @@ makeUrl(options: (Options | OptionsEmpty), endpoint: string): string {
 async load(
   method: string, 
   endpoint: string, 
-  callback: (data: IDataJSON) => (IDataJSON | void), 
+  callback: (data: IDataJSON) => void, 
   options:(Options | OptionsEmpty) = {}
   ): Promise<void> {
     // !!
@@ -151,15 +66,15 @@ async load(
   console.log(this.makeUrl(options, endpoint));
 
 
-  // fetch: (this.makeUrl(options, endpoint), { method })
-  //   .then(this.errorHandler)
-  //   .then((res) => res.json())
-  //   .then((data: IDataJSON) => callback(data))
-  //   .catch((err: string) => console.error(err));
+  fetch(this.makeUrl(options, endpoint), { method })
+    .then(this.errorHandler as Res)
+    .then((res) => res.json())
+    .then((data: IValuesDataSources) => callback(data))
+    .catch((err: string) => console.error(err));
     // !!
 
-  const response = await fetch(this.makeUrl(options, endpoint), { method });
-  const data = await response.json();
+  // const response = await fetch(this.makeUrl(options, endpoint), { method });
+  // const data = await response.json();
 
     console.log('load');
   }

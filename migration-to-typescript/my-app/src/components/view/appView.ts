@@ -1,11 +1,6 @@
 import { News } from './news/news';
 import { Sources } from './sources/sources';
-import { IArtNews } from '../controller/loader'
-
-export interface IValuesDataSources {
-  articles?: Array<IArtNews>;
-  sources?: Array<IArtNews>;
-};
+import { IArtNews, IValuesDataSources } from "../interfaces/interfacesAndTypes"
 
 export class AppView {
     news: News;
