@@ -1,6 +1,10 @@
 import { AppController } from '../controller/controller';
 import { AppView } from '../view/appView';
-import { IArtNews, IDataJSON, IValuesData } from '../interfaces/interfacesAndTypes';
+import {
+  IArtNews,
+  IDataJSON,
+  IValuesData,
+} from '../interfaces/interfacesAndTypes';
 
 // interface IDataSources {
 //   endpoint: string;
@@ -8,25 +12,27 @@ import { IArtNews, IDataJSON, IValuesData } from '../interfaces/interfacesAndTyp
 // };
 
 export class App {
-    controller: AppController;
-    view: AppView;
+  controller: AppController;
+  view: AppView;
 
-    constructor() {
-        this.controller = new AppController();
-        this.view = new AppView();
-    }
+  constructor() {
+    this.controller = new AppController();
+    this.view = new AppView();
+  }
 
-    start() {
-      // let dataResponse: (IDataJSON | void);
-      // let dataSources: IValuesDataSources;
-      let dataResponse: IValuesData;
-      document
-            .querySelector('.sources')!
-            .addEventListener('click', (e) => this.controller.getNews(e, () => this.view.drawNews((dataResponse))));
-        this.controller.getSources(() => (this.view.drawSources(dataResponse)));
+  start() {
+    // let dataResponse: (IDataJSON | void);
+    // let dataSources: IValuesDataSources;
+    let dataResponse: IValuesData;
+    document
+      .querySelector('.sources')!
+      .addEventListener('click', (e) =>
+        this.controller.getNews(e, () => this.view.drawNews(dataResponse))
+      );
+    this.controller.getSources(() => this.view.drawSources(dataResponse));
 
-        // (data: IDataJSON) => (IDataJSON | void)
-    }
+    // (data: IDataJSON) => (IDataJSON | void)
+  }
 }
 
 // export default App;

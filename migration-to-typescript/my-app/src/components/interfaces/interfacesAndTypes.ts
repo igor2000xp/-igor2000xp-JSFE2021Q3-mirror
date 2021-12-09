@@ -2,8 +2,7 @@ export type Options = {
   [apiKey: string]: string;
 };
 
-export type OptionsEmpty = {
-};
+export type OptionsEmpty = {};
 
 export interface dataSources {
   id: string;
@@ -25,17 +24,17 @@ export interface dataSources {
     url: string;
     category: string;
     language: string;
-  }
+  };
   source?: {
     name: string;
     id: string;
   };
-};
+}
 
 export interface IDataJSON {
   status: string;
   sources: Array<dataSources>;
-};
+}
 
 export interface IArtNews {
   author?: string;
@@ -74,8 +73,7 @@ export interface IArtNews {
     name: string;
     id: string;
   };
-};
-
+}
 
 export type Res = {
   ok: boolean;
@@ -88,4 +86,4 @@ export interface IValuesData {
   totalResults?: number;
   articles?: Array<IArtNews>;
   sources?: Array<IArtNews>;
-};
+}

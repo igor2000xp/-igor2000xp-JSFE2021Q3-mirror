@@ -1,80 +1,80 @@
 import fetch from "node-fetch";
-import {Options, OptionsEmpty, Res, IValuesData, IDataJSON,  } from '../interfaces/interfacesAndTypes'
+import { Options, OptionsEmpty, Res, IValuesData, IDataJSON, } from '../interfaces/interfacesAndTypes'
 
 export class Loader {
   baseLink: string;
   options: Options;
 
-constructor(baseLink: string, options: Options) {
-  this.baseLink = baseLink;
-  this.options = options;
-}
-
-getResp(
-  { endpoint, options = {} }: {endpoint: string, options:(Options | OptionsEmpty)},
-  callback = (): void => {
-    console.error('No callback for GET response');
-  }
-):void {
-console.log('getResp = ' + {options});  
-// !!
-// options = {apiKey: '1b18e3d30f3a4a898f7c37fb3a806419',};
-console.log('getResp = ' + Object.values(options));  
-// !!
-this.load('GET', endpoint, callback, options);
-}
-
-errorHandler(res){
-  if (!res.ok) {
-    if (res.status === 401 || res.status === 404)
-      console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
-    throw Error(res.statusText);
+  constructor(baseLink: string, options: Options) {
+    this.baseLink = baseLink;
+    this.options = options;
   }
 
-  return res;
-}
+  getResp(
+    { endpoint, options = {} }: { endpoint: string, options: (Options | OptionsEmpty) },
+    callback = (): void => {
+      console.error('No callback for GET response');
+    }
+  ): void {
+    console.log('getResp = ' + { options });
+    // !!
+    // options = {apiKey: '1b18e3d30f3a4a898f7c37fb3a806419',};
+    console.log('getResp = ' + Object.values(options));
+    // !!
+    this.load('GET', endpoint, callback, options);
+  }
 
-makeUrl(options: (Options | OptionsEmpty), endpoint: string): string {
-  const urlOptions = { ...this.options, ...options };
-  // !!
-  // console.log('urlOptions = ' + urlOptions);
-  let url = `${this.baseLink}${endpoint}?`;
-  // !!
-  // console.log(urlOptions);
-  console.log(endpoint);
-  console.log('options keys = ' + Object.keys(options));
-  console.log('options value = ' + Object.values(options));
-  console.log('this.options = ' + Object.keys(this.options));
-  console.log('this.options = ' + Object.values(this.options));
+  errorHandler(res) {
+    if (!res.ok) {
+      if (res.status === 401 || res.status === 404)
+        console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
+      throw Error(res.statusText);
+    }
 
-  Object.keys(urlOptions).forEach((key) => {
-    url += `${key}=${urlOptions[key]}&`;
-  });
-  //  !!
-  // console.log(url.slice(0, -1));
-  return url.slice(0, -1);
-}
+    return res;
+  }
 
-async load(
-  method: string, 
-  endpoint: string, 
-  callback: (data: IValuesData) => void, 
-  options:(Options | OptionsEmpty) = {}
+  makeUrl(options: (Options | OptionsEmpty), endpoint: string): string {
+    const urlOptions = { ...this.options, ...options };
+    // !!
+    // console.log('urlOptions = ' + urlOptions);
+    let url = `${this.baseLink}${endpoint}?`;
+    // !!
+    // console.log(urlOptions);
+    console.log(endpoint);
+    console.log('options keys = ' + Object.keys(options));
+    console.log('options value = ' + Object.values(options));
+    console.log('this.options = ' + Object.keys(this.options));
+    console.log('this.options = ' + Object.values(this.options));
+
+    Object.keys(urlOptions).forEach((key) => {
+      url += `${key}=${urlOptions[key]}&`;
+    });
+    //  !!
+    // console.log(url.slice(0, -1));
+    return url.slice(0, -1);
+  }
+
+  async load(
+    method: string,
+    endpoint: string,
+    callback: (data: IValuesData) => void,
+    options: (Options | OptionsEmpty) = {}
   ): Promise<void> {
     // !!
-  console.log(method + '--' + endpoint + '--- ' + callback + '-- ' + Object.values(options));
-  console.log(this.makeUrl(options, endpoint));
+    console.log(method + '--' + endpoint + '--- ' + callback + '-- ' + Object.values(options));
+    console.log(this.makeUrl(options, endpoint));
 
 
-  fetch(this.makeUrl(options, endpoint), { method })
-    .then(this.errorHandler)
-    .then((res: Response) => res.json())
-    .then((data: IValuesData) => callback(data))
-    .catch((err: string) => console.error(err));
+    fetch(this.makeUrl(options, endpoint), { method })
+      .then(this.errorHandler)
+      .then((res: Response) => res.json())
+      .then((data: IValuesData) => callback(data))
+      .catch((err: string) => console.error(err));
     // !!
 
-  // const response = await fetch(this.makeUrl(options, endpoint), { method });
-  // const data = await response.json();
+    // const response = await fetch(this.makeUrl(options, endpoint), { method });
+    // const data = await response.json();
     console.log('load');
   }
 }
