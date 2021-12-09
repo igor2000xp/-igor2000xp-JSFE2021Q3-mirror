@@ -1,5 +1,5 @@
 import './news.css';
-import { dataSources, IArtNews } from '../../controller/loader'
+import { dataSources, IArtNews } from '../../interfaces/interfacesAndTypes'
 
 export class News {
     draw(data: Array<IArtNews>) {

@@ -1,6 +1,6 @@
 import { AppController } from '../controller/controller';
 import { AppView } from '../view/appView';
-import { IArtNews, IDataJSON, IValuesDataSources } from '../interfaces/interfacesAndTypes';
+import { IArtNews, IDataJSON, IValuesData } from '../interfaces/interfacesAndTypes';
 
 // interface IDataSources {
 //   endpoint: string;
@@ -18,12 +18,12 @@ export class App {
 
     start() {
       // let dataResponse: (IDataJSON | void);
-      let dataSources: IValuesDataSources;
-      let dataArticle: IValuesDataSources;
+      // let dataSources: IValuesDataSources;
+      let dataResponse: IValuesData;
       document
             .querySelector('.sources')!
-            .addEventListener('click', (e) => this.controller.getNews(e, () => this.view.drawNews((dataArticle))));
-        this.controller.getSources(() => (this.view.drawSources(dataSources)));
+            .addEventListener('click', (e) => this.controller.getNews(e, () => this.view.drawNews((dataResponse))));
+        this.controller.getSources(() => (this.view.drawSources(dataResponse)));
 
         // (data: IDataJSON) => (IDataJSON | void)
     }

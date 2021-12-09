@@ -83,7 +83,9 @@ export type Res = {
   statusText: string;
 };
 
-export interface IValuesDataSources {
+export interface IValuesData {
+  status: string;
+  totalResults?: number;
   articles?: Array<IArtNews>;
   sources?: Array<IArtNews>;
 };

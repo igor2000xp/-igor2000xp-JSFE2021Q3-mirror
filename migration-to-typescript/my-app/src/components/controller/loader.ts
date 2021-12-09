@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import {Options, OptionsEmpty, Res, IValuesDataSources, IDataJSON,  } from '../interfaces/interfacesAndTypes'
+import {Options, OptionsEmpty, Res, IValuesData, IDataJSON,  } from '../interfaces/interfacesAndTypes'
 
 export class Loader {
   baseLink: string;
@@ -12,7 +12,7 @@ constructor(baseLink: string, options: Options) {
 
 getResp(
   { endpoint, options = {} }: {endpoint: string, options:(Options | OptionsEmpty)},
-  callback = (): (IDataJSON | void) => {
+  callback = (): void => {
     console.error('No callback for GET response');
   }
 ):void {
@@ -24,7 +24,7 @@ console.log('getResp = ' + Object.values(options));
 this.load('GET', endpoint, callback, options);
 }
 
-errorHandler(res: Res): (Res | undefined) {
+errorHandler(res){
   if (!res.ok) {
     if (res.status === 401 || res.status === 404)
       console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -58,7 +58,7 @@ makeUrl(options: (Options | OptionsEmpty), endpoint: string): string {
 async load(
   method: string, 
   endpoint: string, 
-  callback: (data: IDataJSON) => void, 
+  callback: (data: IValuesData) => void, 
   options:(Options | OptionsEmpty) = {}
   ): Promise<void> {
     // !!
@@ -67,15 +67,14 @@ async load(
 
 
   fetch(this.makeUrl(options, endpoint), { method })
-    .then(this.errorHandler as Res)
-    .then((res) => res.json())
-    .then((data: IValuesDataSources) => callback(data))
+    .then(this.errorHandler)
+    .then((res: Response) => res.json())
+    .then((data: IValuesData) => callback(data))
     .catch((err: string) => console.error(err));
     // !!
 
   // const response = await fetch(this.makeUrl(options, endpoint), { method });
   // const data = await response.json();
-
     console.log('load');
   }
 }

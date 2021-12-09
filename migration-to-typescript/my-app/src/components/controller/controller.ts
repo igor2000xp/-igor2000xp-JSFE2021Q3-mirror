@@ -6,7 +6,7 @@ export class AppController extends AppLoader {
 
   // callback: (data?: IDataJSON) => void
   // getSources(callback = (): (IDataJSON | void) => {}) {
-    getSources(callback: (data?: IDataJSON) => void) {
+    getSources(callback: (dataIn?: IDataJSON) => void) {
       super.getResp(
           {
               endpoint: 'sources',
@@ -17,7 +17,7 @@ export class AppController extends AppLoader {
   }
 
   // getNews(e: Event, callback = (): (IDataJSON | void) => {}) {
-    getNews(e: Event, callback: (data?: IDataJSON) => void) {
+    getNews(e: Event, callback: (dataIn?: IDataJSON) => void) {
       let target = e.target as HTMLElement;
       const newsContainer = e.currentTarget as HTMLElement;
 
