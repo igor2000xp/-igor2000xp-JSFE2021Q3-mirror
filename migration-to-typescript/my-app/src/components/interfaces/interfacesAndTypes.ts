@@ -86,4 +86,32 @@ export interface IValuesData {
   totalResults?: number;
   articles?: Array<IArtNews>;
   sources?: Array<IArtNews>;
+};
+export interface IGetResp
+{
+  endpoint: string,
+  options: {},
 }
+export interface Callback {
+  // data: T;
+  (data: IValuesData): void;
+}
+// export interface Callback<T> = 
+// {
+//    (data: T): void
+// };
+
+// interface ISumFunc {
+//   (a: number, b: number):number;
+// }
+
+// data?: T[];
+// callback: () => T[];
+
+
+// const numericStorage: MyStorage<number> = {
+//   values: [],
+//   getValues() {
+//     return this.values;
+//   }
+// }

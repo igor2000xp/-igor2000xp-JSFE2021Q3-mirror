@@ -17,7 +17,12 @@ export class AppView {
   }
 
   drawSources(data: IValuesData) {
-    const values = data?.sources ? data?.sources : [];
+    console.log("from drawSources data = ");
+    console.log(data);
+    // !!
+    const values: Array<IArtNews> = data?.sources ? data?.sources : [];
+    console.log("from drawSources values = " + values);
+    // !!
     this.sources.draw(values);
   }
 }

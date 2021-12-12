@@ -1,10 +1,10 @@
 import { AppLoader } from './appLoader';
-import { IArtNews, IDataJSON } from '../interfaces/interfacesAndTypes';
-
+import { IArtNews, IDataJSON, IValuesData, Callback } from '../interfaces/interfacesAndTypes';
+// import { App, controller } from '../app/app';
 export class AppController extends AppLoader {
-  // callback: (data?: IDataJSON) => void
+  // callback: (data?: IDataJSON) => IValuesData
   // getSources(callback = (): (IDataJSON | void) => {}) {
-  getSources(callback: (dataIn?: IDataJSON) => void) {
+  getSources(callback: (data: IValuesData) => void): void {
     super.getResp(
       {
         endpoint: 'sources',
@@ -14,8 +14,18 @@ export class AppController extends AppLoader {
     );
   }
 
+  // class AppController extends AppLoader {
+  //   getSources(callback) {
+  //       super.getResp(
+  //           {
+  //               endpoint: 'sources',
+  //           },
+  //           callback
+  //       );
+  //   }
+
   // getNews(e: Event, callback = (): (IDataJSON | void) => {}) {
-  getNews(e: Event, callback: (dataIn?: IDataJSON) => void) {
+  getNews(e: Event, callback: () => (IValuesData | void)) {
     let target = e.target as HTMLElement;
     const newsContainer = e.currentTarget as HTMLElement;
 

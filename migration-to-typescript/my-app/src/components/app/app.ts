@@ -4,13 +4,14 @@ import {
   IArtNews,
   IDataJSON,
   IValuesData,
+  Callback
 } from '../interfaces/interfacesAndTypes';
 
 // interface IDataSources {
 //   endpoint: string;
 //   callback: void;
 // };
-
+let data: IValuesData;
 export class App {
   controller: AppController;
   view: AppView;
@@ -23,13 +24,16 @@ export class App {
   start() {
     // let dataResponse: (IDataJSON | void);
     // let dataSources: IValuesDataSources;
+    // const callback = (data:IValuesData): Callback<IValuesData> => this.view.drawSources(data));
     let dataResponse: IValuesData;
+
     document
       .querySelector('.sources')!
       .addEventListener('click', (e) =>
-        this.controller.getNews(e, () => this.view.drawNews(dataResponse))
+        this.controller.getNews(e, (data?:IValuesData) => this.view.drawNews(dataResponse))
       );
-    this.controller.getSources(() => this.view.drawSources(dataResponse));
+      const callback = (data: IValuesData): void => this.view.drawSources(data);
+    this.controller.getSources(callback);
 
     // (data: IDataJSON) => (IDataJSON | void)
   }
