@@ -26,14 +26,14 @@ export class App {
     // let dataSources: IValuesDataSources;
     // const callback = (data:IValuesData): Callback<IValuesData> => this.view.drawSources(data));
     let dataResponse: IValuesData;
-
+    const callbackNews = (data: IValuesData): void => this.view.drawNews(data);
     document
       .querySelector('.sources')!
       .addEventListener('click', (e) =>
-        this.controller.getNews(e, (data?:IValuesData) => this.view.drawNews(dataResponse))
+        this.controller.getNews(e, callbackNews)
       );
       const callback = (data: IValuesData): void => this.view.drawSources(data);
-    this.controller.getSources(callback);
+      this.controller.getSources(callback);
 
     // (data: IDataJSON) => (IDataJSON | void)
   }

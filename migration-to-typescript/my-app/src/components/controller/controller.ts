@@ -25,7 +25,7 @@ export class AppController extends AppLoader {
   //   }
 
   // getNews(e: Event, callback = (): (IDataJSON | void) => {}) {
-  getNews(e: Event, callback: () => (IValuesData | void)) {
+  getNews(e: Event, callbackNews: (data: IValuesData) => void): void {
     let target = e.target as HTMLElement;
     const newsContainer = e.currentTarget as HTMLElement;
 
@@ -41,7 +41,7 @@ export class AppController extends AppLoader {
                 sources: sourceId,
               },
             },
-            callback
+            callbackNews
           );
         }
         return;
