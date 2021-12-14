@@ -1,0 +1,56 @@
+body {
+    color: #fff;
+    background: #101013;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 2vw 3vw;
+}
+
+header h1 {
+    font-size: 8vw;
+    font-weight: 800;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+  width: 13vw;
+  border: 0.2vw solid #fff;
+  margin: 0 5vw;
+  border-radius: 30vw/18vw;
+  height: 8vw;
+  background-color: rgb(145, 146, 137);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .logo img {
+  width: 10vw;
+  background-color: rgb(145, 146, 137);
+}
+
+footer a {
+  color: #fff;
+}
+footer .copyright {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+footer .copyright a {
+    color: #444;
+}
+footer .copyright a:hover {
+    color: #555;
+}
+footer .copyright:before {
+    content: '©';
+}
