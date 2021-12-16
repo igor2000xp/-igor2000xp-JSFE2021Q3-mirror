@@ -1,0 +1,11 @@
+/* Webfont: Steppe-Regular */
+@font-face {
+  font-family: "Neucha";
+  src: 
+    /* Modern Browsers */
+      url("https://github.com/igor2000xp/assets/blob/c07f6d74fc110ff532f4479468cd4ae3801ee793/fonts/Neucha/Neucha-Regular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
