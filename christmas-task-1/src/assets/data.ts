@@ -1,4 +1,4 @@
-const data = [
+﻿const data = [
   {
     num: '1',
     name: 'Большой шар с рисунком',
