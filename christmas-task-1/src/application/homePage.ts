@@ -2,7 +2,7 @@ import Control from '../common/control';
 import { ToysPage } from './toysPage';
 
 export class HomePage extends Control {
-  onToys: ()=>void;
+  onToys: () => void;
 
   constructor(parentNode: HTMLElement) {
     super(parentNode);
