@@ -9,13 +9,23 @@ export interface IDataItem {
   favorite: boolean;
 };
 
-export interface IFilters {
-  form: string;
+export interface IFilter {
+  shape: string;
   color: string;
   size: string;
   favorite: boolean;
   quantity: number;
   year: number;
-  sortBy: string;
-  searchFor: string;
+  sorted: string;
+  search: string;
+}
+export interface IFilters {
+  shape: {'ball': string, 'bell': string, 'cone': string, 'snowflake': string, 'figurine': string};
+  color: {'white': string, 'yellow': string, 'red': string, 'blue': string, 'green': string};
+  size: {'big': string, 'average': string, 'small': string};
+  favorite: boolean;
+  quantity: number;
+  year: {'minYear': number, 'maxYear': number};
+  sorted: {'sortByNameUp': boolean, 'sortByNameDown': boolean, 'sortByQuantityUp': boolean, 'sortByQuantityDown': boolean};
+  search: string;
 }

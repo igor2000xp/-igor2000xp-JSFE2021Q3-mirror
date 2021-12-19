@@ -1,5 +1,5 @@
+import { ALL_EVENTS}  from '../../constants';
 const DEFAULT_EVENT = 'default';
-export const ALL_EVENTS = 'ALL_EVENTS';
 
 interface Subscription {
   event: string,

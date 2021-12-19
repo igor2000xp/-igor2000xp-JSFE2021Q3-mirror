@@ -1,4 +1,6 @@
-﻿const data = [
+﻿import { IDataItem } from '../application/interfacesAndTypes/interfaces'
+
+export const data: Array<IDataItem> = [
   {
     num: '1',
     name: 'Большой шар с рисунком',
