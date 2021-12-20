@@ -1,4 +1,4 @@
-import { ALL_EVENTS}  from '../../constants';
+import { ALL_EVENTS }  from '../../constants';
 const DEFAULT_EVENT = 'default';
 
 interface Subscription {
@@ -11,7 +11,7 @@ export type Handler = () => void;
 export default class EventBus {
   private subscriptions: Subscription[] = [];
 
-  constructor() {}
+  // constructor() {}
 
   subscribe(eventType: string = DEFAULT_EVENT, handler: Handler): void {
     if (this.subscriptions.find((sub) => eventType === sub.event && sub.handler === handler)) return;
@@ -24,8 +24,8 @@ export default class EventBus {
 
   unSubscribe(eventType: string = DEFAULT_EVENT, handler: Handler): void {
     const subItem = this.subscriptions.find((sub) => eventType === sub.event && sub.handler === handler);
-    let subIndex: number = -1;
-    if(subItem !== undefined) {
+    let subIndex = -1;
+    if (subItem !== undefined) {
       subIndex = this.subscriptions.indexOf(subItem);
     }
     if (subIndex !== -1) {

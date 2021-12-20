@@ -30,6 +30,10 @@
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-loss-of-precision": "warn",
+    "@typescript-eslint/no-shadow": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/default-param-last": "warn",
     "no-param-reassign": ["error", {
       "props": false
     }]

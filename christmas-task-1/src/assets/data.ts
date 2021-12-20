@@ -1,4 +1,4 @@
-﻿import { IDataItem } from '../application/interfacesAndTypes/interfaces'
+﻿import { IDataItem } from '../application/interfacesAndTypes/interfaces';
 
 export const data: Array<IDataItem> = [
   {

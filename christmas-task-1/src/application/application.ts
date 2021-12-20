@@ -13,7 +13,7 @@ export class Application extends Control{
     homePage.onToys = () => {
       homePage.destroy();
       const toyPage = new ToysPage(this.node);
-      const headerPageComponent = new HeaderPageComponent(this.node);
+      // const headerPageComponent = new HeaderPageComponent(this.node);
       toyPage.onTree = () => {
         toyPage.destroy();
         const treesPage = new TreesPage(this.node);

@@ -9,14 +9,21 @@ import { data } from '../../assets/data';
 export const ON_FILTER_CHANGE = 'ON_FILTER_CHANGE';
 
 export default class State {
-  private _filterNewOnly: boolean = true;
+  private _filterNewOnly = true;
+
   // private _currentCategory: string = 'educational';
-  private _page: string = '';
+  
+  private _page = '';
   // private _filterByData: Date = new Date();
-  private _filterState: IFilters = filterInit;
+  
+  public _filterState: IFilters = filterInit;
+  
   private _eventBus = new EventBus();
+  
   private _toy = new Toy(data[0]);
+  
   private _toysList: Toy[] = [];
+  
   private _filteredToysList: Toy[] = [];
   // private currentRoute: string;
 
@@ -33,9 +40,12 @@ export default class State {
     window.localStorage.setItem('State', JSON.stringify(this));
   }
 
+  // this._filterState = _filterState;
   private loadFilterState() {
     this._filterState = JSON.parse(window.localStorage.getItem('State')!)._filterState; 
   }
+  // this._filterState = this.loadFilterState();
+  
   public filteredToysList(_filterState: IFilters) {
     return this._toy.applyFilters(this._filterState);
     // this._filterState = _filterState;
