@@ -29,3 +29,12 @@ export interface IFilters {
   sorted: {'sortByNameUp': boolean, 'sortByNameDown': boolean, 'sortByQuantityUp': boolean, 'sortByQuantityDown': boolean};
   search: string;
 }
+export interface IFiltersShape {
+  shape: {'ball': string, 'bell': string, 'cone': string, 'snowflake': string, 'figurine': string};
+}
+export interface IFiltersColor {
+  color: {'white': string, 'yellow': string, 'red': string, 'blue': string, 'green': string};
+}
+export interface IFiltersSize {
+  size: {'big': string, 'average': string, 'small': string};
+}

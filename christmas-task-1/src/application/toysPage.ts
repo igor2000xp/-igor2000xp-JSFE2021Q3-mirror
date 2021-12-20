@@ -2,6 +2,7 @@ import Control from '../common/control';
 import { IFilters } from './interfacesAndTypes/interfaces';
 import HeaderPageComponent from './components/headerPageComponent';
 import { HomePage } from './homePage';
+import { filterInit } from './components/filterInit';
 
 export class ToysPage extends Control {
   onTree: () => void;
@@ -22,19 +23,19 @@ export class ToysPage extends Control {
       this.onTree();
     };
 
-    const defaultSettings = {
-      form: '',
-      color: '',
-      size: '',
-      favorite: false,
-      quantity: 0,
-      year: 1940,
-      sortBy: '',
-      searchFor: '', 
-    };
+    // const defaultSettings = {
+    //   form: '',
+    //   color: '',
+    //   size: '',
+    //   favorite: false,
+    //   quantity: 0,
+    //   year: 1940,
+    //   sortBy: '',
+    //   searchFor: '', 
+    // };
     const resetButton = new Control(this.node, 'button', '', 'reset');
     resetButton.node.onclick = () => {
-      this.reset(defaultSettings);
+      this.reset(filterInit);
     };
 
   }
