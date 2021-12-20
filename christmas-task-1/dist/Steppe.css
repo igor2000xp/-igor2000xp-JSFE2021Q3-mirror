@@ -1,0 +1,18 @@
+/* Webfont: Steppe-Regular */
+@font-face {
+  font-family: "Steppe";
+  src: url("https://github.com/igor2000xp/assets/blob/c07f6d74fc110ff532f4479468cd4ae3801ee793/fonts/Steppe/Web-PS/Steppe.woff2")
+      format("woff2"),
+    /* Modern Browsers */
+      url("https://github.com/igor2000xp/assets/blob/c07f6d74fc110ff532f4479468cd4ae3801ee793/fonts/Steppe/Web-PS/Steppe.otf")
+      format("opentype"),
+    /* Safari, Android, iOS */
+      url("https://github.com/igor2000xp/assets/blob/c07f6d74fc110ff532f4479468cd4ae3801ee793/fonts/Steppe/Web-TT/Steppe.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("https://github.com/igor2000xp/assets/blob/c07f6d74fc110ff532f4479468cd4ae3801ee793/fonts/Steppe/Web-TT/Steppe.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
