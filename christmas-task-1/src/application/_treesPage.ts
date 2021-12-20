@@ -1,5 +1,5 @@
-import Control from '../common/control';
-import HeaderPageComponent from './components/headerPageComponent';
+import Control from '../common/_control';
+import HeaderPageComponent from './components/_headerPageComponent';
 
 export class TreesPage extends Control {
   constructor(parentNode: HTMLElement) {

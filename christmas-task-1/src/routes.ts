@@ -9,7 +9,7 @@ export const routes: IRoute[] = [
     component: PageNotFoundComponent,
   },
   {
-    path: '',
+    path: '/',
     component: ChristmasToysListComponent,
   },
 ];

@@ -1,7 +1,7 @@
-import Control from '../common/control';
+import Control from '../common/_control';
 import { IFilters } from './interfacesAndTypes/interfaces';
-import HeaderPageComponent from './components/headerPageComponent';
-import { HomePage } from './homePage';
+import HeaderPageComponent from './components/_headerPageComponent';
+import { HomePage } from './_homePage';
 import { filterInit } from './components/filterInit';
 
 export class ToysPage extends Control {

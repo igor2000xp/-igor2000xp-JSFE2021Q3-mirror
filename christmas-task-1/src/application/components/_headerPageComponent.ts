@@ -1,4 +1,4 @@
-import Control from '../../common/control';
+import Control from '../../common/_control';
 
 class HeaderPageComponent extends Control {
   onHome: () => void;

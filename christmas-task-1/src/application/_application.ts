@@ -1,8 +1,8 @@
-import Control from '../common/control';
-import { HomePage } from './homePage';
-import { TreesPage } from './treesPage';
-import { ToysPage } from './toysPage';
-import HeaderPageComponent from './components/headerPageComponent';
+import Control from '../common/_control';
+import { HomePage } from './_homePage';
+import { TreesPage } from './_treesPage';
+import { ToysPage } from './_toysPage';
+import HeaderPageComponent from './components/_headerPageComponent';
 
 
 export class Application extends Control{

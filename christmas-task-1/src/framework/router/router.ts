@@ -31,6 +31,7 @@ export default class Router implements IRouter {
   }
 
   goTo(routePath: string) {
+    console.log('goTo app.component');
     const route = this.routes.find((route) => route.path === routePath);
     if (!route) {
       // !! ?? Loop ??

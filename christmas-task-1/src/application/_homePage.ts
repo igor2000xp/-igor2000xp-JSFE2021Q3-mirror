@@ -1,5 +1,5 @@
-import Control from '../common/control';
-import { ToysPage } from './toysPage';
+import Control from '../common/_control';
+import { ToysPage } from './_toysPage';
 
 export class HomePage extends Control {
   onToys: () => void;

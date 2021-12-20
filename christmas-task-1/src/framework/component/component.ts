@@ -23,5 +23,7 @@ export default class Component {
     return Component.state;
   }
 
-  public render() {}
+  public render() {
+    console.log('render from component');
+  }
 }

@@ -11,7 +11,7 @@ async function bootstrap(): Promise<void> {
 
   app.initRouter(new Router(routes, ROUTE_NOT_FOUND, ROUTER_ELEMENT_SELECTOR));
   // app.initEventBus(new EventBus());
-  // await app.init();
+  // await app.start();
   await app.render();
 }
 
