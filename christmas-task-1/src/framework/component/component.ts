@@ -6,7 +6,7 @@ export default class Component {
 
   protected static state: State | null = null;
   
-  protected static router: IRouter | null = null;
+  public static router: IRouter | null = null;
 
   // constructor() {}
 

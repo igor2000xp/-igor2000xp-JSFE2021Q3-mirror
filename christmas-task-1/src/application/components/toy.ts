@@ -18,28 +18,31 @@ export default class Toy implements IDataItem {
   
   favorite: boolean;
   
-  arrayFilteredToys: Array<IDataItem>;
+  arrayFilteredToys: Array<IDataItem> = [];
 
   // constructor() {
-  constructor(data: IDataItem) {
-    this.num = data.num;
-    this.name = data.name;
-    this.count = data.count;
-    this.year = data.year;
-    this.shape = data.shape;
-    this.color = data.color;
-    this.size = data.size;
-    this.favorite = data.favorite;
+  constructor(item: IDataItem) {
+  //   this.num = item.num;
+  //   this.name = item.name;
+  //   this.count = item.count;
+  //   this.year = item.year;
+  //   this.shape = item.shape;
+  //   this.color = item.color;
+  //   this.size = item.size;
+  //   this.favorite = item.favorite;
   }
 
-  public clone() {
-    return new Toy(this);
+  public clone(item: IDataItem) {
+    return new Toy(item);
   }
 
-  public applyFilters(_filterState: IFilters) {
+  public applyFilters(_toysList: IDataItem[], _filterState: IFilters) {
+    // console.log('I am trying to filter date');
     // const filteredToy = new Toy(this);
-    const arrayFullList = this.fullList();
-    arrayFullList.forEach(el => {
+    // const arrayFullList = this.fullList();
+    // console.log('_toysList');
+    // console.log(_toysList);
+    _toysList.forEach(el => {
       if (this.filterByShape(el, _filterState) &&
       this.filterByColor(el, _filterState) &&
       this.filterBySize(el, _filterState) &&
@@ -48,11 +51,12 @@ export default class Toy implements IDataItem {
       this.filterByYear(el, _filterState) &&
       this.filterBySearch(el, _filterState) 
       ) {
-        this.arrayFilteredToys.push(this.clone());
+        // console.log(el);
+        this.arrayFilteredToys.push(el);
       }
     });
     this.filterBySort(this.arrayFilteredToys, _filterState);
-
+    // console.log(this.arrayFilteredToys);
     return this.arrayFilteredToys;
   }
 
@@ -61,15 +65,22 @@ export default class Toy implements IDataItem {
   }
 
   private filterByShape(item: IDataItem, _filterState: IFilters) {
+    // console.log('_filterState.shape');
+    // console.log(_filterState.shape);
+    // console.log(item.shape);
+
     if (
       item.shape == _filterState.shape.ball ||
       item.shape == _filterState.shape.bell ||
       item.shape == _filterState.shape.cone ||
       item.shape == _filterState.shape.figurine ||
       item.shape == _filterState.shape.snowflake
-    ) return true;
-
-    return false;
+    ) {
+      return true;
+      } else {
+        return false;
+      }
+    
   }
 
   private filterByColor(item: IDataItem, _filterState: IFilters) {
@@ -96,7 +107,7 @@ export default class Toy implements IDataItem {
 
   private filterByFavorite(item: IDataItem, _filterState: IFilters) {
     if (
-      item.favorite == _filterState.favorite
+      !_filterState.favorite
     ) return true;
 
     return false;
@@ -112,11 +123,8 @@ export default class Toy implements IDataItem {
 
   private filterByYear(item: IDataItem, _filterState: IFilters) {
     if (
-      item.year == _filterState.shape.ball ||
-      item.year == _filterState.shape.bell ||
-      item.year == _filterState.shape.cone ||
-      item.shape == _filterState.shape.figurine ||
-      item.shape == _filterState.shape.snowflake
+      Number(item.year) >= _filterState.year.minYear &&
+      Number(item.year) <= _filterState.year.maxYear 
     ) return true;
 
     return false;
