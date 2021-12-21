@@ -1,0 +1,21 @@
+.footer {
+  background-color: #192F2D;
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signature {
+  width: 100%;
+}
+.signature a {
+  margin: 0 0 0 8vh;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+.rss-school {
+  margin: 0 8vh 0 0;
+  height: 40px;
+}

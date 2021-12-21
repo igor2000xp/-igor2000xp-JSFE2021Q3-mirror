@@ -13,7 +13,7 @@ export default class State {
 
   // private _currentCategory: string = 'educational';
   
-  private _page = '/';
+  public _page = '/';
   // private _filterByData: Date = new Date();
   
   public _filterState: IFilters = filterInit;

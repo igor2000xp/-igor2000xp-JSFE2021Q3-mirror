@@ -2,6 +2,7 @@ import Component from '../framework/component/component';
 import { ON_FILTER_CHANGE } from '../framework/state/state';
 import { ON_CATEGORY_CHANGE } from '../constants';
 import { IDataItem } from '../application/interfacesAndTypes/interfaces';
+import { footer } from './common/footer';
 
 export default class HomePageComponent extends Component {
   private toyComponentList: Component[];
@@ -20,6 +21,27 @@ export default class HomePageComponent extends Component {
   
   async beforeDestroy(): Promise<void> {
     if (this.state !== null) this.state.unSubscribe(ON_CATEGORY_CHANGE, this.onFilterUpdate.bind(this));
+  }
+
+  render() {
+    // console.log('Home render from component');
+    const page = document.createElement('section');
+    page.classList.add('section-home');
+    page.innerHTML =
+    `
+    <div class="ball ball1"></div>
+    <div class="ball ball2"></div>
+    <h1 class="start-page-title">Новогодняя игра «Наряди ёлку»</h1>
+    <button class="switch-start-page" data-page="mainPage">Начать</button>
+    `;
+    document.body.append(page);
+
+    const footerConst = document.createElement('footer');
+    footerConst.classList.add('footer');
+    footerConst.innerHTML = footer;
+
+    document.body.append(footerConst);
+
   }
 
   onFilterUpdate() {

@@ -11,7 +11,7 @@ export type Handler = () => void;
 export default class EventBus {
   private subscriptions: Subscription[] = [];
 
-  // constructor() {}
+  constructor() {}
 
   subscribe(eventType: string = DEFAULT_EVENT, handler: Handler): void {
     if (this.subscriptions.find((sub) => eventType === sub.event && sub.handler === handler)) return;
