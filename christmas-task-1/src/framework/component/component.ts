@@ -35,7 +35,7 @@ export default class Component {
     if (this.element != null) {
       this.element.outerHTML = '';
     }
-    document.body.innerHTML = '<body><h1>Empty</h1></body>';
+    document.body.innerHTML = '';
     console.log('destroyAsync');
   }
 
@@ -43,7 +43,7 @@ export default class Component {
     if (this.element != null) {
       this.element.outerHTML = '';
     }
-    document.body.innerHTML = '<body><h1>Empty</h1></body>';
+    document.body.innerHTML = '';
     console.log('destroyAsync');
     // this.destroyAsync();
   }
