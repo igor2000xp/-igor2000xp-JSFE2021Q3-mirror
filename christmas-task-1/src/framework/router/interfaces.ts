@@ -4,6 +4,7 @@ import { Handler } from '../utils/event-bus';
 export interface IRoute {
   path: string,
   component: typeof Component,
+  // component: Component,
 }
 
 export interface IRouter {

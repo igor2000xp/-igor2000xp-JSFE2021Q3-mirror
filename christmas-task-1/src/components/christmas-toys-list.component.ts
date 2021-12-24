@@ -9,10 +9,10 @@ export default class ChristmasToysListComponent extends Component {
   private list: IDataItem[] = [];
   // private state: AppComponent;
 
-  // constructor() {
-  //   super();
-  //   // this.state = state;
-  // }
+  constructor(parentNode: HTMLElement) {
+    super(parentNode);
+    this.render();
+  }
 
   init() {
     if (this.state !== null) this.state.subscribe(ON_FILTER_CHANGE, this.onFilterUpdate.bind(this));
@@ -20,6 +20,10 @@ export default class ChristmasToysListComponent extends Component {
   
   async beforeDestroy(): Promise<void> {
     if (this.state !== null) this.state.unSubscribe(ON_CATEGORY_CHANGE, this.onFilterUpdate.bind(this));
+  }
+
+  render() {
+    console.log('Christmas page');
   }
 
   onFilterUpdate() {

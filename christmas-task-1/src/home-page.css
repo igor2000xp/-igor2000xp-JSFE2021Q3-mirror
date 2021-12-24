@@ -57,11 +57,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center;
-  align-content: center; */
   width: 30vw;
   height: 150px;
-  /* margin-bottom: 80px; */
   margin-top: 30vh;
   color: #fff;
   font-weight: 400;
@@ -70,7 +67,6 @@
   border-radius: 25px;
   background-color: rgba(139, 218, 214, 0.582);
   backdrop-filter: blur(32px);
-  /* background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(36, 197, 219, 0.15) 0%, rgba(36, 197, 219, 0) 100%); */
   z-index: 5;
   font-size: 48px;
 }

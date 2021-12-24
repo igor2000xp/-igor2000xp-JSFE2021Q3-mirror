@@ -11,7 +11,7 @@ export const routes: IRoute[] = [
     component: PageNotFoundComponent,
   },
   {
-    path: '/toys',
+    path: 'toys',
     component: ChristmasToysListComponent,
   },
   {
@@ -19,7 +19,7 @@ export const routes: IRoute[] = [
     component: HomePageComponent,
   },
   {
-    path: '/trees',
+    path: 'trees',
     component: TreePageComponent,
   },
 

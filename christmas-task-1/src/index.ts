@@ -7,8 +7,9 @@ import AppComponent from './framework/component/app.component';
 // import { ROUTE_NOT_FOUND, ROUTER_ELEMENT_SELECTOR } from './constants';
 
 async function bootstrap(): Promise<void> {
-  const app = new AppComponent();
-  app.start();
+  const app = new AppComponent(document.body);
+  // const app = new Application(document.body);
+  // app.start();
   // await app.render();
 }
 

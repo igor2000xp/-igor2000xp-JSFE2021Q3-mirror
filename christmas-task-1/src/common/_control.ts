@@ -1,3 +1,5 @@
+
+
 class Control<NodeType extends HTMLElement = HTMLElement>{
   public node: NodeType;
 

@@ -6,8 +6,21 @@ import { routes } from '../../routes';
 import { ROUTE_NOT_FOUND, ROUTER_ELEMENT_SELECTOR } from '../../constants';
 import EventBus from '../utils/event-bus';
 import HomePageComponent from '../../components/home-page-component';
+import ChristmasToysListComponent from '../../components/christmas-toys-list.component';
+
 
 export default class AppComponent extends Component {
+  parentNode: HTMLElement;
+
+  private pageComponent: Component;
+
+  constructor(parentNode: HTMLElement){
+    super(parentNode);
+    this.parentNode = parentNode;
+    // const homePage = new HomePageComponent(this.node);
+    this.start();
+  }
+
   public initState(state: State) {
     Component.state = state;
     console.log('start init State  from app.component');
@@ -24,10 +37,17 @@ export default class AppComponent extends Component {
     const eventBus = new EventBus();
   }
 
-  public goHome() {
+  private goHome(): string {
     console.log('We are Home');
-    const home = new HomePageComponent;
-    home.render();
+    const home = new HomePageComponent(this.parentNode);
+    // const home = new HomePageComponent(document.body);
+    // const stateGo = home.render();
+    return home.getNewState;
+  }
+
+  private goToys() {
+    console.log('We are on Toys');
+    const toys = new ChristmasToysListComponent(this.parentNode);
   }
 
   public start() {
@@ -37,13 +57,22 @@ export default class AppComponent extends Component {
     this.initState(state);
 
     this.initRouter(new Router(routes, ROUTE_NOT_FOUND, ROUTER_ELEMENT_SELECTOR));
-    const route = Component.router;
+    const router = Component.router;
     console.log('after init Route from app.component');
-    console.log(route);
+    console.log(router);
 
     this.initEventBus();
+    router?.goTo(state._page);
 
-    if (state._page == '/') this.goHome();
+
+
+    // state._page = this.goHome();
+    // if (state._page == '/') state._page = this.goHome();
+    // console.log('exit home');
+    // // state._page = this.goHome();
+
+    // console.log(state._page);
+    // if (state._page == 'toys') this.goToys();
 
 
   }

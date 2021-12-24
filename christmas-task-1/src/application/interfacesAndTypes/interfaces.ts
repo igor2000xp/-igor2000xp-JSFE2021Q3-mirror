@@ -1,3 +1,6 @@
+import { type } from "os";
+import Control from "../../common/_control";
+
 export interface IDataItem {
   num: string;
   name: string;
@@ -38,3 +41,7 @@ export interface IFiltersColor {
 export interface IFiltersSize {
   size: {'big': string, 'average': string, 'small': string};
 }
+
+// export type NodeType extends = Control{
+//   // node: NodeType;
+// }
