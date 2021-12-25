@@ -121,7 +121,7 @@ export default class ChristmasToysListComponent extends Component {
               ИГРУШКИ
             </li>
             <a href="http://">
-              <li>
+              <li id="trees">
                   ЁЛКА
               </li>
             </a>
@@ -264,6 +264,13 @@ export default class ChristmasToysListComponent extends Component {
     footerConst.innerHTML = footer;
 
     document.body.append(footerConst);
+
+    const buttonMain = document.getElementById('trees')!;
+    buttonMain.addEventListener( 'click', () => {
+      // this.newState = 'toys';
+      console.log('click-click');
+      Component.router?.goTo('trees');
+    });
   }
 
   onFilterUpdate() {
