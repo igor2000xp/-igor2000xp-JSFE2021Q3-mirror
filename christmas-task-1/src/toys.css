@@ -337,18 +337,19 @@ button {
   border-image-source: radial-gradient(104.22% 230.94% at -4.22% 0%, #24c5db 3.62%, rgba(36, 197, 219, 0.26) 55.1%),
     radial-gradient(57.23% 248.2% at 107.17% 104.02%, rgba(34, 153, 235, 0.92) 0%, rgba(34, 153, 235, 0.07) 100%);
 }
-.card-item__heder {
-  font-family: Neucha;
-  font-size: 16px;
+.card-item__header {
+  /* font-family: Neucha; */
+  font-size: 1.2vw;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.8vw;
   letter-spacing: 0.06em;
   text-align: left;
 }
-.card-item__heder p {
+.card-item__header p {
   color: white;
   width: 14vw;
+  height: 3.5vw;
   margin: 0;
   margin-top: 0.2vw;
   padding-left: 0.3vw;
@@ -356,12 +357,22 @@ button {
   text-align: center;
 }
 .card-item__image {
+  height: 5vw;
+  width: 5vw;
+  margin: 0.2vw;
+  /* background-image: url('https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp');
+  background-size: 90%;
+  background-repeat: no-repeat; */
+
+  /* background: no-repeat; */
+}
+.card-item__header img {
   height: 7vw;
   width: 7vw;
-  margin: 0.2vw;
-  background-image: url('https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp');
+  /* margin: 0.2vw; */
+  /* background-image: url('https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp');
   background-size: 90%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
   /* background: no-repeat; */
 }

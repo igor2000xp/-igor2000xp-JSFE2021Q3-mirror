@@ -7,9 +7,16 @@ import data from '../assets/data';
 import PartOfTreesImages from './common/parts-component/parts-trees-images';
 
 export default class ChristmasToysListComponent extends Component {
-  private toyComponentList: Component[];
+  // private toyComponentList: Component[];
 
   private list: IDataItem[] = [];
+
+  private numberCards = 20;
+
+  private numberTrees = 6;
+
+  private numberBackground = 10;
+
   // private state: AppComponent;
 
   constructor(parentNode: HTMLElement) {
@@ -31,9 +38,25 @@ export default class ChristmasToysListComponent extends Component {
     // let dataTrees: Array<IDataItem> = [];
     let toysFav = ''; 
 
-    const partOfTreesImages = new PartOfTreesImages(20);
-    toysFav = partOfTreesImages.render(20);
-    console.log(toysFav);
+    const partOfTreesImages = new PartOfTreesImages(this.numberCards);
+    toysFav = partOfTreesImages.render(this.numberCards);
+    // console.log(toysFav);
+
+    let numberTrees = '';
+    let numberTreesDecorated = '';
+    for (let i = 1; i <= this.numberTrees; i++) {
+      numberTrees += `<div class="tree menu-item" data-tree="${i}"></div>`;
+      numberTreesDecorated += `
+      <div class="tree-decorate">
+          <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/${i}.webp" class="tree-decorate-img" alt="decorate-tree">
+       </div>
+      `;
+    }
+
+    let backgrounds = '';
+    for (let i = 1; i <= this.numberBackground; i++) {
+      backgrounds += `<div class="bg menu-item" data-bg="${i}"></div>`;
+    }
 
     const page = document.createElement('section');
     page.classList.add('section-trees');
@@ -55,24 +78,10 @@ export default class ChristmasToysListComponent extends Component {
         <div class="snow-control menu-item"></div>
       </div>
       <div class="tree-container menu-container">
-        <div class="tree menu-item" data-tree="1"></div>
-        <div class="tree menu-item" data-tree="2"></div>
-        <div class="tree menu-item" data-tree="3"></div>
-        <div class="tree menu-item" data-tree="4"></div>
-        <div class="tree menu-item" data-tree="5"></div>
-        <div class="tree menu-item" data-tree="6"></div>
+        ${numberTrees}
       </div>
       <div class="bg-container menu-container">
-        <div class="bg menu-item" data-bg="1"></div>
-        <div class="bg menu-item" data-bg="2"></div>
-        <div class="bg menu-item" data-bg="3"></div>
-        <div class="bg menu-item" data-bg="4"></div>
-        <div class="bg menu-item" data-bg="5"></div>
-        <div class="bg menu-item" data-bg="6"></div>
-        <div class="bg menu-item" data-bg="7"></div>
-        <div class="bg menu-item" data-bg="8"></div>
-        <div class="bg menu-item" data-bg="9"></div>
-        <div class="bg menu-item" data-bg="10"></div>
+      ${backgrounds}
       </div>
       <div class="garland-container menu-container">
         <div class="garland-btns">
@@ -124,33 +133,15 @@ export default class ChristmasToysListComponent extends Component {
     </div>
 
     <div class="favorites-aside">
-      
       <div class="favorites-container favorite-right">
-
-      ${toysFav} 
-
+      ${toysFav}
       </div>
     </div>
 
     <div class="favorites-decorate">
-
       <div class="favorites-decorate-container">
-      <div class="tree-decorate">
-        <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/1.webp" class="tree-decorate-img" alt="decorate-tree">
+        ${numberTreesDecorated}
       </div>
-      <div class="tree-decorate">
-        <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/2.webp" class="tree-decorate-img" alt="decorate-tree">
-      </div>
-      <div class="tree-decorate">
-        <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/3.webp" class="tree-decorate-img" alt="decorate-tree">
-      </div>
-      <div class="tree-decorate">
-        <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/4.webp" class="tree-decorate-img" alt="decorate-tree">
-      </div>
-      <div class="tree-decorate">
-        <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/5.webp" class="tree-decorate-img" alt="decorate-tree">
-      </div>
-    </div>
     </div>
 
   </div>

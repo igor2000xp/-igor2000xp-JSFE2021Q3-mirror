@@ -3,6 +3,8 @@ import { ON_FILTER_CHANGE } from '../framework/state/state';
 import { ON_CATEGORY_CHANGE } from '../constants';
 import { IDataItem } from '../application/interfacesAndTypes/interfaces';
 import { footer } from './common/footer';
+import data from '../assets/data';
+export { data } from '../assets/data';
 
 export default class ChristmasToysListComponent extends Component {
   private toyComponentList: Component[];
@@ -25,6 +27,34 @@ export default class ChristmasToysListComponent extends Component {
 
   render() {
     console.log('Christmas page');
+
+    let cardsList = '';
+    for (let i = 0; i < data.length; i++) {
+      cardsList += `
+      <div class="cards-item">
+      <div class="card-item__header">
+        <p>${data[i].name}</p>
+        <img 
+        class="card-img" 
+        src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/${i + 1}.webp" 
+        alt="toy"
+        >
+      </div>
+      <div class="card-item__text">Количество: ${data[i].count}</div>
+      <div class="card-item__text">Год покупки: ${data[i].year}год</div>
+      <div class="card-item__text">Форма игрушки: ${data[i].shape}</div>
+      <div class="card-item__text">Цвет игрушки: ${data[i].color}</div>
+      <div class="card-item__text">Размер игрушки: ${data[i].size}</div>
+      <div class="card-item__text">Любимая: ${data[i].favorite}</div>
+    </div>
+      `;
+    }
+
+    // console.log(cardsList);
+
+    // console.log(data[1].name);
+    // console.log(data.length);
+
     const page = document.createElement('section');
     page.classList.add('section-toy');
     page.innerHTML =
@@ -132,126 +162,7 @@ export default class ChristmasToysListComponent extends Component {
 
           <div class="cards-items">
 
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
-            <div class="cards-item">
-              <div class="card-item__heder">
-                <p>Большой шар с рисунком Цветок</p>
-              </div>
-              <div class="card-item__image"></div>
-              <div class="card-item__text">Количество: 2</div>
-              <div class="card-item__text">Год покупки: 1960 год</div>
-              <div class="card-item__text">Форма игрушки: шар</div>
-              <div class="card-item__text">Цвет игрушки: желтый</div>
-              <div class="card-item__text">Размер игрушки: большой</div>
-              <div class="card-item__text">Любимая: нет</div>
-            </div>
+          ${cardsList}  
 
           </div>
 
