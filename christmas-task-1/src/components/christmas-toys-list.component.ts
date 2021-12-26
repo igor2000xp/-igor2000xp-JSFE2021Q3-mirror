@@ -182,6 +182,7 @@ export default class ChristmasToysListComponent extends Component {
       console.log('click-click');
       Component.router?.goTo('trees');
     });
+
   }
 
   onFilterUpdate() {

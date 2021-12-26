@@ -34,13 +34,10 @@ export default class ChristmasToysListComponent extends Component {
 
   render() {
     console.log('Christmas page');
-
-    // let dataTrees: Array<IDataItem> = [];
     let toysFav = ''; 
 
     const partOfTreesImages = new PartOfTreesImages(this.numberCards);
     toysFav = partOfTreesImages.render(this.numberCards);
-    // console.log(toysFav);
 
     let numberTrees = '';
     let numberTreesDecorated = '';
@@ -66,9 +63,9 @@ export default class ChristmasToysListComponent extends Component {
 
     <div class="header-container">      
       <nav class="nav-bar">
-        <a class="logo"></a>
-        <a href="#" class="switch-main-page">Игрушки</a>
-        <a href="#" class="switch-favorites-page active-link">Ёлка</a>
+        <a class="logo" id="home"></a>
+        <a class="switch-main-page" id="toys">Игрушки</a>
+        <a class="switch-favorites-page active-link">Ёлка</a>
       </nav>   
     </div>
 
@@ -155,15 +152,19 @@ export default class ChristmasToysListComponent extends Component {
 
     document.body.append(footerConst);
 
+    const buttonHome = document.getElementById('home')!;
+    buttonHome.addEventListener( 'click', () => {
+      console.log('click-click');
+      Component.router?.goTo('/');
+    });
+    const buttonToys = document.getElementById('toys')!;
+    buttonToys.addEventListener( 'click', () => {
+      Component.router?.goTo('toys');
+    });
   }
 
   onFilterUpdate() {
-    // this.list = document.querySelectorAll('.sdfsdf');
     if (this.state !== null) this.list = this.state.filteredToysList(this.state._toysList, this.state._filterState);
-    // if()
-    // let filterStateToy: IFilters =
-    // this.list = listElements.filter((video) => video.category === this.state.currentCategory);
     this.render();
-    // this.toyComponentList.forEach((toyC) => toyC.disable());
   }
 }
