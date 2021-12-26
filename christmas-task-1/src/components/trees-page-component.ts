@@ -161,6 +161,11 @@ export default class ChristmasToysListComponent extends Component {
     buttonToys.addEventListener( 'click', () => {
       Component.router?.goTo('toys');
     });
+
+    
+
+
+
   }
 
   onFilterUpdate() {
