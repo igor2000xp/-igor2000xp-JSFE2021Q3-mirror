@@ -3,6 +3,8 @@ import { ON_FILTER_CHANGE } from '../framework/state/state';
 import { ON_CATEGORY_CHANGE } from '../constants';
 import { IDataItem } from '../application/interfacesAndTypes/interfaces';
 import { footer } from './common/footer';
+import data from '../assets/data';
+import PartOfTreesImages from './common/parts-component/parts-trees-images';
 
 export default class ChristmasToysListComponent extends Component {
   private toyComponentList: Component[];
@@ -25,6 +27,14 @@ export default class ChristmasToysListComponent extends Component {
 
   render() {
     console.log('Christmas page');
+
+    // let dataTrees: Array<IDataItem> = [];
+    let toysFav = ''; 
+
+    const partOfTreesImages = new PartOfTreesImages(20);
+    toysFav = partOfTreesImages.render(20);
+    console.log(toysFav);
+
     const page = document.createElement('section');
     page.classList.add('section-trees');
     page.innerHTML =
@@ -117,226 +127,8 @@ export default class ChristmasToysListComponent extends Component {
       
       <div class="favorites-container favorite-right">
 
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
-        <div class="favorites-card" data-num="1">
-          <p class="favorites-count">2</p>
-          <img
-            class="favorites-card-img"
-            src="https://raw.githubusercontent.com/igor2000xp/assets/main/toys/1.webp"
-            alt="toy"
-            id="1-1"
-            draggable="true"
-            data-imgnum="1"
-          />
-        </div>
+      ${toysFav} 
+
       </div>
     </div>
 
