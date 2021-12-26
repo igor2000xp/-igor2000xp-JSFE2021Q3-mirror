@@ -73,6 +73,7 @@
   text-decoration: none;
   padding: 1vw;
   transition: .3s;
+  cursor: pointer;
 }
 .nav-bar a:hover {
   color: #278D9F;
