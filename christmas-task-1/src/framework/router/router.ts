@@ -24,6 +24,7 @@ export default class Router implements IRouter {
     this.routes = [...routes];
     this.pageElement = document.querySelector(pageElSelector)!;
     this.notFoundRoute = notFoundRoute;
+    this.pageComponent = new HomePageComponent(document.body);
   }
 
   get subscribe(): (event: string, handler: Handler) => void {
@@ -35,17 +36,17 @@ export default class Router implements IRouter {
   }
 
   goTo(routePath: string) {
-    console.log('goTo router');
-    console.log(routePath);
-    console.log('pageComponent');
-    console.log(this.pageComponent);
-    console.log('routes');
-    console.log(routes);
+    // console.log('goTo router');
+    // console.log(routePath);
+    // console.log('pageComponent');
+    // console.log(this.pageComponent);
+    // console.log('routes');
+    // console.log(routes);
     // if(!this.pageComponent == undefined) {
       // this.pageComponent = 
-      const routesItem = this.routes.find((route) => route.path === this.currentPath);
-      console.log('routesItem');
-      console.log(routesItem);
+      // const routesItem = this.routes.find((route) => route.path === this.currentPath);
+      // console.log('routesItem');
+      // console.log(routesItem);
       // this.pageComponent = routesItem;
     // } else {
       
@@ -56,13 +57,15 @@ export default class Router implements IRouter {
     console.log('route');
     console.log(route);
     if (!route) {
+      console.log('Wait, please!!!');
       this.goTo(this.notFoundRoute);
     }
-    console.log('pageComponent');
+    // console.log('pageComponent');
     // console.log(this.pageComponent);
     this.pageComponent?.destroy();
     // Component.destroy();
     this.currentPath = routePath;
+    console.log('pageComponent');
     console.log(this.pageComponent);
     if (route !== undefined) this.pageComponent = new route.component(document.body);
     console.log(this.pageComponent);

@@ -33,17 +33,20 @@ export default class DragAndDropBall {
 
         function onMouseMove(event: MouseEvent) {
           moveAt(event.pageX, event.pageY);
-
+          console.log('hidden+++++++++++++');
+          
           ball.hidden = true;
           const elemBelow = document.elementFromPoint(
             event.clientX,
             event.clientY,
           );
+          // console.log(document.elementFromPoint);
           ball.hidden = false;
 
           if (!elemBelow) return;
-
+            // console.log('hidden+++++++++++++');
           const droppableBelow: HTMLElement = elemBelow.closest('.droppable')!;
+          // console.log('hidden+++++++++++++');
           if (currentDroppable != droppableBelow) {
             if (currentDroppable) {
               // null если мы были не над droppable до этого события

@@ -149,7 +149,7 @@ output {
   padding: 0.5vw 1vw;
   margin: 0;
   background-color: rgba(31, 112, 127, 0.3);
-  background-image: url("../assets/svg/arrow-down.svg");
+  /* background-image: url("../assets/svg/arrow-down.svg"); */
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 23vw center;
@@ -309,6 +309,7 @@ button {
   border: 1px solid #000; /* Рамка вокруг текста */
   padding: 3px; /* Поля вокруг текста */
   color: white;
+  cursor: pointer;
 }
 .cards {
   overflow-y: scroll;

@@ -57,12 +57,12 @@ export default class AppComponent extends Component {
     this.initState(state);
 
     this.initRouter(new Router(routes, ROUTE_NOT_FOUND, ROUTER_ELEMENT_SELECTOR));
-    const router = Component.router;
+    // const router = Component.router;
     console.log('after init Route from app.component');
-    console.log(router);
+    // console.log(router);
 
     this.initEventBus();
-    router?.goTo(state._page);
+    // router?.goTo(state._page);
 
 
 

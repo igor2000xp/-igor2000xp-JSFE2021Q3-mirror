@@ -4,7 +4,6 @@ import { ON_CATEGORY_CHANGE } from '../constants';
 import { IDataItem } from '../application/interfacesAndTypes/interfaces';
 import { footer } from './common/footer';
 import data from '../assets/data';
-export { data } from '../assets/data';
 
 export default class ChristmasToysListComponent extends Component {
   private toyComponentList: Component[];
@@ -26,6 +25,7 @@ export default class ChristmasToysListComponent extends Component {
   }
 
   render() {
+
     console.log('Christmas page');
 
     let cardsList = '';
@@ -49,11 +49,6 @@ export default class ChristmasToysListComponent extends Component {
     </div>
       `;
     }
-
-    // console.log(cardsList);
-
-    // console.log(data[1].name);
-    // console.log(data.length);
 
     const page = document.createElement('section');
     page.classList.add('section-toy');
@@ -150,11 +145,9 @@ export default class ChristmasToysListComponent extends Component {
             <li>
               ИГРУШКИ
             </li>
-            <a href="http://">
               <li id="trees">
                   ЁЛКА
               </li>
-            </a>
           </ul>
 
         </menu>
@@ -176,22 +169,25 @@ export default class ChristmasToysListComponent extends Component {
 
     document.body.append(footerConst);
 
-    const buttonMain = document.getElementById('trees')!;
-    buttonMain.addEventListener( 'click', () => {
-      // this.newState = 'toys';
-      console.log('click-click');
-      Component.router?.goTo('trees');
-    });
+
+
+    const buttonTrees = document.getElementById('trees')!;
+
+    const treesToysListener = function () {
+            console.log('click-click');
+            page.remove();
+            footerConst.remove();
+            buttonTrees.removeEventListener( 'click', treesToysListener);
+            console.log('buttonMain.removeEventListener( "click", treesListener);');
+            Component.router?.goTo('trees');
+    };
+
+    buttonTrees.addEventListener( 'click', treesToysListener);
 
   }
 
   onFilterUpdate() {
-    // this.list = document.querySelectorAll('.sdfsdf');
     if (this.state !== null) this.list = this.state.filteredToysList(this.state._toysList, this.state._filterState);
-    // if()
-    // let filterStateToy: IFilters =
-    // this.list = listElements.filter((video) => video.category === this.state.currentCategory);
     this.render();
-    // this.toyComponentList.forEach((toyC) => toyC.disable());
   }
 }

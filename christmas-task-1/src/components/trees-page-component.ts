@@ -69,7 +69,7 @@ export default class ChristmasToysListComponent extends Component {
         <a class="switch-favorites-page active-link">Ёлка</a>
       </nav>   
     </div>
-
+    
     <div class="favorites-menu">
       <div class="snow-audio-container menu-container">
         <div class="audio-control menu-item"></div>
@@ -109,7 +109,7 @@ export default class ChristmasToysListComponent extends Component {
     </div>
   </div>
   <div class="trees-main">
-    <div class="tree-main__container">
+    <div class="droppable tree-main__container">
       <div class="snowflakes hide"></div>
       <div class="garland-tree-container"></div>
       <map name="tree-map">
@@ -117,7 +117,7 @@ export default class ChristmasToysListComponent extends Component {
       </map>
       <img
         src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/1.webp"
-        class="main-tree"
+        class="droppable main-tree"
         usemap="#tree-map"
         alt="tree"
       />
@@ -153,15 +153,43 @@ export default class ChristmasToysListComponent extends Component {
     footerConst.innerHTML = footer;
     document.body.append(footerConst);
 
+    console.log(document.getElementById('home'));
+    console.log(document.getElementById('toys'));
+
     const buttonHome = document.getElementById('home')!;
-    buttonHome.addEventListener( 'click', () => {
+    const goTreesListener = function () {
       console.log('click-click');
+      page.remove();
+      footerConst.remove();
+      buttonHome.removeEventListener('click', goTreesListener);
+      // console.log('buttonMain.removeEventListener( "click", treesListener);');
       Component.router?.goTo('/');
-    });
+    };
+    buttonHome.addEventListener('click', goTreesListener);
+
     const buttonToys = document.getElementById('toys')!;
-    buttonToys.addEventListener( 'click', () => {
+    const goHomeListener = function () {
+      console.log('click-click');
+      page.remove();
+      footerConst.remove();
+      buttonToys.removeEventListener( 'click', goHomeListener);
+      // console.log('buttonMain.removeEventListener( "click", treesListener);');
       Component.router?.goTo('toys');
-    });
+    };
+    buttonToys.addEventListener( 'click', goHomeListener);
+
+
+
+
+    // const buttonHome = document.getElementById('home')!;
+    // buttonHome.addEventListener( 'click', () => {
+    //   console.log('click-click');
+    //   Component.router?.goTo('/');
+    // });
+    // const buttonToys = document.getElementById('toys')!;
+    // buttonToys.addEventListener( 'click', () => {
+    //   Component.router?.goTo('toys');
+    // });
 
 // !!!! Drag and Drop
     const nameDragAndDropBall: Array<string> = [];

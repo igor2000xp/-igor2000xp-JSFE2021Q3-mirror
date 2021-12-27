@@ -59,23 +59,20 @@ export default class HomePageComponent extends Component {
 
     document.body.append(footerConst);
 
-    this.newState = '/';
+    // this.newState = '/';
     const buttonMain = document.getElementById('main-page')!;
-    buttonMain.addEventListener( 'click', () => {
-      this.newState = 'toys';
+
+    const treesListener = function () {
       console.log('click-click');
-      Component.router?.goTo('toys');
-      // Component.appComponent?.destroy();
-    });
-    // if (buttonMain !== null) buttonMain.onclick = () => {
-    // = function () {
-      // self.newState = 'toys';
-      // function IssuerCall(setIssuerCallState: (newState: { message: string }) => void)
-      // this.setNewState(setIssuerCallState: (newState: { message: string }));
-    // };
-    // buttonMain.onclick = function () {
-    //   newState = 'toys';
-    // };
+      page.remove();
+      footerConst.remove();
+      buttonMain.removeEventListener( 'click', treesListener);
+      console.log('buttonMain.removeEventListener( "click", treesListener);');
+      Component.router?.goTo('trees');
+    };
+
+    buttonMain.addEventListener( 'click', treesListener);
+
     console.log('home page output');
     console.log(this.newState);
   }
