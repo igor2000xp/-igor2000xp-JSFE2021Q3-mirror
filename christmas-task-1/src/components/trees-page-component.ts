@@ -43,7 +43,7 @@ export default class ChristmasToysListComponent extends Component {
     let numberTrees = '';
     let numberTreesDecorated = '';
     for (let i = 1; i <= this.numberTrees; i++) {
-      numberTrees += `<div class="tree menu-item" data-tree="${i}"></div>`;
+      numberTrees += `<div class="tree menu-item" id="imgTree${i}" ></div>`;
       numberTreesDecorated += `
       <div class="tree-decorate">
           <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/${i}.webp" class="tree-decorate-img" alt="decorate-tree">
@@ -53,7 +53,7 @@ export default class ChristmasToysListComponent extends Component {
 
     let backgrounds = '';
     for (let i = 1; i <= this.numberBackground; i++) {
-      backgrounds += `<div class="bg menu-item" data-bg="${i}"></div>`;
+      backgrounds += `<div class="bg menu-item" id="numBackground${i}"></div>`;
     }
 
     const page = document.createElement('section');
@@ -118,6 +118,7 @@ export default class ChristmasToysListComponent extends Component {
       <img
         src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/1.webp"
         class="droppable main-tree"
+        id="img-main-tree"
         usemap="#tree-map"
         alt="tree"
       />
@@ -153,6 +154,8 @@ export default class ChristmasToysListComponent extends Component {
     footerConst.innerHTML = footer;
     document.body.append(footerConst);
 
+    // !!! Buttons 
+
     const aud = new Audio();
     aud.src = 'https://raw.githubusercontent.com/igor2000xp/assets/c07f6d74fc110ff532f4479468cd4ae3801ee793/audio/audio.mp3';
     const play = document.getElementById('play-audio');
@@ -164,11 +167,34 @@ export default class ChristmasToysListComponent extends Component {
       }
     };
 
-    
     play!.addEventListener('click', startPlay);
 
-    console.log(document.getElementById('home'));
-    console.log(document.getElementById('toys'));
+    // ??? Buttons trees
+    const buttonTree = [];
+    const imgTree = (document.getElementById('img-main-tree') as HTMLImageElement);
+
+    const changeTree = [];
+    for (let i = 1; i <= this.numberTrees; i++) {
+      buttonTree[i] = document.getElementById(`imgTree${i}`);
+      changeTree[i] = function () {
+        imgTree.src = `https://raw.githubusercontent.com/igor2000xp/assets/main/tree/${i}.webp`;
+      };
+      buttonTree[i]?.addEventListener('click', changeTree[i]);
+    }
+
+
+      // numberTrees += `<div class="tree menu-item" id="imgTree${i}" ></div>`;
+      // numberTreesDecorated += `
+      // <div class="tree-decorate">
+      //     <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/${i}.webp" class="tree-decorate-img" alt="decorate-tree">
+      // </div>
+      // `;
+    
+
+
+
+    // console.log(document.getElementById('home'));
+    // console.log(document.getElementById('toys'));
 
     const buttonHome = document.getElementById('home')!;
     const goTreesListener = function () {
