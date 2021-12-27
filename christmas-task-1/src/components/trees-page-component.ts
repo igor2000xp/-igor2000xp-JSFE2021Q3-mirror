@@ -108,7 +108,7 @@ export default class ChristmasToysListComponent extends Component {
       </div>
     </div>
   </div>
-  <div class="trees-main">
+  <div class="trees-main" id="trees-main__background">
     <div class="droppable tree-main__container">
       <div class="snowflakes hide"></div>
       <div class="garland-tree-container"></div>
@@ -174,27 +174,28 @@ export default class ChristmasToysListComponent extends Component {
     const imgTree = (document.getElementById('img-main-tree') as HTMLImageElement);
 
     const changeTree = [];
-    for (let i = 1; i <= this.numberTrees; i++) {
+    for (let i = 1; i <= this.numberBackground; i++) {
       buttonTree[i] = document.getElementById(`imgTree${i}`);
       changeTree[i] = function () {
         imgTree.src = `https://raw.githubusercontent.com/igor2000xp/assets/main/tree/${i}.webp`;
       };
       buttonTree[i]?.addEventListener('click', changeTree[i]);
     }
-
-
-      // numberTrees += `<div class="tree menu-item" id="imgTree${i}" ></div>`;
-      // numberTreesDecorated += `
-      // <div class="tree-decorate">
-      //     <img src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/${i}.webp" class="tree-decorate-img" alt="decorate-tree">
-      // </div>
-      // `;
+// !!
+        // ??? Buttons trees
+        const buttonBackground = [];
+        const imgBackground = document.getElementById('trees-main__background')!;
     
+        const changeBackground = [];
+        for (let i = 1; i <= this.numberTrees; i++) {
+          buttonBackground[i] = document.getElementById(`numBackground${i}`);
+          changeBackground[i] = function () {
+            imgBackground.style.backgroundImage = `url("https://raw.githubusercontent.com/igor2000xp/assets/main/bg/${i}.webp")`;
+          };
+          buttonBackground[i]?.addEventListener('click', changeBackground[i]);
+        }
 
 
-
-    // console.log(document.getElementById('home'));
-    // console.log(document.getElementById('toys'));
 
     const buttonHome = document.getElementById('home')!;
     const goTreesListener = function () {
@@ -218,18 +219,6 @@ export default class ChristmasToysListComponent extends Component {
     };
     buttonToys.addEventListener( 'click', goHomeListener);
 
-
-
-
-    // const buttonHome = document.getElementById('home')!;
-    // buttonHome.addEventListener( 'click', () => {
-    //   console.log('click-click');
-    //   Component.router?.goTo('/');
-    // });
-    // const buttonToys = document.getElementById('toys')!;
-    // buttonToys.addEventListener( 'click', () => {
-    //   Component.router?.goTo('toys');
-    // });
 
 // !!!! Drag and Drop
     const nameDragAndDropBall: Array<string> = [];
