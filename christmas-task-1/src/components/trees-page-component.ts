@@ -145,12 +145,12 @@ export default class ChristmasToysListComponent extends Component {
   </div>
 
     `;
+
     document.body.append(page);
 
     const footerConst = document.createElement('footer');
     footerConst.classList.add('footer');
     footerConst.innerHTML = footer;
-
     document.body.append(footerConst);
 
     const buttonHome = document.getElementById('home')!;
@@ -162,10 +162,24 @@ export default class ChristmasToysListComponent extends Component {
     buttonToys.addEventListener( 'click', () => {
       Component.router?.goTo('toys');
     });
+
 // !!!! Drag and Drop
-    const ball11 = new DragAndDropBall('1-1');
-    const ball12 = new DragAndDropBall('1-2');
-    const ball25 = new DragAndDropBall('2-5');
+    const nameDragAndDropBall: Array<string> = [];
+
+    for (let i = 0; i < this.numberCards; i++) {
+      for (let k = Number(data[i].count); k > 0; k--) {
+        const item = `${i + 1}-${k}`;
+        nameDragAndDropBall.push(item);
+      }
+    }
+
+    console.log(nameDragAndDropBall.length);
+    const ballArray = [];
+
+    for (let i = 0; i < nameDragAndDropBall.length; i++) {
+      ballArray.push(new DragAndDropBall(nameDragAndDropBall[i]));
+    }
+
   }
 
   onFilterUpdate() {
