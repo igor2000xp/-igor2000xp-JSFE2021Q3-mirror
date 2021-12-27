@@ -174,7 +174,7 @@ export default class ChristmasToysListComponent extends Component {
     const imgTree = (document.getElementById('img-main-tree') as HTMLImageElement);
 
     const changeTree = [];
-    for (let i = 1; i <= this.numberBackground; i++) {
+    for (let i = 1; i <= this.numberTrees; i++) {
       buttonTree[i] = document.getElementById(`imgTree${i}`);
       changeTree[i] = function () {
         imgTree.src = `https://raw.githubusercontent.com/igor2000xp/assets/main/tree/${i}.webp`;
@@ -187,7 +187,7 @@ export default class ChristmasToysListComponent extends Component {
         const imgBackground = document.getElementById('trees-main__background')!;
     
         const changeBackground = [];
-        for (let i = 1; i <= this.numberTrees; i++) {
+        for (let i = 1; i <= this.numberBackground; i++) {
           buttonBackground[i] = document.getElementById(`numBackground${i}`);
           changeBackground[i] = function () {
             imgBackground.style.backgroundImage = `url("https://raw.githubusercontent.com/igor2000xp/assets/main/bg/${i}.webp")`;
