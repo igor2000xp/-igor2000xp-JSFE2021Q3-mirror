@@ -69,10 +69,10 @@ export default class ChristmasToysListComponent extends Component {
         <a class="switch-favorites-page active-link">Ёлка</a>
       </nav>   
     </div>
-    
+
     <div class="favorites-menu">
       <div class="snow-audio-container menu-container">
-        <div class="audio-control menu-item"></div>
+        <div class="audio-control menu-item" id="play-audio"></div>
         <div class="snow-control menu-item"></div>
       </div>
       <div class="tree-container menu-container">
@@ -152,6 +152,20 @@ export default class ChristmasToysListComponent extends Component {
     footerConst.classList.add('footer');
     footerConst.innerHTML = footer;
     document.body.append(footerConst);
+
+    const aud = new Audio();
+    aud.src = 'https://raw.githubusercontent.com/igor2000xp/assets/c07f6d74fc110ff532f4479468cd4ae3801ee793/audio/audio.mp3';
+    const play = document.getElementById('play-audio');
+    const startPlay = function () {
+      if (aud.paused) {
+        aud.play();
+      } else {
+        aud.pause();
+      }
+    };
+
+    
+    play!.addEventListener('click', startPlay);
 
     console.log(document.getElementById('home'));
     console.log(document.getElementById('toys'));
