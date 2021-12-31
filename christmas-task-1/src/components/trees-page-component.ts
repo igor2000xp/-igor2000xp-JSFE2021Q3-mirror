@@ -128,7 +128,7 @@ export default class ChristmasToysListComponent extends Component {
       z-index: 100;
       id="js-map-drop"
       draggable="true">
-        <area coords="0,600,85,0,125,0,200,600"
+        <area coords="0,600,85,0,125,0,200,600,0,600"
         shape="poly">
       </map>
     </div>
