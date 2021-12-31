@@ -12,12 +12,18 @@
   padding-bottom: 0;
 	overflow: hidden;
 }
+.js-map {
+  /* position: relative; */
+}
 
 .tree-main__container {
   height: 87vh;
 }
 .tree-main__img {
-  height: 82vh;
+  /* height: 82vh; */
+  display: block;
+  width: 500px;
+  height: 714px;
 }
 .snowflakes {
   height: calc(100vh - 50px);

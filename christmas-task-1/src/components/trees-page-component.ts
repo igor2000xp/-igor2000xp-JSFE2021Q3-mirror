@@ -116,13 +116,6 @@ export default class ChristmasToysListComponent extends Component {
     <div class="tree-main__container">
       <div class="snowflakes hide"></div>
       <div class="garland-tree-container"></div>
-      <map name="tree-map" 
-      class="droppable js-map" 
-      id="map-drop"
-      >
-        <area coords="0,700,125,0,250,700"
-        shape="poly">
-      </map>
       <img
         src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/1.webp"
         class="main-tree tree-main__img"
@@ -130,6 +123,14 @@ export default class ChristmasToysListComponent extends Component {
         usemap="#tree-map"
         alt="tree"
       />
+      <map name="tree-map" 
+      class="js-map" 
+      z-index: 100;
+      id="js-map-drop"
+      draggable="true">
+        <area coords="0,600,85,0,125,0,200,600"
+        shape="poly">
+      </map>
     </div>
   </div>
 
@@ -255,76 +256,65 @@ export default class ChristmasToysListComponent extends Component {
     // console.log(toyDrag);
     // outZone!.ondragover = allowDrop;
 
-    function allowDrop(event: Event) {
-      event.preventDefault();
-      console.log(event);
-    }
+    // https://www.youtube.com/watch?v=j9IfEYrxoNA
+
 
     // https://www.youtube.com/watch?v=-9qu_Z0D84g
     const dragAndDrop = () => {
       const toy: HTMLElement = document.querySelector('.sel1-2')!;
       const tree: HTMLElement = document.querySelector('.js-map')!;
+      let coordX: number;
+      let coordY: number;
+      console.log(tree);
+
+      function allowDrop(event: Event) {
+        event.preventDefault();
+        console.log('preventDefault');
+      }
+      // !!
+      // ******
+      function moveAt(pageX: number, pageY: number) {
+        toy.style.left = pageX - coordX + 'px';
+        toy.style.top = pageY - coordY + 'px';
+        // console.log(pageX + ' - ' + coordX);
+        // console.log(pageY + ' - ' + coordY);
+      }
 
       const dragStart = function (event: DragEvent) {
         console.log('dragStart');
-        // (this: HTMLImageElement).classList.add('hide');
+        event.dataTransfer?.setData('text/html', 'dragstart');
+        coordX = event.offsetX;
+        coordY = event.offsetY;
+        toy!.style.position = 'absolute';
+        toy!.style.zIndex = '1000';
+        moveAt(event.pageX, event.pageY);
+        // tree.append(toy);
+        // event.preventDefault();
       };
       const dragEnd = function (event: DragEvent) {
         console.log('dragEnd');
-        // (this: HTMLImageElement).classList.add('hide');
-        // const shiftX = event.clientX;
-        // - tree!.getBoundingClientRect().left;
-        // const shiftY = event.clientY;
-        // - tree!.getBoundingClientRect().top;
-
-        // toy!.style.position = 'absolute';
-        // toy!.style.zIndex = '1000';
-        // document.body.append(tree);
-
-        // function moveAt(pageX: number, pageY: number) {
-        //   toy.style.left = event.clientX + 'px';
-        //   // pageX - shiftX + 'px';
-        //   toy.style.top = event.clientX + 'px';
-        //   // pageY - shiftY + 'px';
-        toy!.style.position = 'absolute';
-        toy!.style.zIndex = '1000';
-
-        function moveAt(scrX: number, scrY: number) {
-          toy.style.left = scrX + 'px';
-          // event.clientX + 'px';
-          // pageX - shiftX + 'px';
-          toy.style.top = scrY + 'px';
-          // event.clientX + 'px';
-          // pageY - shiftY + 'px';
-      
-        console.log(scrX);
-        console.log(scrY);
-        }
-
-        moveAt(event.screenX, event.screenY);
-        document.body.append(toy);
-      
-
       };
 
       const dragEnter = function (event: DragEvent) {
         console.log('dragEnter');
-        allowDrop(event);
-        // event.dataTransfer?.setData("text/plain", event.target?.id);
       };
-      // const dragOver = function () {
-      //   console.log('dragOver');
-      // };
       const dragLeave = function (event: DragEvent) {
         console.log('dragLeave');
       };
       const dragDrop = function (event: DragEvent) {
         console.log('dragDrop');
-        if (toy !== null) tree?.append(toy);
+        moveAt(event.pageX, event.pageY);
+        // if (toy !== null) tree?.append(toy);
       };
+      // !!
+      // **
       const treeOver = function (event: DragEvent) {
         allowDrop(event);
         console.log('dragOver');
+        tree.append(toy);
+        moveAt(event.pageX, event.pageY);
+        event.preventDefault();
+        // tree?.append(toy);
       };
       // tree!.addEventListener('dragover', dragOver);
 
@@ -332,51 +322,76 @@ export default class ChristmasToysListComponent extends Component {
         // treeOver(tree);
         // tree.addEventListener('dragover' , function(this: HTMLElement, event: DragEvent ) {};
         // https://stackoverflow.com/questions/46925133/how-to-add-passive-option-to-addeventlistener-in-typescript
-        (tree.addEventListener as (
-          type: string,
-          listener: (event: DragEvent) => void,
-          options?: { useCapture?: boolean, passive?:boolean }
-        ) => void)('dragover', (ev: DragEvent) => {treeOver(ev);});
+        // (tree.addEventListener as (
+        //   type: string,
+        //   listener: (event: DragEvent) => void,
+        //   options?: { useCapture?: boolean, passive?:boolean }
+        // ) => void)
+        // ('dragover', (ev: DragEvent) => {treeOver(ev);});
 
-        (tree.addEventListener as (
-          type: string,
-          listener: (event: DragEvent) => void,
-          options?: { useCapture?: boolean, passive?:boolean }
-        ) => void)('dragenter', (ev: DragEvent) => {dragEnter(ev);});
+
+        // https://www.youtube.com/watch?v=m1ZWfOAwyxc&t=491s
+        tree.ondragover = treeOver;
+
+        // (tree.addEventListener as (
+        //   type: string,
+        //   listener: (event: DragEvent) => void,
+        //   options?: { useCapture?: boolean, passive?:boolean }
+        //   ) => void
+        // )('dragenter', (ev: DragEvent) => {dragEnter(ev);});
         // tree.addEventListener('dragenter', dragEnter);
 
-        (tree.addEventListener as (
-          type: string,
-          listener: (event: DragEvent) => void,
-          options?: { useCapture?: boolean, passive?:boolean }
-        ) => void)('dragleave', (ev: DragEvent) => {dragLeave(ev);});
-        // tree.addEventListener('dragleave', dragLeave);
+        tree.ondragenter = dragEnter;
 
-        (tree.addEventListener as (
-          type: string,
-          listener: (event: DragEvent) => void,
-          options?: { useCapture?: boolean, passive?:boolean }
-        ) => void)('drop', (ev: DragEvent) => {dragDrop(ev);});
+        // (tree.addEventListener as (
+        //   type: string,
+        //   listener: (event: DragEvent) => void,
+        //   options?: { useCapture?: boolean, passive?:boolean }
+        //   ) => void
+        // )('dragleave', (ev: DragEvent) => {dragLeave(ev);});
+        // tree.addEventListener('dragleave', dragLeave);
+          tree.ondragleave = dragLeave;
+
+
+        // (tree.addEventListener as (
+        //   type: string,
+        //   listener: (event: DragEvent) => void,
+        //   options?: { useCapture?: boolean, passive?:boolean }
+        //   ) => void
+        // )('drop', (ev: DragEvent) => {dragDrop(ev);});
+
+        tree.ondrop = dragDrop;
         // tree.addEventListener('drop', dragDrop);
         // dragEnter();
       // }
       //
       
-      (toy.addEventListener as (
-        type: string,
-        listener: (event: DragEvent) => void,
-        options?: { useCapture?: boolean, passive?:boolean }
-      ) => void)('dragstart', (ev: DragEvent) => {dragStart(ev);});
+      // (toy.addEventListener as (
+      //   type: string,
+      //   listener: (event: DragEvent) => void,
+      //   options?: { useCapture?: boolean, passive?:boolean }
+      //   ) => void
+      // )('dragstart', (ev: DragEvent) => {dragStart(ev);});
+
+
       // toy?.addEventListener('dragstart', dragStart);
+          // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      toy.ondragstart = dragStart;
 
 
-      (toy.addEventListener as (
-        type: string,
-        listener: (event: DragEvent) => void,
-        options?: { useCapture?: boolean, passive?:boolean }
-      ) => void)('dragend', (ev: DragEvent) => {dragEnd(ev);});
+      // (toy.addEventListener as (
+      //   type: string,
+      //   listener: (event: DragEvent) => void,
+      //   options?: { useCapture?: boolean, passive?:boolean }
+      //   ) => void)('dragend', (ev: DragEvent) => {dragEnd(ev);});
       // toy?.addEventListener('dragend', dragEnd);
+        toy.ondragend = dragEnd;
+
+
+
     };
+
+
     dragAndDrop();
 
     // ??????
