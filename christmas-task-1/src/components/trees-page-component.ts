@@ -116,21 +116,22 @@ export default class ChristmasToysListComponent extends Component {
     <div class="tree-main__container">
       <div class="snowflakes hide"></div>
       <div class="garland-tree-container"></div>
-      <img
-        src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/1.webp"
-        class="main-tree tree-main__img"
-        id="img-main-tree"
-        usemap="#tree-map"
-        alt="tree"
-      />
+
       <map name="tree-map" 
       class="js-map" 
       z-index: 100;
       id="js-map-drop"
       draggable="true">
-        <area coords="0,600,85,0,125,0,200,600,0,600"
+        <area id="js-area" coords="0,700,200,0,300,0,500,700,0,700"
         shape="poly">
       </map>
+      <img
+      src="https://raw.githubusercontent.com/igor2000xp/assets/main/tree/1.webp"
+      class="main-tree tree-main__img"
+      id="img-main-tree"
+      usemap="#tree-map"
+      alt="tree"
+    />
     </div>
   </div>
 
@@ -262,7 +263,11 @@ export default class ChristmasToysListComponent extends Component {
     // https://www.youtube.com/watch?v=-9qu_Z0D84g
     const dragAndDrop = () => {
       const toy: HTMLElement = document.querySelector('.sel1-2')!;
-      const tree: HTMLElement = document.querySelector('.js-map')!;
+      const tree: HTMLElement = document.querySelector('#js-area')!;
+      const treeMap: HTMLElement = document.querySelector('.js-map')!;
+      const treeLeave: HTMLElement = document.querySelector('#img-main-tree')!;
+      const inContainer: HTMLElement = document.querySelector('.tree-main__container')!;
+      let isLeave = true;
       let coordX: number;
       let coordY: number;
       console.log(tree);
@@ -278,6 +283,13 @@ export default class ChristmasToysListComponent extends Component {
         toy.style.top = pageY - coordY + 'px';
         // console.log(pageX + ' - ' + coordX);
         // console.log(pageY + ' - ' + coordY);
+        // toy.style.left = pageX + 'px';
+        // toy.style.top = pageY + 'px';
+
+      }
+      function moveAtEnd(pageX: number, pageY: number) {
+        toy.style.left = pageX - (2 * coordX) + 'px';
+        toy.style.top = pageY - (1 * coordY) + 'px';
       }
 
       const dragStart = function (event: DragEvent) {
@@ -288,32 +300,51 @@ export default class ChristmasToysListComponent extends Component {
         toy!.style.position = 'absolute';
         toy!.style.zIndex = '1000';
         moveAt(event.pageX, event.pageY);
-        // tree.append(toy);
+        inContainer.append(toy);
         // event.preventDefault();
       };
       const dragEnd = function (event: DragEvent) {
         console.log('dragEnd');
+        console.log(event);
+        // allowDrop(event);
+        // coordX = event.offsetX;
+        // coordY = event.offsetY;
+
+        moveAtEnd(event.pageX, event.pageY);
+        // toy.style.left = event.pageX + 'px';
+        // toy.style.top = event.pageY + 'px';
+
       };
 
-      const dragEnter = function (event: DragEvent) {
-        console.log('dragEnter');
-      };
+      // const dragEnter = function (event: DragEvent) {
+      //   console.log('dragEnter');
+      // };
       const dragLeave = function (event: DragEvent) {
         console.log('dragLeave');
+        isLeave = true;
       };
       const dragDrop = function (event: DragEvent) {
-        console.log('dragDrop');
+        console.log('Drop');
+        // moveAt(event.pageX, event.pageY);
+        // if (toy !== null) tree?.append(toy);
+      };
+      const drag = function (event: DragEvent) {
+        console.log('Drag');
+
+        // treeMap.append(toy);
         moveAt(event.pageX, event.pageY);
+        // moveAt(event.pageX, event.pageY);
         // if (toy !== null) tree?.append(toy);
       };
       // !!
       // **
       const treeOver = function (event: DragEvent) {
-        allowDrop(event);
+        if (isLeave) {
+          allowDrop(event);
+        }
+        isLeave = false;
         console.log('dragOver');
-        tree.append(toy);
-        moveAt(event.pageX, event.pageY);
-        event.preventDefault();
+        // event.preventDefault();
         // tree?.append(toy);
       };
       // tree!.addEventListener('dragover', dragOver);
@@ -340,8 +371,8 @@ export default class ChristmasToysListComponent extends Component {
         //   ) => void
         // )('dragenter', (ev: DragEvent) => {dragEnter(ev);});
         // tree.addEventListener('dragenter', dragEnter);
-
-        tree.ondragenter = dragEnter;
+      // !!!!
+        // tree.ondragenter = dragEnter;
 
         // (tree.addEventListener as (
         //   type: string,
@@ -350,7 +381,7 @@ export default class ChristmasToysListComponent extends Component {
         //   ) => void
         // )('dragleave', (ev: DragEvent) => {dragLeave(ev);});
         // tree.addEventListener('dragleave', dragLeave);
-          tree.ondragleave = dragLeave;
+        treeLeave.ondragleave = dragLeave;
 
 
         // (tree.addEventListener as (
@@ -360,7 +391,11 @@ export default class ChristmasToysListComponent extends Component {
         //   ) => void
         // )('drop', (ev: DragEvent) => {dragDrop(ev);});
 
+        treeLeave.ondrop = dragDrop;
+        toy.ondrop = dragDrop;
         tree.ondrop = dragDrop;
+
+        toy.ondrag = drag;
         // tree.addEventListener('drop', dragDrop);
         // dragEnter();
       // }
