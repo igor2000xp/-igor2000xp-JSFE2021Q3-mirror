@@ -13,10 +13,16 @@
   margin: 0 0 0 8vh;
   color: white;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1.2vw;
   text-decoration: none;
 }
 .rss-school {
   margin: 0 8vh 0 0;
-  height: 40px;
+  height: 3.5vw;
+}
+.rss-school img {
+  height: 3.5vw;
+}
+.rss-school:hover {
+  filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(141deg) brightness(89%) contrast(90%);
 }

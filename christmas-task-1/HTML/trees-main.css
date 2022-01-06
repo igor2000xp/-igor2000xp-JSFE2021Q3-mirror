@@ -1,0 +1,44 @@
+.trees-main {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background-image: url("https://raw.githubusercontent.com/igor2000xp/assets/main/bg/1.webp");
+	background-size: cover;
+	background-position: center;
+  width: 48vw;
+  min-height: 78vh;
+  /* border: 1px solid red; */
+	padding-top: 4vh;
+  padding-bottom: 0;
+	overflow: hidden;
+}
+.tree-main__container {
+  height: 88vh;
+}
+.tree-main__container img {
+  height: 82vh;
+}
+.snowflakes {
+  height: calc(100vh - 50px);
+  width: 800px;
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  margin-left: -400px;
+  pointer-events: none;
+  z-index: 100;
+  overflow: hidden;
+}
+.garland-tree-container {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 140px);
+  width: 800px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -400px;
+  pointer-events: none;
+  z-index: 90;
+  overflow: hidden;
+}

@@ -77,6 +77,17 @@ module.exports = ({ development }) => {
           test: /\.[tj]s$/,
           use: 'ts-loader',
           exclude: /node_modules/,
+        //   exclude: [
+        //     /node_modules/,
+        //     /HTML/
+
+        //     // path.resolve(__dirname, 'node_modules'),
+        //     // path.resolve(__dirname, 'HTML'),
+        //   ],
+        //   include: [
+        //     /src/
+        //     // path.resolve(__dirname, 'src')
+        //  ]
         },
         {
           test: /\.(?:ico|gif|png|jpg|jpeg|svg|webp)$/i,

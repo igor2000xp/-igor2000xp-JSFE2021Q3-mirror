@@ -1,0 +1,150 @@
+.header-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.select {
+  width: 4vw;
+  height: 4.5vw;
+  margin: 0.2vw 2vw 0 0;
+  background-image: url("https://raw.githubusercontent.com/igor2000xp/assets/main/svg/ball-2.svg");
+  background-size: 4vw 5vw;
+  background-position: left -0.6vw;
+  background-repeat: no-repeat;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select span {
+	display: inline-block;
+	min-width: 3.4vw;
+	height: 3.4vw;
+	margin-top: 0.65vw;
+	margin-left: 0;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 3.9vw;
+	font-size: 2vw;
+  color: white;
+	background-color: #278D9F;
+}
+.favorites-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%; 
+  max-width: 4.5vw;
+  min-height: 4.2vw;
+  border-radius: 0.8vw;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.favorites-card-img {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: 3.4vw;
+  width: 3,4vw;
+  object-fit: contain;
+  cursor: move;
+  margin-bottom: 1vw;
+}
+.favorites-aside {
+  height: 22vw;
+  min-height: 22vw;
+  width: 24vw;
+  /* border: 1px solid yellow; */
+}
+.favorites-count {
+  z-index: 10;
+  align-self: flex-end;  
+  width: 2vw;
+  height: 2vw;
+  line-height: 2vw;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 2.8vw;
+  border-radius: 0.9vw;
+  background-color: #24C5DB;
+  font-size: 1.2vw;
+  font-weight: 900;
+}
+.favorites-container,
+.favorites-decorate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.35vw;  
+  width: 100%;
+  padding-top: 0.3vw;
+  padding-left: 0.1vw;
+}
+.favorites-container::before,
+.favorites-decorate::before,
+.bg-container::before,
+.tree-container::before,
+.garland-container::before {
+  content: "Игрушки";
+  width: 100%;
+  font-size: 1.8vw;
+  font-weight: 400;
+  padding: 0.8vw;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+.favorites-decorate::before {
+  content: "Вы нарядили";
+}
+.bg-container::before {
+  content: "Выберите фон";
+}
+.tree-container::before {
+  content: "Выберите ёлку";
+}
+.garland-container::before {
+  content: "Гирлянда";
+}
+.favorite-right::before {
+  padding-top: 0;
+  margin-top: -3vw;
+}
+.favorites-decorate-container {
+  display: flex;
+  overflow-x:auto;
+  gap: 0.8vw;
+  width: 30vw;
+  overflow-x: auto;
+}
+
+.favorites-decorate-container::-webkit-scrollbar {	
+  height: 0.8vw;
+  border-radius: 0.5vw;
+	background-color: rgba(255, 255, 255, .5);
+  backdrop-filter: blur(6px);
+}
+
+.favorites-decorate-container::-webkit-scrollbar-thumb {
+	background-color: #237E8F;
+  border-radius: 0.4vw;
+  cursor: pointer;
+}
+
+.tree-decorate {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 7vw;
+  min-width: 7vw;
+  height: 7vw;
+  border-radius: 1vw;
+  background-color: rgba(255, 255, 255, .5);
+  margin: 0.5vw;
+}
+
+.tree-decorate-img {
+  height: 7vw;
+}

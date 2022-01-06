@@ -34,6 +34,7 @@
     "@typescript-eslint/no-shadow": "warn",
     "@typescript-eslint/no-empty-function": "warn",
     "@typescript-eslint/default-param-last": "warn",
+    "@typescript-eslint/no-useless-constructor": "warn",
     "no-param-reassign": ["error", {
       "props": false
     }]
