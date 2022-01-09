@@ -1,21 +1,22 @@
-import { _ } from "./util"
+import _ from './util';
 
-export class EventEmitter {
+class EventEmitter {
   constructor() {
-    this.listeners = {}
+    this.listeners = {};
   }
 
   on(eventName, func) {
-    if(_.isUndefined(this.listeners[eventName])) {
+    if (_.isUndefined(this.listeners[eventName])) {
       this.listeners[eventName] = [];
     }
     this.listeners[eventName].push(func);
   }
 
   emit(eventName, data) {
-    if(_.isUndefined(this.listeners[eventName])) return;
+    if (_.isUndefined(this.listeners[eventName])) return;
 
-    this.listeners[eventName].forEach(f => f(data));    
+    this.listeners[eventName].forEach((f) => f(data));
   }
 }
 
+export default EventEmitter;

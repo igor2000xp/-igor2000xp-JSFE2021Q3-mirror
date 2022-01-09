@@ -1,8 +1,6 @@
-
-
 class PipesFactory {
   constructor() {
-    this.pipes = {}
+    this.pipes = {};
   }
 
   registerPipe(pipe) {
@@ -14,5 +12,5 @@ class PipesFactory {
   }
 }
 
-
-export const pipesFactory = new PipesFactory();
+const pipesFactory = new PipesFactory();
+export default pipesFactory;

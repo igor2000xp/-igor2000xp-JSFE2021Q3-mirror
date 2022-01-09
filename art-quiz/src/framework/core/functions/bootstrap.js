@@ -1,3 +1,4 @@
-export function bootstrap(module) {
-  module.start()
+export default function bootstrap(module) {
+  console.log('module.start()');
+  module.start();
 }

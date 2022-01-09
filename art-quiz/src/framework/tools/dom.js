@@ -1,4 +1,4 @@
-import { _ } from './util'
+import _ from './util';
 
 
 class DomManipulator {
@@ -62,10 +62,10 @@ class DomManipulator {
       return this;
     }
 
-    parent() {
-      return $(this.nativeElement.parentNode);
+    // parent() {
+    //   return $(this.nativeElement.parentNode);
 
-    }
+    // }
 
     attr (name, value = null) {
       if(_.isNull(value)) {
@@ -77,17 +77,17 @@ class DomManipulator {
       return this;
     }
 
-    find (selector) {
-      return $(this.nativeElement.querySelector(selector));
-    }
+    // find (selector) {
+    //   return $(this.nativeElement.querySelector(selector));
+    // }
 
-    findAll (selector) {
-      return Array.from(this.nativeElement.querySelectorAll(selector)).map(e => $(e));
-    }
+    // findAll (selector) {
+    //   return Array.from(this.nativeElement.querySelectorAll(selector)).map(e => $(e));
+    // }
 }
 
 
-export function $(el) {
+export default function $(el) {
   return new DomManipulator(el);
 }
 

@@ -1,14 +1,16 @@
-import { WFMPipe } from 'framework';
+import { WFMPipe } from '../../../framework/index';
 
 class AppMultiPipe extends WFMPipe {
-  constructor(config) {
-    super(config)
-  }
+  // constructor(config) {
+  //   super(config);
+  // }
 }
 
-export const appMultiPipe = new AppMultiPipe({
+const appMultiPipe = new AppMultiPipe({
   name: 'multi',
   transform(value, number = 2) {
     return +value * number;
-  }
-})
+  },
+});
+
+export default appMultiPipe;

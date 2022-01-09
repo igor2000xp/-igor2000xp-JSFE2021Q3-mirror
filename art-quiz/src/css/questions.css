@@ -44,6 +44,7 @@
   /* align-self: flex-start; */
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 15vh;
 }
 .qa-content{
   padding-bottom: 1vh;
@@ -71,19 +72,27 @@
   margin: 5px 0 5pz 0;
 }
 .q-picture-center {
-  width: 100%;
+  width: 90vw;
+  /* height: 52vw; */
   justify-self: center;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 .q-picture {
   width: 95vw;
-  height: 95vw;
+  height: 55vh;
   border-radius: 25px;
   overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .q-picture img {
-  width: 100%;
+  width: 50vw;
+  height: 30vw;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 /* ?? Buttons */
@@ -136,7 +145,7 @@
   padding-top: 8vh;
   width: 92%;
   height: 100%;
-  margin: 8px 0 0 0;
+  margin: 8px 0 80px 0;
   display: flex;
   flex-direction: row;
   align-self: center;

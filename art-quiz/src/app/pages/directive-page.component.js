@@ -1,15 +1,12 @@
-import { WFMComponent, router } from 'framework';
+import { WFMComponent } from '../../framework/index';
 
 class DirectivePageComponent extends WFMComponent {
-  constructor(config) {
-    super(config);
-
-
-  }
-
+  // constructor(config) {
+  //   super(config);
+  // }
 }
 
-export const directivePageComponent = new DirectivePageComponent({
+const directivePageComponent = new DirectivePageComponent({
   selector: 'app-directive-page',
   template: `
     <div class="row">
@@ -23,6 +20,7 @@ export const directivePageComponent = new DirectivePageComponent({
   .dir__block {
     margin-top 30px;
   }
-  `
+  `,
 });
 
+export default directivePageComponent;

@@ -1,12 +1,12 @@
-import { WFMComponent } from 'framework';
+import { WFMComponent } from '../../framework/index';
 
 class AppFooter extends WFMComponent {
-  constructor(config) {
-    super(config)
-  }
+  // constructor(config) {
+  //   super(config);
+  // }
 }
 
-export const appFooter = new AppFooter({
+const appFooter = new AppFooter({
   selector: 'app-footer',
 
   template: `
@@ -31,5 +31,7 @@ export const appFooter = new AppFooter({
       margin-left: 20px;
     }
   
-  `
-})
+  `,
+});
+
+export default appFooter;

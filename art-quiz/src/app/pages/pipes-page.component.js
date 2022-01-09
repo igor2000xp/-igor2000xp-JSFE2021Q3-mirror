@@ -1,18 +1,16 @@
-import { WFMComponent } from 'framework';
+import { WFMComponent } from '../../framework/index';
 
 class PipePageComponent extends WFMComponent {
   constructor(config) {
     super(config);
 
     this.data = {
-      number: 10
-    }
-
+      number: 10,
+    };
   }
-
 }
 
-export const pipePageComponent = new PipePageComponent({
+const pipePageComponent = new PipePageComponent({
   selector: 'app-pipe-page',
   template: `
     <div class="row">
@@ -28,6 +26,7 @@ export const pipePageComponent = new PipePageComponent({
   .pipe__block {
     margin-top 30px;
   }
-  `
+  `,
 });
 
+export default pipePageComponent;

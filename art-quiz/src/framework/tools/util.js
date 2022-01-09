@@ -1,17 +1,15 @@
 const _ = {
+
   delay(ms = 1000) {
-    return new Promise((resolve,  reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        resolve()
+        resolve();
       }, ms);
-
     });
-
-    },
+  },
 
   isUndefined(d) {
-    return typeof d == 'undefined';
-
+    return typeof d === 'undefined';
   },
 
   isNull(d) {
@@ -24,8 +22,7 @@ const _ = {
 
   isEmpty(d) {
     return d.length && d.length === 0;
-  }
-}
+  },
+};
 
-
-export { _ }
+export default _;

@@ -1,58 +1,32 @@
-import { WFMComponent, $ } from 'framework';
+import { WFMComponent, $ } from '../../framework/index';
+import tabsAuthHeader from './tabs-auth-vars/tabs-auth-header';
+import tabsAuthFooter from './tabs-auth-vars/tabs-auth-footer';
 
 class QuestAuthComponent extends WFMComponent {
-  constructor(config) {
-    super(config);
-  }
-
-  // events() {
-  //   return {
-  //     'click .collapsible': 'onTabClick'  
-  //   }
-  // };
-
-  // onInit() {
-  //   http.get('https://api.ipify.org?format=json')
-  //     .then(({ip}) => {
-  //         _.delay(1000).then(() => {
-  //         this.data.ip = ip;
-  //          this.render();
-  //         });
-          
-  //     })
+  // constructor(config) {
+  //   super(config);
   // }
 
+  onTabClick({ target }) {
+    const $target = $(target);
+    if (!$target.hasClass('collapsible-header')) return;
 
-  onTabClick({target}) {
-    // console.log(event);
-    let $target = $(target);
-    if(!$target.hasClass('collapsible-header')) return;
-
-    // this.el.querySelectorAll('.js-tab').forEach(e => {
-    //   e.classList.remove('active');
-    // });
-    // target.parentNode.classList.add('active');
-
-    this.el.findAll('.js-tab').forEach(e => {
+    this.el.findAll('.js-tab').forEach((e) => {
       e.removeClass('active');
     });
+
     $target.parent().addClass('active');
   }
 }
 
-export const questAuthComponent = new QuestAuthComponent ({
+const questAuthComponent = new QuestAuthComponent({
   selector: 'app-quest-auth',
   template: `
   
 <div class="q-wrapper">
 
 <div class="q-container">
-<!-- Header -->
-    <header class="q-heder-settings">
-      <div class="q-header-top">
-        
-      </div>
-    </header>
+  ${tabsAuthHeader}
 <!-- content Section  -->
     <section class="q-content qa-content">
       <div class="q-question">
@@ -67,12 +41,18 @@ export const questAuthComponent = new QuestAuthComponent ({
 
           <div class="qa-pic__container">
             <a href="./#tabs-auth">
-              <img class="qa-pic" src="../img/cat/1.jpg" alt="realism">
+              <img 
+              class="qa-pic" 
+              src="https://raw.githubusercontent.com/igor2000xp/assets-art-quiz/main/assets/full/0full.webp" 
+              alt="realism">
             </a>
           </div>
           <div class="qa-pic__container">
             <a href="./#tabs-auth">
-              <img class="qa-pic" src="../img/cat/2.jpg" alt="realism">
+              <img 
+              class="qa-pic" 
+              src="https://raw.githubusercontent.com/igor2000xp/assets-art-quiz/main/assets/full/1full.webp" 
+              alt="realism">
             </a>
           </div>
 
@@ -81,12 +61,18 @@ export const questAuthComponent = new QuestAuthComponent ({
 
           <div class="qa-pic__container">
             <a href="./#tabs-auth">
-              <img class="qa-pic" src="../img/cat/3.jpg" alt="realism">
+              <img 
+              class="qa-pic" 
+              src="https://raw.githubusercontent.com/igor2000xp/assets-art-quiz/main/assets/full/2full.webp" 
+              alt="realism">
             </a>
           </div>
           <div class="qa-pic__container">
             <a href="./#tabs-auth">
-              <img class="qa-pic" src="../img/cat/4.jpg" alt="realism">
+              <img 
+              class="qa-pic" 
+              src="https://raw.githubusercontent.com/igor2000xp/assets-art-quiz/main/assets/full/3full.webp" 
+              alt="realism">
             </a>
           </div>
 
@@ -98,7 +84,8 @@ export const questAuthComponent = new QuestAuthComponent ({
 <!-- !! End of Pictures -->
     </section>
 <!-- Footer and end of the content section -->
-    <footer class="q-footer qa-footer"> 
+${tabsAuthFooter}
+ <!--   <footer class="q-footer qa-footer"> 
       <div class="q-footer-container__down">
 
         <div class="q-footer-container__down-rss">
@@ -121,7 +108,6 @@ export const questAuthComponent = new QuestAuthComponent ({
               </defs>
             </svg>
 
-            <!-- <img src="../img/quiz/rs_school_js.svg" alt="RSSchool"> -->
           </a>
         </div>
         <div class="q-footer-link">
@@ -132,15 +118,16 @@ export const questAuthComponent = new QuestAuthComponent ({
           © 2021
         </div>
       </div>
-    </footer>
+    </footer> -->
   
 </div>
 
 </div>
   `,
 
-    styles: `
+  styles: `
 
-    `
+    `,
 });
 
+export default questAuthComponent;

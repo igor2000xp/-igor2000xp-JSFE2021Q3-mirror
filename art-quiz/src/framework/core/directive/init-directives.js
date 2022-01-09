@@ -1,9 +1,7 @@
-import { _ } from "../../tools/util";
+import _ from '../../tools/util';
 
+export default function initDirectives(directives) {
+  if (_.isUndefined(directives)) return;
 
-
-export function initDirectives(directives) {
-  if(_.isUndefined(directives)) return;
-
-  directives.forEach(d => d.init());
+  directives.forEach((d) => d.init());
 }

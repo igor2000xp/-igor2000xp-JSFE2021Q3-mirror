@@ -1,12 +1,12 @@
-import { WFMComponent } from 'framework';
+import { WFMComponent } from '../../framework/index';
 
 class AppHeader extends WFMComponent {
-  constructor(config) {
-    super(config)
-  }
+  // constructor(config) {
+  //   super(config);
+  // }
 }
 
-export const appHeader = new AppHeader({
+const appHeader = new AppHeader({
   selector: 'app-header',
 
   template: `
@@ -19,5 +19,7 @@ export const appHeader = new AppHeader({
 
   styles: `
   
-  `
-})
+  `,
+});
+
+export default appHeader;

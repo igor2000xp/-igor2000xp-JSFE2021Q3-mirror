@@ -1,15 +1,16 @@
-import { WFMComponent } from "framework";
+import { WFMComponent } from '../framework/index';
 
 class AppComponent extends WFMComponent {
   constructor(config) {
-    super(config)
+    super(config);
   }
 }
 
-export const appComponent = new AppComponent({
+const appComponent = new AppComponent({
   selector: 'app-root',
   template: `
-  
   <router-outlet></router-outlet>
-    `
+    `,
 });
+
+export default appComponent;

@@ -1,9 +1,8 @@
-import { _ } from "../../tools/util";
-import { pipesFactory } from "./pipes-factory";
+import _ from '../../tools/util';
+import pipesFactory from './pipes-factory';
 
-export function  initPipes(pipes) {
-  if(_.isUndefined(pipes)) return;
+export default function initPipes(pipes) {
+  if (_.isUndefined(pipes)) return;
 
-
-  pipes.forEach(p => pipesFactory.registerPipe(p))
+  pipes.forEach((p) => pipesFactory.registerPipe(p));
 }

@@ -1,12 +1,9 @@
-import { _ } from '../../tools/util';
-import { RoutingModule } from './routing.module';
+import _ from '../../tools/util';
+import RoutingModule from './routing.module';
 
+export default function initRouting(routes, dispatcher) {
+  if (_.isUndefined(routes)) return;
 
-
- export function initRouting(routes, dispatcher) {
-  if(_.isUndefined(routes)) return;
-
-  let routing = new RoutingModule(routes, dispatcher);
+  const routing = new RoutingModule(routes, dispatcher);
   routing.init();
-   
- }
+}

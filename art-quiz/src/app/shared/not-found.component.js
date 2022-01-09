@@ -1,12 +1,12 @@
-import { WFMComponent } from 'framework';
+import { WFMComponent } from '../../framework/index';
 
 class NotFound extends WFMComponent {
-  constructor(config) {
-    super(config)
-  }
+  // constructor(config) {
+  //   super(config);
+  // }
 }
 
-export const notFound = new NotFound({
+const notFound = new NotFound({
   selector: 'app-not-found',
 
   template: `
@@ -24,5 +24,7 @@ export const notFound = new NotFound({
     align-items: center; 
     justify-content: center;
   }
-  `
-})
+  `,
+});
+
+export default notFound;
