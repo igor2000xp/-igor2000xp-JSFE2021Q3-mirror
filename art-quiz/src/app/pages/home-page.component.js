@@ -20,7 +20,7 @@ class HomePageComponent extends WFMComponent {
   //   };
   // }
 
-  afterInit() {
+  // afterInit() {
   //   http.get('https://api.ipify.org?format=json')
   //     .then(({ip}) => {
   //         _.delay(1000).then(() => {
@@ -29,7 +29,7 @@ class HomePageComponent extends WFMComponent {
   //         });
 
   //     })
-  }
+  // }
 
   // goToTabs(event) {
   //   event.preventDefault();

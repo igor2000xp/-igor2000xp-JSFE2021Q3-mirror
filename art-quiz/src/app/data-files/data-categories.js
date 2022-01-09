@@ -1,10 +1,10 @@
 const dataCategories = [
-  'realism',     'impressionism',
-  'religion',    'portrait',
+  'realism', 'impressionism',
+  'religion', 'portrait',
   'renaissance', 'painting',
-  'landscape',   'marine',
+  'landscape', 'marine',
   'avant-garde', 'surrealism',
-  'romanticism', 'expressionism'
+  'romanticism', 'expressionism',
 ];
 
 export default dataCategories;

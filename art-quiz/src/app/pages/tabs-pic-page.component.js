@@ -5,7 +5,7 @@ import funcTabsAuthCategories from './tabs-auth-vars/tabs-auth-categories-func';
 
 const countCategories = 10;
 const gameType = 'quest-pic';
-let score = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const score = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 class TabsPageComponent extends WFMComponent {
   constructor(config) {

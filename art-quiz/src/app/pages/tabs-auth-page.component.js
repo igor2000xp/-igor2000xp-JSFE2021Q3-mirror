@@ -5,7 +5,7 @@ import funcTabsAuthCategories from './tabs-auth-vars/tabs-auth-categories-func';
 
 const countCategories = 10;
 const gameType = 'quest-auth';
-let score = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const score = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 class TabsAuthComponent extends WFMComponent {
   constructor(config) {
     super(config);
@@ -30,7 +30,6 @@ class TabsAuthComponent extends WFMComponent {
   </div>
     `;
   }
-
 
   // events() {
   //   return {
@@ -68,7 +67,7 @@ class TabsAuthComponent extends WFMComponent {
 
 const tabsAuthComponent = new TabsAuthComponent({
   selector: 'app-tabs-auth',
-  template: ``,
+  template: '',
 
   styles: `
 

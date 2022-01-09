@@ -1,11 +1,11 @@
 import dataCategories from '../../data-files/data-categories';
 
 function funcTabsAuthCategories(countCategories, score, gameType) {
-  let template = ``;
-  for(let i = 0; i < countCategories; i++) {
-    let categories = dataCategories[i];
+  let template = '';
+  for (let i = 0; i < countCategories; i++) {
+    const categories = dataCategories[i];
     const scoreFunc = score[i];
-  template += `
+    template += `
   <div class="cont-pic">
   
     <div class="header-pic">
@@ -39,6 +39,6 @@ function funcTabsAuthCategories(countCategories, score, gameType) {
   `;
   }
   return template;
-} 
+}
 
 export default funcTabsAuthCategories;
