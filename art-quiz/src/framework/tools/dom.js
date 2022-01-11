@@ -75,14 +75,13 @@ class DomManipulator {
 
     return this;
   }
-
-  // find (selector) {
+  // find(selector) {
   //   return $(this.nativeElement.querySelector(selector));
   // }
 
-  // findAll (selector) {
-  //   return Array.from(this.nativeElement.querySelectorAll(selector)).map(e => $(e));
-  // }
+  findAll(selector) {
+    return Array.from(this.nativeElement.querySelectorAll(selector)).map((e) => $(e));
+  }
 }
 
 export default function $(el) {

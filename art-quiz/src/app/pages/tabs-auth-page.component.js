@@ -31,32 +31,9 @@ class TabsAuthComponent extends WFMComponent {
     `;
   }
 
-  // events() {
-  //   return {
-  //     'click .collapsible': 'onTabClick'
-  //   }
-  // };
-
-  // onInit() {
-  //   http.get('https://api.ipify.org?format=json')
-  //     .then(({ip}) => {
-  //         _.delay(1000).then(() => {
-  //         this.data.ip = ip;
-  //          this.render();
-  //         });
-
-  //     })
-  // }
-
   onTabClick({ target }) {
-    // console.log(event);
     const $target = $(target);
     if (!$target.hasClass('collapsible-header')) return;
-
-    // this.el.querySelectorAll('.js-tab').forEach(e => {
-    //   e.classList.remove('active');
-    // });
-    // target.parentNode.classList.add('active');
 
     this.el.findAll('.js-tab').forEach((e) => {
       e.removeClass('active');
@@ -68,10 +45,7 @@ class TabsAuthComponent extends WFMComponent {
 const tabsAuthComponent = new TabsAuthComponent({
   selector: 'app-tabs-auth',
   template: '',
-
-  styles: `
-
-    `,
+  styles: '',
 });
 
 export default tabsAuthComponent;

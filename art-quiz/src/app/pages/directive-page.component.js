@@ -1,9 +1,9 @@
 import { WFMComponent } from '../../framework/index';
 
 class DirectivePageComponent extends WFMComponent {
-  // constructor(config) {
-  //   super(config);
-  // }
+  constructor(config) {
+    super(config);
+  }
 }
 
 const directivePageComponent = new DirectivePageComponent({

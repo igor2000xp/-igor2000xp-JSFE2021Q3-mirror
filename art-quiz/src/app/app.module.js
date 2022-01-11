@@ -9,18 +9,16 @@ class AppModule extends WFMModule {
     super(config);
   }
 }
-
+// This is appModule(config)
 const appModule = new AppModule({
   components: [
 
   ],
-
   bootstrap: appComponent,
   routes: appRoutes,
   directive: [
     appHoverDirective,
   ],
-
   pipes: [
     appMultiPipe,
   ],

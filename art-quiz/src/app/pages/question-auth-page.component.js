@@ -1,13 +1,16 @@
 import { WFMComponent, $ } from '../../framework/index';
 import tabsAuthHeader from './tabs-auth-vars/tabs-auth-header';
 import tabsAuthFooter from './tabs-auth-vars/tabs-auth-footer';
+import authors from '../data-files/data-authors';
 
 class QuestAuthComponent extends WFMComponent {
-  // constructor(config) {
-  //   super(config);
-  // }
+  constructor(config) {
+    super(config);
+  }
 
   onTabClick({ target }) {
+    console.log(authors);
+
     const $target = $(target);
     if (!$target.hasClass('collapsible-header')) return;
 
@@ -22,7 +25,6 @@ class QuestAuthComponent extends WFMComponent {
 const questAuthComponent = new QuestAuthComponent({
   selector: 'app-quest-auth',
   template: `
-  
 <div class="q-wrapper">
 
 <div class="q-container">

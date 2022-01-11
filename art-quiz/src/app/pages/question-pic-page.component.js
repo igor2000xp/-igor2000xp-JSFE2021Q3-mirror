@@ -3,9 +3,9 @@ import tabsAuthHeader from './tabs-auth-vars/tabs-pic-header';
 import tabsAuthFooter from './tabs-auth-vars/tabs-auth-footer';
 
 class QuestPicComponent extends WFMComponent {
-  // constructor(config) {
-  //   super(config);
-  // }
+  constructor(config) {
+    super(config);
+  }
 
   onTabClick({ target }) {
     const $target = $(target);
@@ -71,26 +71,16 @@ const questPicComponent = new QuestPicComponent({
               </button>
             </a>
           </div>
-  
-
-
-
 
         </div>
-
-
       </section>
 <!-- Footer and end of the content section -->
     ${tabsAuthFooter} 
-    
   </div>
-
 </div>
   `,
 
-  styles: `
-
-    `,
+  styles: '',
 });
 
 export default questPicComponent;
