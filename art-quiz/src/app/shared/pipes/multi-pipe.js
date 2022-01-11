@@ -1,9 +1,9 @@
 import { WFMPipe } from '../../../framework/index';
 
 class AppMultiPipe extends WFMPipe {
-  // constructor(config) {
-  //   super(config);
-  // }
+  constructor(config) {
+    super(config);
+  }
 }
 
 const appMultiPipe = new AppMultiPipe({

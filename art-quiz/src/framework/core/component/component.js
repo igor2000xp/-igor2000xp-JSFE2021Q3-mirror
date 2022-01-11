@@ -22,7 +22,6 @@ function hasPipe(key) {
 }
 
 function getKeyFromPipe(key) {
-  // title | number
   return key.split('|')[0].trim();
 }
 
@@ -52,7 +51,6 @@ function compileTemplate(template, data) {
 
 function initStyles(styles) {
   if (_.isUndefined(styles)) return;
-  // console.log(styles);
 
   const style = $(document.createElement('style'));
   style.html(styles);
@@ -79,5 +77,3 @@ export default class WFMComponent {
     initEvents.call(this);
   }
 }
-
-// export { default as WFMComponent } from Component;

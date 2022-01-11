@@ -15,15 +15,10 @@ export default class WFMModule {
   }
 
   start() {
-    // console.log('start');
     initPipes(this.pipes);
-    // console.log(this.components);
-    // console.log('components before');
     initComponents(this.bootstrap, this.components);
     initRouting(this.routes, this.dispatcher);
     initDirectives(this.directive);
-
-    console.log('init-start');
     this.dispatcher.on('routing.change-page', () => {
       initDirectives(this.directive);
     });

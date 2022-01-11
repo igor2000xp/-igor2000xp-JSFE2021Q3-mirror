@@ -11,9 +11,7 @@ class DomManipulator {
 
   on(eventName, func, context = null) {
     func = func.bind(context);
-    // debugger
     this.nativeElement.addEventListener(eventName, func);
-    // debugger
   }
 
   off(eventName, func) {
@@ -49,7 +47,6 @@ class DomManipulator {
 
   html(html) {
     if (html.isWFM) html = html.nativeElement.innerHTML;
-
     this.nativeElement.innerHTML = html;
     return this;
   }
@@ -61,10 +58,9 @@ class DomManipulator {
     return this;
   }
 
-  // parent() {
-  //   return $(this.nativeElement.parentNode);
-
-  // }
+  parent() {
+    return $(this.nativeElement.parentNode);
+  }
 
   attr(name, value = null) {
     if (_.isNull(value)) {
@@ -75,9 +71,10 @@ class DomManipulator {
 
     return this;
   }
-  // find(selector) {
-  //   return $(this.nativeElement.querySelector(selector));
-  // }
+
+  find(selector) {
+    return $(this.nativeElement.querySelector(selector));
+  }
 
   findAll(selector) {
     return Array.from(this.nativeElement.querySelectorAll(selector)).map((e) => $(e));
@@ -87,8 +84,3 @@ class DomManipulator {
 export default function $(el) {
   return new DomManipulator(el);
 }
-
-// on css off addClass removeClass hasClass html append find
-//  parent findAll attr
-
-// $('body').on('click', func).attr();
