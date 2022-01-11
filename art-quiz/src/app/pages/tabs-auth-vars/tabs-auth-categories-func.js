@@ -7,21 +7,17 @@ function funcTabsAuthCategories(countCategories, score, gameType) {
     const scoreFunc = score[i];
     template += `
   <div class="cont-pic">
-  
     <div class="header-pic">
-  
       <div class="heder-pic__name">
         <h4>
           ${categories}
         </h4>
       </div> <!-- end of heder-pic__name -->
-  
       <div class="heder-pic__score">
         <h4>
           ${scoreFunc}
         /10</h4>
       </div>
-  
     </div> <!-- End  of header-pic -->
   
     <div class="pic-cat__container">
@@ -33,9 +29,6 @@ function funcTabsAuthCategories(countCategories, score, gameType) {
     </div> <!-- End of class="pic-cat__container" -->
   
   </div> <!-- Ebd of cont-pic -->
-  
-  
-  
   `;
   }
   return template;
