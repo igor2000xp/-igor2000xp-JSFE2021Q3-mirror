@@ -2,7 +2,7 @@ import dataCategories from '../../data-files/data-categories';
 
 function funcTabsAuthCategories(countCategories, score, gameType) {
   let template = '';
-  for (let i = 0; i < countCategories; i++) {
+  for (let i = 0; i < countCategories; i += 1) {
     const categories = dataCategories[i];
     const scoreFunc = score[i];
     template += `
