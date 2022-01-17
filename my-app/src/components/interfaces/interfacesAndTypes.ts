@@ -2,46 +2,29 @@ export type Options = {
   [apiKey: string]: string;
 };
 
-export interface IArtNews {
-  author?: string;
-  title?: string;
-  description?: string;
-  url?: string;
-  urlToImage?: string;
+export interface IArtNews extends ISource, IArticles {
+  articles?: IArticles;
+  source: ISource;
+}
+export interface IArticles {
+  author: string;
+  title: string;
+  description: string;
+  url: string;
+  urlToImage: string;
   publishedAt?: string;
-  content?: string;
+  content: string;
   language?: string;
   country?: string;
   category?: string;
-  id?: string;
-  name?: string;
-  articles?: {
-    author: string;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string;
-    publishedAt?: string;
-    content: string;
-    language?: string;
-    country?: string;
-    category?: string;
-  };
-  sources?: {
-    id: string;
-    name: string;
-    description: string;
-    url: string;
-    category: string;
-    language: string;
-  };
-  source?: {
-    name: string;
-    id: string;
-  };
 }
 
-export interface IValuesData {
+interface ISource {
+  name: string;
+  id: string;
+}
+
+export interface IDataValue {
   status: string;
   totalResults?: number;
   articles?: Array<IArtNews>;
@@ -51,3 +34,5 @@ export interface IGetResp {
   endpoint: string,
   options: Record<string, never>,
 }
+
+export type Callback = (data: IDataValue) => void;

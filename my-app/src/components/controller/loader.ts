@@ -1,6 +1,6 @@
 import {
   Options,
-  IValuesData,
+  IDataValue,
 } from '../interfaces/interfacesAndTypes';
 
 export class Loader {
@@ -18,7 +18,7 @@ export class Loader {
       endpoint,
       options = {},
     }: { endpoint: string; options: Options | Record<string, never> },
-    callback: (data: IValuesData) => void,
+    callback: (data: IDataValue) => void,
   ): void {
     if (callback.toString() == '') {
       console.error('No callback for GET response');
@@ -49,7 +49,7 @@ export class Loader {
   private load(
     method: string,
     endpoint: string,
-    callback: (data: IValuesData) => void,
+    callback: (data: IDataValue) => void,
     options: Options | Record<string, never> = {},
   ) {
     fetch(this.makeUrl(options, endpoint), { method })
@@ -57,7 +57,7 @@ export class Loader {
       .then((response: Response) => {
         return response.json();
       })
-      .then((data: IValuesData) => {
+      .then((data: IDataValue) => {
         return callback(data!);
       })
       .catch((err: string) => console.error(err));

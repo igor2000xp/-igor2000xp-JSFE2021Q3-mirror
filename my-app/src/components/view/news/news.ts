@@ -3,7 +3,7 @@ import { IArtNews } from '../../interfaces/interfacesAndTypes';
 
 export class News {
   public draw(data: Array<IArtNews>) {
-    const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
+    const news:IArtNews[] = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
     const fragment = document.createDocumentFragment();
     const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp')!;
